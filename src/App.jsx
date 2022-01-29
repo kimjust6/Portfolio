@@ -11,7 +11,7 @@ import Menu from "./components/menu/Menu"
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="app">
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} width={width} setWidth={setWidth}/>
