@@ -2,7 +2,7 @@ import "./resume.scss";
 
 const Resume = () => {
   return (
-    <div>
+    <div className="resume" id="resume">
         Resume
     </div>
   );

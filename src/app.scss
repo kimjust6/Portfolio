@@ -1,9 +1,30 @@
+
+
 .app{
-  height: 100vh;
-  
+  height: 100vh;  
   .sections{
+    scrollbar-width: none; //firefox no scrollbar
+    &::-webkit-scrollbar{  //chrome no scrollbar
+      display: none;
+      
+    }
+
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);  //make each component 100% of page - navbar
+    position: relative;  
+    top: 70px;  //move components down 70px
+    scroll-snap-type: y mandatory;  //force window to snap between components
+    scroll-behavior: smooth; //makes scrolling smoother
+
+    > *{
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start; //snap scrollbar to beginning of each component
+      
+    }
+    
+
   }
+
 
 }
