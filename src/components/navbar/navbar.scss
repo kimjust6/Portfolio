@@ -7,7 +7,7 @@
     height: 71px;
     position: fixed;
     top: 0;
-    
+    transition: all 1s ease;    
     z-index: 2; //make topbar show on top of other components
     
 
@@ -18,29 +18,106 @@
         justify-content: space-between; 
         
         .left{
+            display:flex;
+            align-items: center;
+            
             .name{
                 font-size: 35px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
+                // margin-right: 40px;
             }
+            .itemContainer{
+                font-size: 20px;
+                margin-left: 30px;
+                span{
+                    font-weight: 400;
+                }
+                
+                // margin: 10px;
+                .icon{
+                    align-items: center;
+                    font-size: 30px;
+                    margin-right: 17px;
+                }
+            }
+            
 
         }
         .right{
-            .link{
+            display:flex;
+            align-items: center;
+
+            .link{ // style the links on the right
                 padding: 0px 10px;
                 text-decoration: none;
                 color: inherit;
+                .contactLink
+                {
+                    margin-right: 50px;
+                }
+                .allLinks
+                {
+                    margin-right: 10px;
+                }
                 
             }
-            .link:hover{
-                color: $linkHover;
+            .link:hover{ //when you hover
+                color: $linkHover; 
                 text-decoration: underline;
-                
             }
+            .hamburger{
+                // padding-left: 40px;
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                width: 32px;
+                height: 26px;
+                
+                
+                justify-content: space-between;
+                cursor: pointer;
+                
+                span{
+                    
+                    transform-origin: right;
+                    transition: all 0.75s ease;
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    // padding-right: 4px;
+                    
+                }
+            }
+
         }
     }
 
-    
+    &.active{
+        // transition-duration: 200ms;
+        
+        background-color: white;
+        color: $mainColor;
+        .hamburger{
+            
+            span{
+
+                &:nth-child(2){
+                    background-color: white;
+                }
+                background-color: white;
+                &:first-child{
+                    background-color: $mainColor;
+                    transform: rotate(-43deg);
+                }
+                &:last-child{
+                    background-color: $mainColor;
+                    transform: rotate(43deg);
+                }
+
+            }
+        }
+    }
 }
 
