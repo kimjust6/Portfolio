@@ -1,9 +1,13 @@
 import {GitHub, Mail, LinkedIn} from "@material-ui/icons";
+// import windowSize from 'react-window-size';
+
 import "./navbar.scss";
 
 
 
-export default function Navbar ({menuOpen, setMenuOpen}) {
+export default function Navbar ({menuOpen, setMenuOpen, width, setWidth}) {
+  //get dimensions to find out if we need the hamburger menu
+  // const windowWidth = Dimensions.get('window').width;
   return (
     <div className={"navbar " + (menuOpen && "active")}>
       <div className="wrapper">
@@ -16,6 +20,7 @@ export default function Navbar ({menuOpen, setMenuOpen}) {
             {/* <span>kimjust6@gmail.com</span> */}
           </div>
         </div>
+        
         <div className="right">
           <div className="allLinks">
           <a className="link" href="#intro">About Me</a>
@@ -35,6 +40,7 @@ export default function Navbar ({menuOpen, setMenuOpen}) {
     </div>
   );
 };
+
 
 
 

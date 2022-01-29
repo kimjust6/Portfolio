@@ -10,6 +10,7 @@
     transition: all 1s ease;    
     z-index: 3; //make topbar show on top of other components
     
+    
 
     .wrapper{
         display: flex;
@@ -48,7 +49,10 @@
         .right{
             display:flex;
             align-items: center;
+            @media (max-width:$hamburgerWidth){
 
+            }
+            
             .link{ // style the links on the right
                 padding: 0px 10px;
                 text-decoration: none;
@@ -63,33 +67,55 @@
                 }
                 
             }
+            
             .link:hover{ //when you hover
-                color: $linkHover; 
+                // color: $linkHover; 
                 text-decoration: underline;
+                text-overflow: ellipsis;
+                font-weight: 500; 
+            }
+            
+            @media only screen and (max-width: $hamburgerWidth){
+                .link{
+                    display:none;
+            }
+            
             }
             .hamburger{
-                // padding-left: 40px;
-                overflow-y: hidden;
-                display: flex;
-                flex-direction: column;
-                width: 32px;
-                height: 26px;
+                display: none;
+            }
+
+            
+                .hamburger{
                 
-                
-                justify-content: space-between;
-                cursor: pointer;
-                
-                span{
+                    // padding-left: 40px;
+                    overflow-y: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    width: 32px;
+                    height: 26px;
                     
-                    transform-origin: right;
-                    transition: all 0.75s ease;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $secondaryColour;
-                    // padding-right: 4px;
                     
+                    justify-content: space-between;
+                    cursor: pointer;
+                    
+                    span{
+                        
+                        transform-origin: right;
+                        transition: all 0.75s ease;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $secondaryColour;
+                        // padding-right: 4px;
+                        
+                    }
+                }
+                @media only screen and (min-width: $hamburgerWidth){
+                    .hamburger{
+                        display:none;
                 }
             }
+            
 
         }
     }
@@ -119,5 +145,7 @@
             }
         }
     }
+
+
 }
 

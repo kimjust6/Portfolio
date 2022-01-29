@@ -1,7 +1,9 @@
 import React from 'react';
+import {useState} from 'react';
 import "./menu.scss";
 
 function menu ({menuOpen, setMenuOpen}) {
+    
   return (
       <div className="top">
     <div className={"menu " + (menuOpen && "active")}>

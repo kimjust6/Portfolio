@@ -10,10 +10,11 @@ import Menu from "./components/menu/Menu"
 
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [menuOpen, setMenuOpen] = useState(true);
   return (
     <div className="app">
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} width={width} setWidth={setWidth}/>
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro/>

@@ -7,9 +7,15 @@
         height: calc(max-content + 5vh);
         width: 100vw;
         top: -301px; //move nav menu off to the right, when closed
-
+        background-color: $mainColor;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         transition: all 0.75s ease;  
         position: fixed;
+
+
         ul{
             padding: 0;
             margin: 10px;
@@ -33,20 +39,18 @@
 
         }
 
-        background-color: $mainColor;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+
         &.active{
             position: fixed;
             top: 70px;
-            
-            
-           
+            @media only screen and (min-width: $hamburgerWidth){
+                width: 100vw;
+                top: -301px;
+                     
+            }
         }
     }
-    
+
 
 }
 
