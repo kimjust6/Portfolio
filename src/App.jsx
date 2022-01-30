@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import "./app.scss";
-import Navbar from "./components/navbar/Navbar";
-import Intro from "./components/intro/Intro";
-import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
-import Resume from "./components/resume/Resume";
-import Menu from "./components/menu/Menu"
+import Navbar from "./components/navbar/Navbar.jsx";
+import Intro from "./components/intro/Intro.jsx";
+import Projects from "./components/projects/Projects.jsx";
+import Contact from "./components/contact/Contact.jsx";
+import Resume from "./components/resume/Resume.jsx";
+import Menu from "./components/menu/Menu.jsx"
 
 
 function App() {
