@@ -1,6 +1,6 @@
-import "./resume.scss";
+import "./education.scss";
 
-const Resume = () => {
+const education = () => {
   return (
     <div className="resume" id="resume">
         Resume
@@ -8,4 +8,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default education;
