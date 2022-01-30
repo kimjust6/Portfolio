@@ -15,6 +15,9 @@
     top: 70px;  //move components down 70px
     scroll-snap-type: y mandatory;  //force window to snap between components
     scroll-behavior: smooth; //makes scrolling smoother
+    // :focus-within {
+    //   scroll-behavior: smooth;
+    // }
 
     > *{
       width: 100vw;

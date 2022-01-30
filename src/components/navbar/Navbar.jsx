@@ -5,9 +5,8 @@ import "./navbar.scss";
 
 
 
-export default function Navbar ({menuOpen, setMenuOpen, width, setWidth}) {
-  //get dimensions to find out if we need the hamburger menu
-  // const windowWidth = Dimensions.get('window').width;
+export default function Navbar ({menuOpen, setMenuOpen}) {
+  
   return (
     <div className={"navbar " + (menuOpen && "active")}>
       <div className="wrapper">
