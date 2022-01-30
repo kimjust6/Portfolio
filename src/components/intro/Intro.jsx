@@ -1,3 +1,6 @@
+
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import "./intro.scss";
 
 const Intro = () => {
@@ -5,7 +8,9 @@ const Intro = () => {
     <div className="intro" id="intro">
         Intro
         <div className="left">
-
+        <div className="picture">
+          {/* <img src="../assets/profile.jpg" alt=""></img> */}
+        </div>
         </div>
         <div className="right">
 

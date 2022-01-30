@@ -1,4 +1,21 @@
+@import "../../global.scss";
+
+
 .intro{
     background-color: bisque;
-    
+    display: flex;
+    height: calc(100vh - 70px);
+    .left{
+        flex: 0.25;
+        overflow-y: hidden; 
+        .picture{
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+    .right{
+        flex: 0.75;
+    }
 }

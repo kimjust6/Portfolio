@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./menu.scss";
 
-function menu ({menuOpen, setMenuOpen}) {
+function Menu ({menuOpen, setMenuOpen}) {
     
   return (
       <div className="top">
@@ -34,6 +34,6 @@ function menu ({menuOpen, setMenuOpen}) {
   );
 };
 
-export default menu;
+export default Menu;
 
 
