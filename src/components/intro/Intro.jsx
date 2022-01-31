@@ -13,20 +13,21 @@ const Intro = () => {
       </div>
       <div className="right">
         <div className="text">
-          <h2 className="hello">My name is</h2>
+          {/* <h2 className="hello">My name is</h2> */}
           <h1 className="name">Justin Kim</h1>
           <h1 className="hello">Junior Software Developer</h1>
 
           <h4 className="introduction">
             <br />
-            Full stack developer that is passionate about finance and technology.
-
+            Full stack developer that is passionate about finance and
+            technology.
           </h4>
-          
+          <div className="downArrow">
+            <a href="#projects">
+              <KeyboardArrowDownIcon fontSize="inherit" />
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="downArrow">
-        <KeyboardArrowDownIcon/>
       </div>
     </div>
   );

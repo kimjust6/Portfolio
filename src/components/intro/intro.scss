@@ -8,13 +8,15 @@
     background-color: bisque;
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
+    justify-content: center;
     
     flex-shrink: 1;
     // overflow-y: hidden; 
     
     .left{
         margin: 20px;
+        padding-right: 20px;
         overflow-x: hidden; 
         overflow-y: hidden; 
         // flex: 0.5;
@@ -47,6 +49,10 @@
         }
     }
     .right{
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
         // border: 2px solid white;
         justify-content: center;
         align-items: center;
@@ -79,10 +85,35 @@
 
             }
         }
+        .downArrow{
+            
+            font-weight: 600;
+            flex-direction: column;
+            a{
+                position: absolute;
+                bottom: 50px;
+                left: 35%;
+                font-size: 100px;
+                display:flex;
+                color: black;
+                animation: arrowBlink 1.5s infinite;
+                
+            }
+
+            a:hover{
+                opacity: 100%;
+            }
+        }
+
+        @keyframes arrowBlink{
+            50%{
+                opacity: 10%;
+                
+
+
+                
+            }
+        }
     }
-    .downArrow{
-        color: black;
-        font-size: 100px;
-        
-    }
+
 }
