@@ -34,10 +34,12 @@
         .title{
             max-height: 500px;
             max-width: 500px;
+            
             // padding-right: 40px;
             margin-right: 40px;
             h2{
                 margin: 0;
+                font-size: $subHeadFontSize; 
             }
             .tech{
                 color: crimson;

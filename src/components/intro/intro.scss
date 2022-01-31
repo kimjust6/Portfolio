@@ -69,6 +69,18 @@
                 width: 30px;
                 
             }
+            .but1{
+                font-size: 30px;
+                background-color: $mainColor;
+                color: $lightSecondaryColour;
+
+                margin-top: 30px;
+                width: 200px;
+                
+            }
+            .but1:hover{
+                background-color: black;
+            }
             .title{
                 margin:0;
                 font-size: 45px;
@@ -84,6 +96,7 @@
                 flex-shrink: 1;
                 max-width: 620px;
                 word-wrap: break-word;
+                color: $mainColor;
 
             }
         }
@@ -94,7 +107,7 @@
             a{
                 position: absolute;
                 bottom: 50px;
-                left: 26%;
+                left: 13%;
                 font-size: 100px;
                 display:flex;
                 color: black;

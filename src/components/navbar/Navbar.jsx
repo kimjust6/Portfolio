@@ -31,7 +31,7 @@ export default function Navbar ({menuOpen, setMenuOpen}) {
           <a className="link" href="#about">About Me</a>
           <a className="link" href="#education">Education</a>
           <a className="link" href="#projects">Projects</a>
-          <a className="link contactLink" href="#contact">Contact</a>
+          <a className="link" href="#contact">Skills</a>
           </div>
           <div className="hamburger" onClick={()=>(setMenuOpen(!menuOpen))}>
             {/* <div className="hamborder"> */}

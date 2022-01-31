@@ -8,7 +8,7 @@ import Contact from "./components/contact/Contact.jsx";
 import Education from "./components/resume/Education.jsx";
 import Menu from "./components/menu/Menu.jsx"
 import About from "./components/about/About.jsx"
-
+import Skills from "./components/skills/Skills.jsx";
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
         <About/>
         <Education/>
         <Projects/>
+        <Skills/>
         <Contact/>
       </div>
     </div>

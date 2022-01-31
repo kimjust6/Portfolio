@@ -30,7 +30,7 @@ function Menu ({menuOpen, setMenuOpen}) {
             </div>
             <div>
             <li>
-                <a href="#contact" onClick={()=>(setMenuOpen(false))}>Contact Me</a>
+                <a href="#contact" onClick={()=>(setMenuOpen(false))}>Skills</a>
             </li>
             </div>
         </ul>
