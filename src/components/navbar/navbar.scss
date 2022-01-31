@@ -9,7 +9,9 @@
   top: 0;
   transition: all 1s ease;
   z-index: 3; //make topbar show on top of other components
-  box-shadow: 3px 0px 3px $mainColor;
+//   box-shadow: 3px 0px 3px $mainColor;
+  box-shadow: 3px 0px 3px $secondaryColour;
+  
 
   .wrapper {
     display: flex;
