@@ -1,5 +1,7 @@
 import react from "react";
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+
 import "./projects.scss";
 
 const Projects = () => {
@@ -28,7 +30,7 @@ const Projects = () => {
             <img src="https://i.imgur.com/Arrus6K.png" alt=""></img>
           </div>
         </div>
-
+        <Divider style={{width:'100%'}} variant="middle"/>
         <div className="proj2">
           <div className="title">
             <h2>Eventure Mobile Application</h2>
@@ -49,6 +51,7 @@ const Projects = () => {
             <img src="https://i.imgur.com/l2FVRdI.png" alt=""></img>
           </div>
         </div>
+        <Divider style={{width:'100%'}} variant="middle"/>
         <div className="proj3">
           <div className="title">
             <h2>Portfolio Website</h2>
@@ -69,7 +72,7 @@ const Projects = () => {
             <img src="https://i.imgur.com/uB6c6X6.png" alt=""></img>
           </div>
         </div>
-
+        <Divider style={{width:'100%'}} variant="middle"/>
         <div className="proj4">
           <div className="title">
             <h2>Boulder Dash Clone</h2>
@@ -94,27 +97,8 @@ const Projects = () => {
           </div>
         </div>
         
-        
-        
-        
+          
 
-
-        {/* <div className="item">
-          <img src="" alt=""></img>
-          <h3>Library Management System</h3>
-        </div>
-        <div className="item">
-          <img src="" alt=""></img>
-          <h3>Eventure</h3>
-        </div>
-        <div className="item">
-          <img src="" alt=""></img>
-          <h3>Boulder Dash Clone</h3>
-        </div>
-        <div className="item">
-          <img src="" alt=""></img>
-          <h3>Shell Script</h3>
-        </div> */}
     </div>
   );
 };

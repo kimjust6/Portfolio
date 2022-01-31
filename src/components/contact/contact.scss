@@ -10,27 +10,28 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    color: $secondaryColour;
     .title{
+        
+
         h1{
             border-bottom: 2px solid $secondaryColour;
         }
+
     }
-    color: $secondaryColour;
+    
     .links
     {
 
         width: 80px;
         div{
             a{
-                
                 color: $secondaryColour;
                 text-decoration: none;
                 margin-left: 5px;
                 margin-right: 5px;
-                font-size: 24px;
+                font-size: 32px;
                 margin: 10px;
-                
-                
             }
             a:hover{
                 
