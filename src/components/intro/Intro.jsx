@@ -15,7 +15,7 @@ const Intro = () => {
         <div className="text">
           {/* <h2 className="hello">My name is</h2> */}
           <h1 className="name">Justin Kim</h1>
-          <h1 className="hello">Junior Software Developer</h1>
+          <h1 className="title">Software Developer</h1>
 
           <h4 className="introduction">
             <br />
