@@ -99,19 +99,16 @@
                 animation: arrowBlink 1.5s infinite;
                 
             }
-
-            a:hover{
-                opacity: 100%;
+            @media only screen and (max-width: $singleColumnWidth){
+                a{
+                    display:none;
+                }
             }
         }
 
         @keyframes arrowBlink{
             50%{
                 opacity: 10%;
-                
-
-
-                
             }
         }
     }
