@@ -6,7 +6,9 @@ import "./contact.scss";
 const Contact = () => {
   return (
     <div className="contact">
-        <h2> Contact Me</h2>
+      <div className="title">
+          <h1> Contact Me</h1>
+        </div>
         <div className="links">
         <div class="linkedin">
         <a href="https://www.linkedin.com/in/justin-kim6/" target="_blank" rel="noreferrer"><LinkedIn></LinkedIn> LinkedIn</a>

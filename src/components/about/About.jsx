@@ -11,9 +11,10 @@ const About = () => {
     </div>
     <div className="content">
         <p>
-            My name is Justin Kim and I am a quick learning fullstack developer searching for a co-op position for Summer of 2022.
-            I love learning new technologies and developing tools and applications. 
-            Feel free to look around to see what kind of projects I have been working on.
+            My name is Justin Kim and I am a fullstack developer searching for a co-op position for Summer of 2022.
+            I am a quick learner and am always able to think on my feet.
+            I love learning new technologies and developing new applications. 
+            Have a look at what kind of projects I have been working on and feel free to email me if you have any questions.
         </p>
     </div>
 </div>

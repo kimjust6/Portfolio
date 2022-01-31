@@ -1,27 +1,66 @@
 @import "../../global.scss";
 
-.education{
+.education {
+  .school {
+    .title {
+      h1 {
+        border-bottom: 2px solid $secondaryColour;
+      }
+    }
     background-color: $mainColor;
     width: 100%;
-    
+
     display: flex;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: $secondaryColour;
-    h1{
-        font-size: $headingFontSize;
+    h1 {
+      font-size: $headingFontSize;
     }
-    p{
-        margin: 5px;
-        color:inherit;
+    p {
+      margin: 5px;
+      color: inherit;
+    }
+    .degree,
+    .school {
+      font-size: 28px;
+    }
+    
+    .date {
+        margin: 0;
+        font-size: 20px;
+        margin-bottom: 0;
+        
         
     }
-    .degree, .school{
-        font-size: 28px;
+    
+  }
+  .courses{
+    font-size: 24px;
+    
+    background-color: $mainColor;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $secondaryColour;
+    .courseWork{
+        margin-bottom: -15px;
+        h1{
+            font-size: 36px;
+            border-bottom: 2px solid;
+            // border: 2px solid;
+        }
     }
-    .date{
-        font-size: 20px;
+    il{
+        // margin-top: -20px;
+        font-size: 23px;
+        font-weight: 500;
+        padding-bottom: 15px;
+        max-width: 1200px;
     }
+}
 }
