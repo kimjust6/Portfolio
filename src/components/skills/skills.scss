@@ -1,2 +1,26 @@
+
 @import "../../global.scss";
 
+
+
+.skills{
+    background-color: $lightSecondaryColour;
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: $headingFontSize
+    }
+    .skillType{
+        display: flex;
+        .title{
+            h2{
+                font-size: $subHeadFontSize;
+            }
+
+        }
+    }
+}
