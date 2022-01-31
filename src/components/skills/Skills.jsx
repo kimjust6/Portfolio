@@ -13,12 +13,86 @@ const Skills = () => {
         <h1>Skills</h1>
         <div className="skillType">
             <div className="title">
+                <h2>Back End</h2>
+                <div className="list">
+                    <ul>
+                        <li>
+                            C++
+                        </li>
+                        <li>
+                            Java
+                        </li>
+                        <li>
+                            Python
+                        </li>
+                        <li>
+                            Node.js
+                        </li>
+                        <li>
+                            Visual Basic
+                        </li>
+                        <li>
+                            Shell Scripting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className="title">
                 <h2>Front End</h2>
+                <div className="list">
+                    <ul>
+                        <li>
+                            React.js
+                        </li>
+                        <li>
+                            Angular
+                        </li>
+                        <li>
+                            Javascript
+                        </li>
+                        <li>
+                            HTML
+                        </li>
+                        <li>
+                            CSS
+                        </li>
+                        <li>
+                            Typescript
+                        </li>
+                        <li>
+                            Spring Boot
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div className="content">
-                
+            <div className="title">
+                <h2>Databases</h2>
+                <div className="list">
+                    <ul>
+                        <li>
+                            postgreSQL
+                        </li>
+                        <li>
+                            Angular
+                        </li>
+                        <li>
+                            Node.js
+                        </li>
+                        <li>
+                            HTML
+                        </li>
+                        <li>
+                            CSS
+                        </li>
+                        <li>
+                            Typescript
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
+
     </div>
   );
 };

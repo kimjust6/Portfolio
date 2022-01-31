@@ -24,7 +24,7 @@ const Intro = () => {
             technology.
           </h4>
           <Button className="but1" target="_blank" href="https://drive.google.com/file/d/1lPpys9BbJom56Zpdcq0dZHkO31trq7WA/view?usp=sharing" variant="contained">
-            Resume
+            My Resumé
             </Button>
           <div className="downArrow">
             <a href="#about">

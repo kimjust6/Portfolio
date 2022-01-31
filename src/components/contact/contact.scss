@@ -27,13 +27,19 @@
                 text-decoration: none;
                 margin-left: 5px;
                 margin-right: 5px;
+                font-size: 24px;
+                margin: 10px;
                 
                 
             }
             a:hover{
-                font-weight: 500;
-                border: 1px white fill;
                 
+                font-weight: 500;
+                border: 1px $secondaryColour fill;
+                // background-color: $secondaryColour;
+                // border-radius: 20%;
+                // color: $mainColor;
+
             }
         }
         display: flex;
