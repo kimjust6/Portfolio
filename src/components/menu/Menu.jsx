@@ -15,13 +15,16 @@ function Menu ({menuOpen, setMenuOpen}) {
             </div>
             <div>
             <li>
-                <a href="#projects" onClick={()=>(setMenuOpen(false))}>Projects</a>
+                <a href="#education" onClick={()=>(setMenuOpen(false))}>Education</a>
             </li>
             </div>
             <div>
             <li>
-                <a href="#resume" onClick={()=>(setMenuOpen(false))}>Resume Me</a>
+                <a href="#projects" onClick={()=>(setMenuOpen(false))}>Projects</a>
             </li>
+            
+         
+
             </div>
             <div>
             <li>

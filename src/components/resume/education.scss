@@ -1,8 +1,27 @@
 @import "../../global.scss";
 
-.resume{
-    background-color: lightsalmon;
+.education{
+    background-color: $mainColor;
     width: 100%;
-    height: calc(100% - 70px);
     
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $secondaryColour;
+    h1{
+        font-size: 45px;
+    }
+    p{
+        margin: 5px;
+        color:inherit;
+        
+    }
+    .degree, .school{
+        font-size: 28px;
+    }
+    .date{
+        font-size: 20px;
+    }
 }

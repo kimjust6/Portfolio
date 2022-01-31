@@ -1,6 +1,67 @@
-.portfolio{
-    background-color: lightgray;
-    width: 100%;
-    height: calc(100% - 70px);
+@import "../../global.scss";
+
+.projects{
+
     
+    background-color: white;
+    // width: 100%;
+    flex-wrap: wrap;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .proj1, .proj2, .proj3, .proj4{
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:center;
+        
+        justify-content: center;
+        max-height: 500px;
+        .title{
+            max-height: 500px;
+            max-width: 500px;
+            // padding-right: 40px;
+            margin-right: 40px;
+            h2{
+                margin: 0;
+            }
+            .tech{
+                color: crimson;
+                margin:0;
+            }
+
+        }
+        .but1{
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .but2{
+            margin-right: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        .screen{
+            img{
+                border: solid 1px;
+                min-height: 0px;
+                max-height: 490px;
+            };
+        }
+    }
+
+    .proj1, .proj3 {
+        background-color: $lightSecondaryColour;
+        flex-direction: row-reverse;
+        .title{
+            margin-left: 40px;
+        }
+    }
+
+
 }
