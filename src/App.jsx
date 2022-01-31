@@ -5,8 +5,9 @@ import Navbar from "./components/navbar/Navbar.jsx";
 import Intro from "./components/intro/Intro.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
-import Resume from "./components/resume/Resume.jsx";
+import Education from "./components/resume/Education.jsx";
 import Menu from "./components/menu/Menu.jsx"
+
 
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
-        <Intro/>
+        <Intro />
+        <Education/>
         <Projects/>
-        <Resume/>
         <Contact/>
       </div>
     </div>
