@@ -15,7 +15,7 @@ const Projects = () => {
             </h3>
             
             <p>
-            This is a banking application that uses cryptocurrencies as the store of value between accounts. Transactions are done on a live blockchain and done in real time. We used the Spring Boot framework for the front end and Java for the backend. Account information was stored and encrypted on a postgreSQL server.  To broadcast transactions, we 
+            This is a banking application that uses cryptocurrencies as the store of value between accounts. Transactions are done on a live blockchain and done in real time. We used the Spring Boot framework for the front end and Java for the backend. Account information was stored and encrypted on a postgreSQL server.  To broadcast transactions, we spun up a banano (cryptocurrency) node in a docker container.
             </p>
             <Button className="but1" target="_blank" href="https://github.com/kimjust6/Banking-Web-App" variant="contained">Github Link</Button>
             <Button className="but2" target="_blank" href="https://www.youtube.com/watch?v=80ICIoXTi1U" variant="outlined">Video Demo</Button>
@@ -79,10 +79,7 @@ const Projects = () => {
             </h3>
             
             <p>
-            In this project, I recreated the classic arcade game "Boulder Dash". 
-            In this game, the player will travel through the maze and collect
-            diamonds and attempt to proceed to the next level.  The level is loaded 
-            from a text file and all the game logic is coded in Java.
+            This website portfolio website is coded in React.js and CSS to showcase my technical knowledge and application. I created this website with responsive design in mind.
             </p>
             <Button className="but1" target="_blank" href="https://github.com/kimjust6/portfolio2" variant="contained">Github Link</Button>
             <Button className="but2" target="_blank" href="https://www.justink.dev/" variant="outlined">Live Demo</Button>
