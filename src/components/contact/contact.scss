@@ -1,8 +1,42 @@
 @import "../../global.scss";
 
 .contact{
-    background-color: lightblue;
+    
+    background-color: $mainColor;
     width: 100%;
-    height: calc(100% - 70px);
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+    color: $secondaryColour;
+    .links
+    {
+        width: 80px;
+        div{
+            a{
+                
+                color: $secondaryColour;
+                text-decoration: none;
+                margin-left: 5px;
+                margin-right: 5px;
+                
+                
+            }
+            a:hover{
+                font-weight: 500;
+                border: 1px white fill;
+                
+            }
+        }
+        display: flex;
+        width: 40%;
+        
+        justify-content: space-around;
+    }
+    // align-content: space-between;
+
     
 }
