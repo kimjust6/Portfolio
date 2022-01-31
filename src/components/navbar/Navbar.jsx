@@ -13,9 +13,15 @@ export default function Navbar ({menuOpen, setMenuOpen}) {
         <div className="left">
           <a className="name" href = "#intro">justin kim</a>  
           <div className="itemContainer">
-            <LinkedIn className="icon"/>
-            <GitHub className="icon"/>
-            <Mail className="icon"/>
+            <a href="https://www.linkedin.com/in/justin-kim6/" target="_blank" rel="noreferrer">
+              <LinkedIn className="icon"/>
+            </a>
+            <a href="https://github.com/kimjust6" target="_blank" rel="noreferrer">
+              <GitHub className="icon"/>
+            </a>
+            <a href="mailto:kimjust6@gmail.com" target="_blank" rel="noreferrer">
+              <Mail className="icon"/>
+            </a>
             {/* <span>kimjust6@gmail.com</span> */}
           </div>
         </div>
