@@ -47,6 +47,7 @@
         &.active{
             position: fixed;
             top: 70px;
+
             @media only screen and (min-width: $hamburgerWidth){
                 width: 100vw;
                 top: -301px;
