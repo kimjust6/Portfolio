@@ -10,14 +10,16 @@ function Menu ({menuOpen, setMenuOpen}) {
         <ul className="nav">
             <div>
             <li>
-                <a href="#intro" onClick={()=>(setMenuOpen(false))}>About Me</a>
+                <a href="#about" onClick={()=>(setMenuOpen(false))}>About Me</a>
             </li>
             </div>
+
             <div>
             <li>
                 <a href="#education" onClick={()=>(setMenuOpen(false))}>Education</a>
             </li>
             </div>
+
             <div>
             <li>
                 <a href="#projects" onClick={()=>(setMenuOpen(false))}>Projects</a>

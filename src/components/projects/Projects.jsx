@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div className="projects" id="projects">
 
-        
+        <h1 class="heading">Projects</h1>
         <div className="proj1">
           <div className="title">
             <h2>Blockchain Banking Web Application</h2>
@@ -37,7 +37,7 @@ const Projects = () => {
             This mobile app lets users create and join events near them.  Users are also able to search for businesses and other points of interest through the tomtom API. Eventure was developed using the Agile Software Development and coded using angular. User information is stored in a Firebase database.
             </p>
             {/* <Button className="but" target="_blank" href="https://github.com/kimjust6/boulderdash" variant="contained">Github Link</Button> */}
-            <Button className="but1" target="_blank" href="https://www.eventure.site/landing" variant="outlined">Live Demo</Button>
+            <Button className="but2" target="_blank" href="https://www.eventure.site/landing" variant="outlined">Live Demo</Button>
             
             
 
@@ -46,8 +46,28 @@ const Projects = () => {
             <img src="https://i.imgur.com/l2FVRdI.png" alt=""></img>
           </div>
         </div>
-        
         <div className="proj3">
+          <div className="title">
+            <h2>Portfolio Website</h2>
+            <h3 className="tech">
+              React.js, CSS
+            </h3>
+            
+            <p>
+            This website portfolio website is coded in React.js and CSS to showcase my technical knowledge and application. I created this website with responsive design in mind.
+            </p>
+            <Button className="but1" target="_blank" href="https://github.com/kimjust6/portfolio2" variant="contained">Github Link</Button>
+            <Button className="but2" target="_blank" href="https://www.justink.dev/" variant="outlined">Live Demo</Button>
+            
+            
+
+          </div>
+          <div className="screen">
+            <img src="https://i.imgur.com/uB6c6X6.png" alt=""></img>
+          </div>
+        </div>
+
+        <div className="proj4">
           <div className="title">
             <h2>Boulder Dash Clone</h2>
             <h3 className="tech">
@@ -71,26 +91,7 @@ const Projects = () => {
           </div>
         </div>
         
-        <div className="proj4">
-          <div className="title">
-            <h2>Portfolio Website</h2>
-            <h3 className="tech">
-              React.js, CSS
-            </h3>
-            
-            <p>
-            This website portfolio website is coded in React.js and CSS to showcase my technical knowledge and application. I created this website with responsive design in mind.
-            </p>
-            <Button className="but1" target="_blank" href="https://github.com/kimjust6/portfolio2" variant="contained">Github Link</Button>
-            <Button className="but2" target="_blank" href="https://www.justink.dev/" variant="outlined">Live Demo</Button>
-            
-            
-
-          </div>
-          <div className="screen">
-            <img src="https://i.imgur.com/uB6c6X6.png" alt=""></img>
-          </div>
-        </div>
+        
         
         
 

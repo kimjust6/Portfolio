@@ -28,7 +28,7 @@ export default function Navbar ({menuOpen, setMenuOpen}) {
         
         <div className="right">
           <div className="allLinks">
-          <a className="link" href="#intro">About Me</a>
+          <a className="link" href="#about">About Me</a>
           <a className="link" href="#education">Education</a>
           <a className="link" href="#projects">Projects</a>
           <a className="link contactLink" href="#contact">Contact</a>

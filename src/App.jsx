@@ -7,6 +7,7 @@ import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Education from "./components/resume/Education.jsx";
 import Menu from "./components/menu/Menu.jsx"
+import About from "./components/about/About.jsx"
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
+        <About/>
         <Education/>
         <Projects/>
         <Contact/>

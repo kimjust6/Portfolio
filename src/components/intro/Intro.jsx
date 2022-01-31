@@ -23,7 +23,7 @@ const Intro = () => {
             technology.
           </h4>
           <div className="downArrow">
-            <a href="#education">
+            <a href="#about">
               <KeyboardArrowDownIcon fontSize="inherit" />
             </a>
           </div>
