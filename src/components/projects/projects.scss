@@ -2,13 +2,17 @@
 
 .projects{
     .heading{
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: $headingFontSize;
+        font-size: 24px;
         
         width: 100%;
         height: 100%;
+        h1{
+            border-bottom: 2px solid black;
+        }
     }
     
     background-color: $lightSecondaryColour;

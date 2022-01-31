@@ -9,11 +9,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    
+    font-size: 24px;
+    .title{
+        h1{
+            border-bottom: 2px solid $secondaryColour;
+        }
+    }
     color: $secondaryColour;
     .links
     {
+
         width: 80px;
         div{
             a{

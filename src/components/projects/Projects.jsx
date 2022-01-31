@@ -5,8 +5,11 @@ import "./projects.scss";
 const Projects = () => {
   return (
     <div className="projects" id="projects">
-
-        <h1 class="heading">Projects</h1>
+        <div className="heading">
+          <h1>Projects</h1>
+          
+        </div>
+        
         <div className="proj1">
           <div className="title">
             <h2>Blockchain Banking Web Application</h2>

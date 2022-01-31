@@ -3,8 +3,9 @@ import "./education.scss";
 const Education = () => {
   return (
     <div className="education" id="education">
-      
-      <h1>Education</h1>
+      <div className="title">
+        <h1>Education</h1>
+      </div>
       <p className="degree">
         Honours Bachelor of Technology in Software Development – GPA 3.9
       </p>

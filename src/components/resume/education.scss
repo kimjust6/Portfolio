@@ -1,6 +1,12 @@
 @import "../../global.scss";
 
 .education{
+    .title{        
+        h1{
+            border-bottom: 2px solid $secondaryColour;
+        }
+        
+    }
     background-color: $mainColor;
     width: 100%;
     
