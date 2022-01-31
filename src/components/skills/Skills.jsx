@@ -59,6 +59,9 @@ const Skills = () => {
                             CSS
                         </li>
                         <li>
+                            JavaFX
+                        </li>
+                        <li>
                             Typescript
                         </li>
                         <li>
