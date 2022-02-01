@@ -4,7 +4,7 @@
   background-color: $mainColor;
   color: $secondaryColour;
   width: 100%;
-  height: 71px;
+  min-height: 71px;
   position: fixed;
   top: 0;
   transition: all 1s ease;
