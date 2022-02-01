@@ -55,12 +55,21 @@
             // border: 2px solid;
         }
     }
-    il{
-        // margin-top: -20px;
-        font-size: 23px;
-        font-weight: 500;
+    .aList{
+        list-style-type:square;
+        
+        li{
+            padding-left: 12%;
+            
+            font-size: 23px;
+            font-weight: 500;
+            
+            max-width: 1200px;
+
+            
+        }
         padding-bottom: 15px;
-        max-width: 1200px;
     }
+    
 }
 }

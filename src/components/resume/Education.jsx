@@ -18,9 +18,9 @@ const Education = () => {
       <Divider light="true" className="divide" style={{ width: "100%" }} />
       <div className="courses">
         <div className="courseWork">
-          <h1>Relevant Coursework</h1>
+          <h1>Relevant Courses</h1>
         </div>
-        <ul>
+        <ul class="aList">
           <li>Design Patterns in UML</li>
           <li>Web Programming Tools and Frameworks</li>
           <li>Computer Vision</li>
