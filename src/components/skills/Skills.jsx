@@ -13,7 +13,7 @@ const Skills = () => {
         <h1>Skills</h1>
 
         <div className="skillType">
-            <div className="title">
+            <div className="title1">
                 <h2>Back End</h2>
                 <div className="list">
                     <ul>
@@ -39,7 +39,7 @@ const Skills = () => {
                 </div>
             </div>
             <Divider variant="middle"/>
-            <div className="title">
+            <div className="title2">
                 <h2>Front End</h2>
                 <div className="list">
                     <ul>
@@ -71,7 +71,7 @@ const Skills = () => {
                 </div>
             </div>
             <Divider variant="middle"/>
-            <div className="title">
+            <div className="title3">
             
                 <h2>Databases</h2>
                 <div className="list">
@@ -94,7 +94,7 @@ const Skills = () => {
             </div>
 
             <Divider variant="middle"/>
-            <div className="title">
+            <div className="title4">
             
                 <h2>Tools & Misc</h2>
                 <div className="list">
