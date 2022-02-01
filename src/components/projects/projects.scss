@@ -1,6 +1,16 @@
 @import "../../global.scss";
 
 .projects{
+    background-color: $lightSecondaryColour;
+    // width: 100%;
+    flex-wrap: wrap;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
     .heading{
         
         display: flex;
@@ -8,21 +18,13 @@
         align-items: center;
         font-size: 24px;
         
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         h1{
             border-bottom: 2px solid black;
         }
     }
     
-    background-color: $lightSecondaryColour;
-    // width: 100%;
-    flex-wrap: wrap;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     .proj1, .proj2, .proj3, .proj4{
         width: 100%;
@@ -34,11 +36,15 @@
         align-items:center;
         
         justify-content: center;
-        max-height: 500px;
+        // max-height: 500px;
+        
         .title{
+            
             max-height: 500px;
             max-width: 500px;
-            
+            background-color: purple;
+            margin-bottom: 40px;
+            margin-top: 40px;
             // padding-right: 40px;
             margin-right: 40px;
             h2{
@@ -48,6 +54,7 @@
             .tech{
                 color: crimson;
                 margin:0;
+                
             }
 
         }
@@ -74,24 +81,28 @@
         .but2:hover{
             background-color: rgb(180, 0, 0);    
         }
-        .screen{
+        .screen{ max-width: 700px;
+            
             img{
+                
                 border: solid 1px;
-                min-height: 0px;
-                max-height: 490px;
+                // min-height: 0px;
+                // max-height: 490px;
+                max-width: 80%;
             };
         }
     }
     .proj2, .proj4 {
         background-color: white;
+        flex-direction: row-reverse;
     }
     .proj1, .proj3 {
         background-color: $lightSecondaryColour;
-        flex-direction: row-reverse;
+        
         .title{
             margin-left: 40px;
         }
     }
-
+    
 
 }
