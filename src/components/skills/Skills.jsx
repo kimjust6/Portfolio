@@ -105,6 +105,13 @@ const Skills = () => {
                         <li>
                             Unix
                         </li>
+                        
+                        <li>
+                            Vercel
+                        </li>
+                        <li>
+                            Heroku
+                        </li>
                         <li>
                             Visio
                         </li>

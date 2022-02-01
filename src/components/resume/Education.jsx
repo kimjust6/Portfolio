@@ -15,7 +15,7 @@ const Education = () => {
         <p className="school">Seneca College, Toronto</p>
         <p className="school">Expected Graduation: August 2023</p>
       </div>
-      <Divider light="true" className="divide" style={{ width: "100%" }} />
+      {/* <Divider light="true" className="divide" style={{ width: "100%" }} /> */}
       <div className="courses">
         <div className="courseWork">
           <h1>Relevant Courses</h1>
