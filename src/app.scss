@@ -4,7 +4,7 @@
   overflow-y: hidden; 
   height: 100vh; 
   scroll-behavior: smooth;
-  
+  transition: all 1s ease;
   .sections{
     scrollbar-width: none; //firefox no scrollbar
     &::-webkit-scrollbar{  //chrome no scrollbar
