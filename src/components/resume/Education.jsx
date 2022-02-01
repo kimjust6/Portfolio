@@ -20,7 +20,7 @@ const Education = () => {
         <div className="courseWork">
           <h1>Relevant Courses</h1>
         </div>
-        <ul class="aList">
+        <ul className="aList">
           <li>Design Patterns in UML</li>
           <li>Web Programming Tools and Frameworks</li>
           <li>Computer Vision</li>

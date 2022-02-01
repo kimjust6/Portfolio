@@ -10,7 +10,7 @@ const Contact = () => {
           <h1> Contact Me</h1>
         </div>
         <div className="links">
-        <div class="linkedin">
+        <div className="linkedin">
         <a href="https://www.linkedin.com/in/justin-kim6/" target="_blank" rel="noreferrer"><LinkedIn></LinkedIn> LinkedIn</a>
         </div>
         <div className="github">
