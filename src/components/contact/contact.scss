@@ -48,6 +48,13 @@
         
         justify-content: space-around;
         flex-wrap: wrap;
+        div{
+            a{
+                display: flex;
+                // background-color: orange;
+                flex-wrap: nowrap;
+            }
+        }
     }
     // align-content: space-between;
 

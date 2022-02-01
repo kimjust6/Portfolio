@@ -65,12 +65,13 @@
             
 
         }
-        .title1, .title3{
-            background-color: $secondaryColour;
-        }
-        .title2, .title4
+        .title1, .title3
         {
             background-color: white;
         }
+        .title2, .title4{
+            background-color: $secondaryColour;
+        }
+        
     }
 }
