@@ -19,5 +19,21 @@
         font-weight: 600;
         font-size: 24px;
          max-width: 1000px;
+         a{
+             color: $linkColour;
+            //  background-color: $mainColor;
+
+            // border: solid 1px;
+            // border-radius: 3px;
+
+         }
+         a:hover{
+            //  color: $linkColour;
+             color: $linkHoverColour;
+             
+         }
+         a:focus{
+            color: purple;
+         }
     }
 }
