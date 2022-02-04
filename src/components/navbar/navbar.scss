@@ -48,6 +48,15 @@
           margin-right: 17px;
         }
       }
+      @media only screen and (max-width: $hamburgerWidth) {
+        .name {
+          // right: -300px;
+          font-size: 20px;
+          .lastName{
+            display: none;
+          }
+        }
+      }
     }
     .right {
       display: flex;
