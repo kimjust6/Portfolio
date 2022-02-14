@@ -33,7 +33,7 @@ const Projects = () => {
         <Divider style={{width:'100%'}} variant="middle"/>
         <div className="proj2">
           <div className="title">
-            <h2>Eventure Mobile Application</h2>
+            <h2>Eventure Mobile Application (WIP)</h2>
             <h3 className="tech">
               Agile Development, Ionic, Google Firebase, tomtom API
             </h3>
