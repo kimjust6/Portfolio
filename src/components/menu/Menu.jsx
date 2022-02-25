@@ -10,19 +10,19 @@ function Menu ({menuOpen, setMenuOpen}) {
         <ul className="nav">
             <div>
             <li>
-                <a href="#about" onClick={()=>(setMenuOpen(false))}>About Me</a>
+                <a className="link" href="#about" onClick={()=>(setMenuOpen(false))}>About Me</a>
             </li>
             </div>
 
             <div>
             <li>
-                <a href="#education" onClick={()=>(setMenuOpen(false))}>Education</a>
+                <a className="link" href="#education" onClick={()=>(setMenuOpen(false))}>Education</a>
             </li>
             </div>
 
             <div>
             <li>
-                <a href="#projects" onClick={()=>(setMenuOpen(false))}>Projects</a>
+                <a className="link" href="#projects" onClick={()=>(setMenuOpen(false))}>Projects</a>
             </li>
             
          
@@ -30,7 +30,7 @@ function Menu ({menuOpen, setMenuOpen}) {
             </div>
             <div>
             <li>
-                <a href="#contact" onClick={()=>(setMenuOpen(false))}>Skills</a>
+                <a className="link" href="#contact" onClick={()=>(setMenuOpen(false))}>Skills</a>
             </li>
             </div>
         </ul>
