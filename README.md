@@ -1,4 +1,4 @@
 # Portfolio Web Application In React
 
-This is my portfolio application that showcases my projects
-Coded in React.js
+This is my portfolio application that showcases my projects.
+It is developed in React.js and uses bootstrap + CSS for styling.
