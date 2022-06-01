@@ -83,7 +83,7 @@ const Skills = () => {
                                 MySQL
                             </li>
                             <li>
-                                Google Firebase
+                                Firebase/Firestore
                             </li>
                             <li>
                                 MongoDB
@@ -101,6 +101,12 @@ const Skills = () => {
                         <ul>
                             <li>
                                 Git
+                            </li>
+                            <li>
+                                Postman
+                            </li>
+                            <li>
+                                Jira
                             </li>
                             <li>
                                 Unix

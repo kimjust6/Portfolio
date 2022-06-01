@@ -1,97 +1,106 @@
 @import "../../global.scss";
 
 .projects {
-    background-color: $lightSecondaryColour;
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 0;
+  background-color: $lightSecondaryColour;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 .projects .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
 .projects .heading h1 {
-    border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .projects .proj1,
 .proj2,
 .proj3,
 .proj4 {
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
-    max-height: 100%;
-    max-width: 700px;
-    margin-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+  max-height: 100%;
+  max-width: 700px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .title h2 {
-    margin: 0;
-    font-size: $subHeadFontSize;
+  margin: 0;
+  font-size: $subHeadFontSize;
 }
 
 .title .tech {
-    color: crimson;
-    margin: 0;
+  color: crimson;
+  margin: 0;
 }
 
 .projects .but1 {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: $mainColor;
-    color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: $mainColor;
+  color: white;
 }
 
 .projects .but1:hover {
-    background-color: black;
+  background-color: black;
 }
 
 .projects .but2 {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: crimson;
-    color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: crimson;
+  color: white;
 }
 
 .projects .but2:hover {
-    background-color: rgb(180, 0, 0);
+  background-color: rgb(180, 0, 0);
 }
 
 .projects .screen {
-    max-width: 900px;
-    display: flex;
-    justify-content: center;
+  width: 900px;
+  display: flex;
+  justify-content: center;
 }
 
 .projects .screen img {
-    border: solid 1px;
-    max-width: 90%;
+  border: solid 1px;
+  max-width: 90%;
 }
 
 .proj2,
 .proj4 {
-    background-color: white;
-    // flex-direction: row-reverse;
+  background-color: white;
+  // flex-direction: row-reverse;
 }
 
 .proj1,
 .proj3 {
-    background-color: $lightSecondaryColour;
+  background-color: $lightSecondaryColour;
+}
+
+.icon {
+  max-width: 20px;
+  padding-right: 7px;
+}
+
+.proj4 .screen img {
+  max-width: 50%;
 }
