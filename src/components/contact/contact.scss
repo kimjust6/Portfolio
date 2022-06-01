@@ -11,6 +11,7 @@
   font-size: 24px;
   color: $secondaryColour;
   .title {
+      margin-bottom: 0;
     h1 {
       border-bottom: 2px solid $secondaryColour;
     }
@@ -27,9 +28,8 @@
         font-size: 32px;
         margin: 10px;
       }
-      a:hover {
-        font-weight: 500;
-        border: 1px $secondaryColour fill;
+      a:hover{
+        color: $iconHoverColour;
       }
     }
     display: flex;

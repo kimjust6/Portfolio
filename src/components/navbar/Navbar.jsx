@@ -19,23 +19,22 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedIn className="icon" />
+              <LinkedIn className="icons" />
             </a>
             <a
               href="https://github.com/kimjust6"
               target="_blank"
               rel="noreferrer"
             >
-              <GitHub className="icon" />
+              <GitHub className="icons" />
             </a>
             <a
               href="mailto:kimjust6@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <Mail className="icon" />
+              <Mail className="icons" />
             </a>
-            {/* <span>kimjust6@gmail.com</span> */}
           </div>
         </div>
 
