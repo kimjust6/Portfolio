@@ -1,8 +1,5 @@
 import React from "react";
 import Divider from "@material-ui/core/Divider";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import HtmlIcon from "@mui/icons-material/Html";
-import CssIcon from "@mui/icons-material/Css";
 
 import "./skills.scss";
 

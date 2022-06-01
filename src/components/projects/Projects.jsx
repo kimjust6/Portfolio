@@ -1,5 +1,4 @@
-import react from "react";
-import { GitHub, YouTube, Circle } from "@material-ui/icons";
+import { GitHub, YouTube, CloudQueue } from "@material-ui/icons";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 
@@ -120,7 +119,7 @@ const Projects = () => {
             href="https://www.justink.dev/"
             variant="outlined"
           >
-            Live Demo
+            <CloudQueue className="icon"/>Live Demo
           </Button>
         </div>
         <div className="screen">
