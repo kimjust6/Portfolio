@@ -8,130 +8,130 @@ import CssIcon from '@mui/icons-material/Css';
 import "./skills.scss";
 
 const Skills = () => {
-  return (
-    <div className="skills" id="contact">
-        <h1>Skills</h1>
+    return (
+        <div className="skills" id="contact">
+            <h1>Skills</h1>
 
-        <div className="skillType">
-            <div className="title1">
-                <h2>Back End</h2>
-                <div className="list">
-                    <ul>
-                        <li>
-                            C++
-                        </li>
-                        <li>
-                            Java
-                        </li>
-                        <li>
-                            Python
-                        </li>
-                        <li>
-                            Node.js
-                        </li>
-                        <li>
-                            Visual Basic
-                        </li>
-                        <li>
-                            Shell Scripting
-                        </li>
-                    </ul>
+            <div className="skillType">
+                <div className="title1">
+                    <h2>Back End</h2>
+                    <div className="list">
+                        <ul>
+                            <li>
+                                C++
+                            </li>
+                            <li>
+                                Java
+                            </li>
+                            <li>
+                                Python
+                            </li>
+                            <li>
+                                Node.js
+                            </li>
+                            <li>
+                                Visual Basic
+                            </li>
+                            <li>
+                                Shell Scripting
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <Divider variant="middle"/>
-            <div className="title2">
-                <h2>Front End</h2>
-                <div className="list">
-                    <ul>
-                        <li>
-                            React.js
-                        </li>
-                        <li>
-                            Angular
-                        </li>
-                        <li>
-                            Javascript
-                        </li>
-                        <li>
-                            HTML
-                        </li>
-                        <li>
-                            CSS
-                        </li>
-                        <li>
-                            JavaFX
-                        </li>
-                        <li>
-                            Typescript
-                        </li>
-                        <li>
-                            Thymeleaf
-                        </li>
-                    </ul>
+                <Divider variant="middle" />
+                <div className="title2">
+                    <h2>Front End</h2>
+                    <div className="list">
+                        <ul>
+                            <li>
+                                React.js
+                            </li>
+                            <li>
+                                Angular
+                            </li>
+                            <li>
+                                Javascript
+                            </li>
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JavaFX
+                            </li>
+                            <li>
+                                Typescript
+                            </li>
+                            <li>
+                                Thymeleaf
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <Divider variant="middle"/>
-            <div className="title3">
-            
-                <h2>Databases</h2>
-                <div className="list">
-                    <ul>
-                        <li>
-                            postgreSQL
-                        </li>
-                        <li>
-                            MySQL
-                        </li>
-                        <li>
-                            Google Firebase
-                        </li>
-                        <li>
-                            MongoDB
-                        </li>
+                <Divider variant="middle" />
+                <div className="title3">
 
-                    </ul>
+                    <h2>Databases</h2>
+                    <div className="list">
+                        <ul>
+                            <li>
+                                postgreSQL
+                            </li>
+                            <li>
+                                MySQL
+                            </li>
+                            <li>
+                                Google Firebase
+                            </li>
+                            <li>
+                                MongoDB
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <Divider variant="middle"/>
-            <div className="title4">
-            
-                <h2>Tools & Misc</h2>
-                <div className="list">
-                    <ul>
-                        <li>
-                            Git
-                        </li>
-                        <li>
-                            Unix
-                        </li>
-                        
-                        <li>
-                            Vercel
-                        </li>
-                        <li>
-                            Heroku
-                        </li>
-                        <li>
-                            Visio
-                        </li>
-                        <li>
-                            Visual Paradigm
-                        </li>
-                        <li>
-                            MS Office
-                        </li>
+                <Divider variant="middle" />
+                <div className="title4">
 
-                    </ul>
+                    <h2>Tools & Misc</h2>
+                    <div className="list">
+                        <ul>
+                            <li>
+                                Git
+                            </li>
+                            <li>
+                                Unix
+                            </li>
+
+                            <li>
+                                Vercel
+                            </li>
+                            <li>
+                                Heroku
+                            </li>
+                            <li>
+                                Visio
+                            </li>
+                            <li>
+                                Visual Paradigm
+                            </li>
+                            <li>
+                                MS Office
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
+
+
             </div>
 
-        
+
         </div>
-            
-
-    </div>
-  );
+    );
 };
 
 
