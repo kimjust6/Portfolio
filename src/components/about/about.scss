@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.about{
+.about {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,32 +8,32 @@
     background-color: $lightSecondaryColour;
     padding-left: 5%;
     padding-right: 5%;
-    .title{
-        font-size: 24px;
-        h1{
-            border-bottom: 2px solid black;
-        }
-    }
-    .content{
-        color: $mainColor;
-        font-weight: 600;
-        font-size: 24px;
-         max-width: 1000px;
-         a{
-             color: $linkColour;
-            //  background-color: $mainColor;
+}
 
-            // border: solid 1px;
-            // border-radius: 3px;
 
-         }
-         a:hover{
-            //  color: $linkColour;
-             color: $linkHoverColour;
-             
-         }
-         a:focus{
-            color: purple;
-         }
-    }
+.about .title {
+    font-size: 24px;
+}
+
+.about .title h1 {
+    border-bottom: 2px solid black;
+}
+
+.about .content {
+    color: $mainColor;
+    font-weight: 600;
+    font-size: 24px;
+    max-width: 1000px;
+}
+
+.about .content a {
+    color: $linkColour;
+}
+
+.about .content a:hover {
+    color: $linkHoverColour;
+}
+
+.about .content a:focus {
+    color: purple;
 }

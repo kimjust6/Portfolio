@@ -1,137 +1,120 @@
 @import "../../global.scss";
 
 
-.intro{
-    width:100%;
-    
+.intro {
+    width: 100%;
     transition: all 0.75s ease;
-    // padding: 20px;
     background-color: bisque;
     display: flex;
-    flex-wrap:wrap;
-    // justify-content: space-around;
+    flex-wrap: wrap;
     justify-content: center;
-    
     flex: 1;
-    // overflow-y: hidden; 
-    // background-color: purple;
-    .left{
-        // flex: 1;
-        margin: 20px;
-        // padding-right: 20px;
-        overflow-x: hidden; 
-        overflow-y: hidden; 
-        // flex: 0.5;
-        
-                // width:100%;
-        // height: 100%;
-        // border: 2px solid black;
-        display: flex;
-        
-        
+}
 
-        align-items: center;
-        justify-content: center;
-        // background-color:green;
-        max-width:50%;
-        .picture{
-            // background-color:orange;
-            // max-width:600px;
-            // min-width:20px;
-            // min-height:20px;
-            max-width:80%;
-            // padding: 0.2vw;
-            // margin: 2vw;
-            
-            img{
-                max-width:100%;
-                // min-width:20px;
-                // min-height:20px;
-                // max-width: 600px;
-                border-radius: 40%;
 
-            }
+.intro .left {
+    margin: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.intro .left .picture {
+    max-width: 80%;
+}
+
+.intro .left .picture img {
+    max-width: 100%;
+    border-radius: 40%;
+}
+
+.intro .right {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .right .text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro .right .text div {
+    font-size: 25px;
+    width: 30px;
+}
+
+.intro .right .text .but1 {
+    font-size: 30px;
+    background-color: $mainColor;
+    color: $lightSecondaryColour;
+
+    margin-top: 30px;
+    width: 210px;
+}
+
+.intro .right .text .but1:hover {
+    background-color: black;
+}
+
+.intro .right .text .title {
+    margin: 0;
+    font-size: 45px;
+}
+
+.intro .right .text .name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 80px;
+}
+
+.intro .right .text .introduction {
+    font-size: 20px;
+    margin: 0;
+    flex-shrink: 1;
+    max-width: 620px;
+    word-wrap: break-word;
+    color: $mainColor;
+}
+
+.intro .right .text .downArrow {
+    font-weight: 600;
+    flex-direction: column;
+}
+
+.intro .right .text .downArrow a {
+    position: absolute;
+    bottom: 50px;
+    left: 12.5%;
+    font-size: 100px;
+    display: flex;
+    color: black;
+    animation: arrowBlink 1.5s infinite;
+}
+
+
+.intro .right .text .downArrow {
+    @media only screen and (max-width: $singleColumnWidth) {
+        a {
+            display: none;
         }
     }
-    .right{
-        // flex: 1;
-        padding-left: 30px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        // border: 2px solid white;
-        justify-content: center;
-        align-items: center;
-        .text{
+}
 
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-            div{
-                font-size: 25px;
-                width: 30px;
-                
-            }
-            .but1{
-                font-size: 30px;
-                background-color: $mainColor;
-                color: $lightSecondaryColour;
 
-                margin-top: 30px;
-                width: 210px;
-                
-            }
-            .but1:hover{
-                background-color: black;
-            }
-            .title{
-                margin:0;
-                font-size: 45px;
-            }
-            .name{
-                margin:0;
-                font-weight: 600;
-                font-size: 80px;
-            }
-            .introduction{
-                font-size: 20px;
-                margin:0;
-                flex-shrink: 1;
-                max-width: 620px;
-                word-wrap: break-word;
-                color: $mainColor;
-
-            }
-        }
-        .downArrow{
-            
-            font-weight: 600;
-            flex-direction: column;
-            a{
-                position: absolute;
-                bottom: 50px;
-                left: 12.5%;
-                font-size: 100px;
-                display:flex;
-                color: black;
-                animation: arrowBlink 1.5s infinite;
-                
-            }
-            @media only screen and (max-width: $singleColumnWidth){
-                a{
-                    display:none;
-                }
-            }
-        }
-
-        @keyframes arrowBlink{
-            50%{
-                opacity: 10%;
-            }
+.intro .right {
+    @keyframes arrowBlink {
+        50% {
+            opacity: 10%;
         }
     }
-    
 }
