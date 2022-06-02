@@ -48,7 +48,6 @@
     color: $secondaryColour;
     .courseWork {
       h1 {
-        margin-top: 10px;
         margin-bottom: 30px;
         font-size: 41px;
         border-bottom: 2px solid;
@@ -58,16 +57,30 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      list-style-type: square;
+      margin-left: -1rem;
+      // list-style-type: square;
+      
       
 
       li {
-        // padding-left: 12%;
-        margin-bottom: 5px;
-        font-size: 23px;
-        font-weight: 500;
+        
+        font-size: 25px;
       }
-      padding-bottom: 15px;
     }
   }
+}
+
+.workExperience{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  min-width: 58rem;
+}
+
+.positionTitle {
+  font-size: 30px;
+  font-weight: 600;
+  // border-bottom: 1px solid $secondaryColour;
+  margin-bottom: 0.25rem;
+
 }

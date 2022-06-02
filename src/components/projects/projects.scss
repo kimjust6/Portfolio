@@ -89,10 +89,9 @@
 img {
   width: 100%;
 }
-.projects .screen .img{
-    // border: solid 1px;
-    width: 100%;
-    
+.projects .screen .img {
+  // border: solid 1px;
+  width: 100%;
 }
 
 .proj2,
@@ -114,3 +113,10 @@ img {
 .proj4 .screen img {
   max-width: 50%;
 }
+
+.Media {
+  overflow: hidden;
+  position: relative;
+}
+
+

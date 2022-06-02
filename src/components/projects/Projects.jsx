@@ -190,10 +190,12 @@ const Projects = () => {
 function ImageCarousel(props) {
   return (
     <Carousel
-      className="img"
-      navButtonsAlwaysVisible={true}
+      className="images"
+      navButtonsAlwaysVisible={false}
       animation="slide"
-      autoPlay={false}
+      autoPlay={true}
+      duration="450"
+      interval="5000"
     >
       {props.myImage.map((item, i) => (
         <Item key={i} item={item} />
@@ -207,6 +209,7 @@ function Item(props) {
     <div>
       <Card>
         <CardMedia
+          className="Media"
           component="img"
           height="450"
           image={props.item.image}
