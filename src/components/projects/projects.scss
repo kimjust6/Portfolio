@@ -78,11 +78,21 @@
   width: 900px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.projects .screen img {
-  border: solid 1px;
-  max-width: 90%;
+// .projects .screen img {
+//   max-width: 90%;
+// }
+img {
+  width: 100%;
+}
+.projects .screen .img{
+    // border: solid 1px;
+    width: 100%;
+    
 }
 
 .proj2,

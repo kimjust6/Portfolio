@@ -1,4 +1,3 @@
-import Divider from "@material-ui/core/Divider";
 
 import "./education.scss";
 

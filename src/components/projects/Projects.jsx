@@ -1,10 +1,27 @@
 import { GitHub, YouTube, CloudQueue } from "@material-ui/icons";
 import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
+import Carousel from "react-material-ui-carousel";
 
 import "./projects.scss";
 
 const Projects = () => {
+  var project1Images = [
+    {
+      image: "https://i.imgur.com/M1Cr3jy.png",
+    },
+    {
+      image: "https://i.imgur.com/YtsmSca.png",
+    },
+    {
+      image: "https://i.imgur.com/EN3zOft.png",
+    },
+    {
+      image: "https://i.imgur.com/eaJnZ95.png",
+    },
+  ];
+
   return (
     <div className="projects" id="projects">
       <div className="heading">
@@ -52,7 +69,10 @@ const Projects = () => {
           </Button>
         </div>
         <div className="screen">
-          <img src="https://i.imgur.com/Arrus6K.png" alt=""></img>
+          <div className="img">
+            <ImageCarousel myImage={project1Images} />
+          </div>
+          {/* <img src="https://i.imgur.com/Arrus6K.png" alt=""></img> */}
         </div>
       </div>
       <Divider style={{ width: "100%" }} variant="middle" />
@@ -65,9 +85,9 @@ const Projects = () => {
           </h3>
 
           <p>
-            Completed this project in 6 sprints over an 8 month period.
-            This mobile app lets users create and join events near them. Users
-            are also able to search for businesses and other points of interest
+            Completed this project in 6 sprints over an 8 month period. This
+            mobile app lets users create and join events near them. Users are
+            also able to search for businesses and other points of interest
             through the tomtom API. Eventure was developed using the Agile
             Software Development and coded using angular. User information is
             stored in a Firebase database.
@@ -119,7 +139,8 @@ const Projects = () => {
             href="https://www.justink.dev/"
             variant="outlined"
           >
-            <CloudQueue className="icon"/>Live Demo
+            <CloudQueue className="icon" />
+            Live Demo
           </Button>
         </div>
         <div className="screen">
@@ -156,11 +177,35 @@ const Projects = () => {
           </Button>
         </div>
         <div className="screen">
-          <img src="https://i.imgur.com/a3yG8xX.png" alt=""></img>
+          <img src="https://i.imgur.com/a3yG8xX.png" alt="" />
         </div>
       </div>
     </div>
   );
 };
+
+function ImageCarousel(props) {
+  return (
+      <Carousel
+        className="img"
+        navButtonsAlwaysVisible={true}
+        animation="slide"
+        autoPlay={false}
+      >
+        {props.myImage.map((item, i) => (
+          <Item key={i} item={item} />
+        ))}
+      </Carousel>
+  );
+}
+
+function Item(props) {
+  return (
+    <Paper>
+      <img src={props.item.image} alt='' />
+      {/* <Button className="CheckButton">Check it out!</Button> */}
+    </Paper>
+  );
+}
 
 export default Projects;
