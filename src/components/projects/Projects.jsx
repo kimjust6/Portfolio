@@ -1,6 +1,5 @@
 import { GitHub, YouTube, CloudQueue } from "@material-ui/icons";
-import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
+import { Card, CardMedia, Button } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import Carousel from "react-material-ui-carousel";
 
@@ -10,15 +9,19 @@ const Projects = () => {
   var project1Images = [
     {
       image: "https://i.imgur.com/M1Cr3jy.png",
+      alt: "Blockchain Banking Web Application 1",
     },
     {
       image: "https://i.imgur.com/YtsmSca.png",
+      alt: "Blockchain Banking Web Application 2",
     },
     {
       image: "https://i.imgur.com/EN3zOft.png",
+      alt: "Blockchain Banking Web Application 3",
     },
     {
       image: "https://i.imgur.com/eaJnZ95.png",
+      alt: "Blockchain Banking Web Application 4",
     },
   ];
 
@@ -186,25 +189,31 @@ const Projects = () => {
 
 function ImageCarousel(props) {
   return (
-      <Carousel
-        className="img"
-        navButtonsAlwaysVisible={true}
-        animation="slide"
-        autoPlay={false}
-      >
-        {props.myImage.map((item, i) => (
-          <Item key={i} item={item} />
-        ))}
-      </Carousel>
+    <Carousel
+      className="img"
+      navButtonsAlwaysVisible={true}
+      animation="slide"
+      autoPlay={false}
+    >
+      {props.myImage.map((item, i) => (
+        <Item key={i} item={item} />
+      ))}
+    </Carousel>
   );
 }
 
 function Item(props) {
   return (
-    <Paper>
-      <img src={props.item.image} alt='' />
-      {/* <Button className="CheckButton">Check it out!</Button> */}
-    </Paper>
+    <div>
+      <Card>
+        <CardMedia
+          component="img"
+          height="450"
+          image={props.item.image}
+          alt={props.item.alt}
+        />
+      </Card>
+    </div>
   );
 }
 
