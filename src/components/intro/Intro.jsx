@@ -19,7 +19,7 @@ const Intro = () => {
           <h1 className="title">Software Developer</h1>
 
           <h4 className="introduction">
-            Full stack developer that is passionate about finance and
+            Full stack developer who is passionate about finance and
             technology.
           </h4>
           <Button className="but1" target="_blank" href="https://drive.google.com/file/d/1lPpys9BbJom56Zpdcq0dZHkO31trq7WA/view?usp=sharing" variant="contained">
