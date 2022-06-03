@@ -11,9 +11,9 @@ const About = () => {
     </div>
     <div className="content">
         <p>
-            Hello there! My name is Justin Kim and I am a 3rd year student studying Software Development. 
+            Hello there! My name is Justin Kim and I am a 4th year student studying Software Development. 
             I love learning new technologies and developing new applications.  My current goal is to find a co-op position 
-            for the Summer of 2022.   <br/><br/>
+            for the Winter of 2023. (January 2023 - April 2023)   <br/><br/>
             In addition to programming, I am interested in market trends and financial news.
             Have a look at what kind of projects I have been working on and feel free to email me at <a href="mailto:kimjust6@gmail.com">kimjust6@gmail.com</a> if you have any questions.
         </p>

@@ -1,35 +1,31 @@
-
 @import "./global.scss";
-.app{
-  overflow-y: hidden; 
-  height: 100vh; 
+.app {
+  overflow-y: hidden;
+  height: 100vh;
   scroll-behavior: smooth;
   transition: all 1s ease;
-  .sections{
+  .sections {
     scrollbar-width: none; //firefox no scrollbar
-    &::-webkit-scrollbar{  //chrome no scrollbar
+    &::-webkit-scrollbar {
+      //chrome no scrollbar
       display: none;
-      
     }
 
     width: 100%;
-    height: calc(100vh - 70px);  //make each component 100% of page - navbar
-    position: relative;  
-    top: 70px;  //move components down 70px
-    scroll-snap-type: y mandatory;  //force window to snap between components
+    height: calc(100vh - 70px); //make each component 100% of page - navbar
+    position: relative;
+    top: 70px; //move components down 70px
+    scroll-snap-type: y mandatory; //force window to snap between components
     scroll-behavior: smooth; //makes scrolling smoother
-
 
     > {
       width: 100vw;
-      
+
       scroll-snap-align: start; //snap scrollbar to beginning of each component
-      
     }
-    .intro{
+    .intro {
       height: calc(100vh - 70px);
     }
-
   }
 
 

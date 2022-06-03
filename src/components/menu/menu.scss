@@ -1,62 +1,53 @@
 @import "../../global.scss";
 
-
-.top{
-    .menu{
-        z-index: 2;
-        height: calc(max-content + 5%);
-        width: 100vw;
-        top: -301px; //move nav menu off to the right, when closed
-        background-color: $mainColor;
-        align-items: center;
-        display: flex; //place the text in a flex
-        justify-content: center; 
-        flex-direction: column;  //makes the text vertical
-        transition: all 0.75s ease;  //transition the animations
-        position: fixed;
-
-
-        ul{
-            padding: 0;
-            margin: 10px auto;
-            list-style: none;
-            font-size: 20px;
-            color: $secondaryColour;
-            width: 100vw;
-            text-align: center;  //alignts the text in the center
-            
-            
-            :hover{
-                text-decoration: underline;
-                font-weight: 600;
-            }
-            > div{
-                margin: 8px;
-            }
-
-            a{
-                font-size: inherit;
-                text-decoration: none;
-                color: inherit;
-
-            }
-
-        }
-
-
-        &.active{
-            position: fixed;
-            top: 70px;
-
-            @media only screen and (min-width: $hamburgerWidth){
-                width: 100vw;
-                top: -301px;
-                     
-            }
-        }
-    }
-
-
+.top .menu {
+    z-index: 2;
+    height: calc(max-content + 5%);
+    width: 100vw;
+    top: -301px; //move nav menu off to the right, when closed
+    background-color: $mainColor;
+    align-items: center;
+    display: flex; //place the text in a flex
+    justify-content: center;
+    flex-direction: column; //makes the text vertical
+    transition: all 0.75s ease; //transition the animations
+    position: fixed;
 }
 
+.top .menu ul {
+    padding: 0;
+    margin: 10px auto;
+    list-style: none;
+    font-size: 20px;
+    color: $secondaryColour;
+    width: 100vw;
+    text-align: center; //alignts the text in the center
+}
 
+.top .menu ul:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.top .menu ul>div {
+    margin: 8px;
+}
+
+.top .menu ul a {
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+.top .menu {
+    &.active {
+        position: fixed;
+        top: 70px;
+
+        @media only screen and (min-width: $hamburgerWidth) {
+            width: 100vw;
+            top: -301px;
+
+        }
+    }
+}

@@ -3,6 +3,8 @@
 .education {
   .school {
     .title {
+      margin-bottom: 0;
+      margin-top: -1rem;
       h1 {
         border-bottom: 2px solid $secondaryColour;
       }
@@ -38,21 +40,16 @@
   }
   .courses {
     font-size: 24px;
-
     background-color: $mainColor;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     color: $secondaryColour;
     .courseWork {
-      
-      h1{
-        
-        margin: 0;
-      }
       h1 {
+        margin-bottom: 30px;
         font-size: 41px;
         border-bottom: 2px solid;
       }
@@ -60,16 +57,61 @@
     .aList {
       display: flex;
       flex-direction: column;
-      align-items:flex-start;
-      list-style-type: square;
+      align-items: flex-start;
+      margin-left: -1rem;
+      // list-style-type: square;
 
       li {
-        // padding-left: 12%;
-
-        font-size: 23px;
-        font-weight: 500;
+        font-size: 25px;
       }
-      padding-bottom: 15px;
     }
   }
+}
+
+.workExperience {
+  display: flex;
+  align-items: start;
+  margin-left: 2rem;
+  justify-content: space-between;
+  min-width: 57rem;
+}
+
+.positionTitle {
+  font-size: 30px;
+  font-weight: 600;
+  // border-bottom: 1px solid $secondaryColour;
+  margin-bottom: 0.25rem;
+}
+
+.rotate {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.down {
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.bgc-main {
+  background-color: $mainColor !important;
+}
+
+.c-lightSecondary {
+  color: $lightSecondaryColour !important;
+}
+
+.maxwidth-60rem {
+  max-width: 60rem;
+}
+
+.listStyle-circle {
+  list-style-type: circle;
+}
+
+.workDescription{
+  font-size: 1.4rem;
 }
