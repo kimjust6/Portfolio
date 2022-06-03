@@ -124,7 +124,7 @@ const Projects = () => {
           <h3 className="tech">React.js, MaterialUI, CSS</h3>
 
           <p>
-            This website portfolio website is coded in React.js and CSS to
+            This portfolio website is coded in React.js and CSS to
             showcase my technical knowledge and application. I created this
             website with responsive design in mind.
           </p>

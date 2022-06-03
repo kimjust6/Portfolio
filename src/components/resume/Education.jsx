@@ -1,24 +1,67 @@
 // import Divider from '@material-ui/core/Divider';
+import React, { useState } from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ListItem from "@mui/material/ListItem";
+import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import "./education.scss";
 
 const Education = () => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  const handleClick = () => {
+    setExpanded(!isExpanded);
+  };
+
   return (
     <div className="education" id="education">
       <div className="courses">
         <div className="courseWork">
           <h1>Work Experience</h1>
         </div>
-        <div className="workExperience">
-          <ul className="aList">
-            <div className="positionTitle">Software Developer Coop </div>
-            <li>Partech, Inc.</li>
-            <li>25 Centurian Drive</li>
-            <li>Markham, Ontario</li>
-          </ul>
-          <ul>
-            <li className="positionTitle">May 2022 – Present</li>
-          </ul>
-        </div>
+        <Accordion>
+          <AccordionSummary
+            onClick={handleClick}
+            className={"bgc-main c-lightSecondary"}
+          >
+            <div className="workExperience ">
+              <ul className="aList">
+                <div className="positionTitle">Software Developer Coop </div>
+                <li>Partech, Inc.</li>
+                <li>25 Centurian Drive</li>
+                <li>Markham, Ontario</li>
+              </ul>
+              <ul className="rotate">
+                <li className="positionTitle">
+                  May 2022 – Present{" "}
+                  <ExpandCircleDownIcon
+                    className={isExpanded ? "down expandMore" : "expandMore"}
+                  />
+                </li>
+              </ul>
+            </div>
+          </AccordionSummary>
+          <AccordionDetails className={"bgc-main c-lightSecondary"}>
+            <ul className={"maxwidth-60rem listStyle-circle workDescription"}>
+              <ListItem>• Worked using Agile/Scrum methodologies.</ListItem>
+              <ListItem>
+                • Developed new stories/features and debugged existing Angular
+                web components with typescript/html/css.
+              </ListItem>
+              <ListItem>
+                • Developed new and debugged existing RESTful apis in Java with
+                the tools such as the eclipse debugger, postman, and mySQL
+                workbench.
+              </ListItem>
+              <ListItem>
+                • Heavy exposure to material design, Jira, gridster2, wijmo,
+                bitbucket, postman, and mySQL Workbench.
+              </ListItem>
+              <ListItem>• Performed code reviews.</ListItem>
+            </ul>
+          </AccordionDetails>
+        </Accordion>
       </div>
       {/* <Divider light="true" className="divide" style={{ width: "100%" }} /> */}
 

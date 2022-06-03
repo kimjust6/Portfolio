@@ -19,7 +19,6 @@ const Intro = () => {
           <h1 className="title">Software Developer</h1>
 
           <h4 className="introduction">
-            <br />
             Full stack developer that is passionate about finance and
             technology.
           </h4>

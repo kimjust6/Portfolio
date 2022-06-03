@@ -4,6 +4,7 @@
   .school {
     .title {
       margin-bottom: 0;
+      margin-top: -1rem;
       h1 {
         border-bottom: 2px solid $secondaryColour;
       }
@@ -59,22 +60,20 @@
       align-items: flex-start;
       margin-left: -1rem;
       // list-style-type: square;
-      
-      
 
       li {
-        
         font-size: 25px;
       }
     }
   }
 }
 
-.workExperience{
+.workExperience {
   display: flex;
   align-items: start;
+  margin-left: 2rem;
   justify-content: space-between;
-  min-width: 58rem;
+  min-width: 57rem;
 }
 
 .positionTitle {
@@ -82,5 +81,37 @@
   font-weight: 600;
   // border-bottom: 1px solid $secondaryColour;
   margin-bottom: 0.25rem;
+}
 
+.rotate {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.down {
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.bgc-main {
+  background-color: $mainColor !important;
+}
+
+.c-lightSecondary {
+  color: $lightSecondaryColour !important;
+}
+
+.maxwidth-60rem {
+  max-width: 60rem;
+}
+
+.listStyle-circle {
+  list-style-type: circle;
+}
+
+.workDescription{
+  font-size: 1.4rem;
 }

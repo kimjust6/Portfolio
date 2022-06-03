@@ -67,7 +67,8 @@
 }
 
 .intro .right .text .title {
-    margin: 0;
+    margin-left: -2rem;
+    margin-bottom: 1rem;
     font-size: 45px;
 }
 
@@ -79,7 +80,8 @@
 
 .intro .right .text .introduction {
     font-size: 20px;
-    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     flex-shrink: 1;
     max-width: 620px;
     word-wrap: break-word;
@@ -108,6 +110,7 @@
             display: none;
         }
     }
+    
 }
 
 
@@ -117,4 +120,5 @@
             opacity: 10%;
         }
     }
+
 }
