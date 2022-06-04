@@ -1,9 +1,13 @@
 @import "./global.scss";
+
 .app {
   overflow-y: hidden;
   height: 100vh;
   scroll-behavior: smooth;
   transition: all 1s ease;
+}
+
+.app {
   .sections {
     scrollbar-width: none; //firefox no scrollbar
     &::-webkit-scrollbar {
@@ -27,6 +31,4 @@
       height: calc(100vh - 70px);
     }
   }
-
-
 }
