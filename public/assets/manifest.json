@@ -2,9 +2,9 @@
   "short_name": "Portfolio",
   "name": "Justin's Portfolio",
   "icons": [{
-      "src": "alpha_j_box_icon_136970.ico",
+      "src": "public/icon.png",
       "sizes": "64x64 32x32 24x24 16x6",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
 
   ],
