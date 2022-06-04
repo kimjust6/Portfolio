@@ -1,84 +1,101 @@
 @import "../../global.scss";
 
-.education {
-  .school {
-    .title {
-      margin-bottom: 0;
-      margin-top: -1rem;
-      h1 {
-        border-bottom: 2px solid $secondaryColour;
-      }
-    }
-    background-color: $mainColor;
-    width: 100%;
+.education .school .title {
+  margin-bottom: 0;
+  margin-top: -1rem;
+}
 
-    display: flex;
-    padding-bottom: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $secondaryColour;
-    h1 {
-      font-size: $headingFontSize;
-    }
-    p {
-      margin: 5px;
-      color: inherit;
-    }
-    .degree,
-    .school {
-      font-size: 28px;
-      display: flex;
-      justify-content: center;
-    }
+.education .school .title h1 {
+  border-bottom: 2px solid $secondaryColour;
+}
 
-    .date {
-      margin: 0;
-      font-size: 20px;
-      margin-bottom: 0;
-    }
-  }
-  .courses {
-    font-size: 24px;
-    background-color: $mainColor;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: $secondaryColour;
-    .courseWork {
-      h1 {
-        margin-bottom: 30px;
-        font-size: 41px;
-        border-bottom: 2px solid;
-      }
-    }
-    .aList {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: -1rem;
-      // list-style-type: square;
+.education .school {
+  background-color: $mainColor;
+  width: 100%;
 
-      li {
-        font-size: 25px;
-      }
-    }
-  }
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  color: $secondaryColour;
+}
+
+.education .school h1 {
+  font-size: $headingFontSize;
+}
+
+.education .school p {
+  margin: 5px;
+  color: inherit;
+}
+
+.education .school .degree,
+.school {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.education .school .date {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.education .courses {
+  font-size: 24px;
+  background-color: $mainColor;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $secondaryColour;
+}
+
+.education .courses .courseWork {
+  padding-bottom: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.education .courses .courseWork h1 {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 2px solid;
+}
+
+.education .courses .aList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bright:hover {
+  filter: brightness(120%);
+}
+.education .courses .aList li {
+  font-size: 25px;
+}
+.myAccordian {
+  background-color: $mainColor;
 }
 
 .workExperience {
   display: flex;
-  align-items: start;
-  margin-left: 2rem;
+  align-items: flex-start;
+  width: 60%;
   justify-content: space-between;
-  min-width: 57rem;
 }
 
 .positionTitle {
+  display: flex;
   font-size: 30px;
   font-weight: 600;
+  width: 100%;
   // border-bottom: 1px solid $secondaryColour;
   margin-bottom: 0.25rem;
 }
@@ -87,6 +104,8 @@
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
+  display: flex;
+  align-items: flex-start;
 }
 
 .down {
@@ -112,6 +131,11 @@
   list-style-type: circle;
 }
 
-.workDescription{
+.workDescription {
   font-size: 1.4rem;
+}
+
+.expandIcon{
+  padding: 0.1rem;
+  padding-left: 0.2rem;
 }
