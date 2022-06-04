@@ -9,143 +9,146 @@
   top: 0;
   transition: all 1s ease;
   z-index: 3; //make topbar show on top of other components
-//   box-shadow: 3px 0px 3px $mainColor;
+  //   box-shadow: 3px 0px 3px $mainColor;
   box-shadow: 3px 0px 3px $secondaryColour;
+}
+
+.navbar .wrapper {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .wrapper .left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .wrapper .left .name {
+  transition: all 0.2s ease;
+  font-size: 35px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar .wrapper .left .name:hover {
+  color: $iconHoverColour;
+}
+
+.navbar .wrapper .left .itemContainer {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.navbar .wrapper .left .itemContainer span {
   
+  font-weight: 400;
+}
 
-  .wrapper {
-    display: flex;
-    padding: 10px 30px;
-    align-items: center;
-    justify-content: space-between;
+.navbar .wrapper .left .itemContainer a {
+  
+  color: $secondaryColour;
+}
 
-    .left {
-      display: flex;
-      align-items: center;
+.navbar .wrapper .left .itemContainer a .icons {
+  align-items: center;
+  font-size: 30px;
+  margin-right: 17px;
+}
 
-      .name {
-        font-size: 35px;
-        font-weight: 700;
-        text-decoration: none;
-        color: inherit;
-        // margin-right: 40px;
-      }
-      .name:hover{
-        color: $iconHoverColour;
-      }
-      .itemContainer {
-        font-size: 20px;
-        margin-left: 30px;
-        span {
-          font-weight: 400;
-        }
+.navbar .wrapper .left .itemContainer {
+  .icons:hover {
+    transition: all 0.2s ease;
+    color: $iconHoverColour;
+  }
+}
 
-        a {
-          color: $secondaryColour;
-
-        }
-
-        // margin: 10px;
-        .icons {
-          align-items: center;
-          font-size: 30px;
-          margin-right: 17px;
-          
-        }
-        .icons:hover{
-          color: $iconHoverColour;
-        }
-      }
-      @media only screen and (max-width: $hamburgerWidth) {
-        .name {
-          // right: -300px;
-          font-size: 20px;
-          .lastName{
-            display: none;
-          }
-        }
-      }
-    }
-    .right {
-      // display: flex;
-      
-      align-items: center;
-
-      .link {
-        // style the links on the right
-        padding: 0px 10px;
-        text-decoration: none;
-        color: inherit;
-        font-size: 21px;
-        
-        .contactLink {
-          margin-right: 50px;
-        }
-        .allLinks {
-          margin-right: 10px;
-        }
-      }
-      .allLinks
-      {
-        display:flex;
-        flex-direction: row;
-      }
-      .link::after {
-          
-          content: '';
-          display: block;
-          width: 0px;
-          height: 3px;
-          background: $secondaryColour;
-          transition: 0.4s
-       }
-        .link:hover::after {
-          width: 100%
-        }
-
-
-      @media only screen and (max-width: $hamburgerWidth) {
-        .link {
-          // right: -300px;
-          display: none;
-        }
-
-      }
-      .hamburger {
+.navbar .wrapper .left {
+  @media only screen and (max-width: $hamburgerWidth) {
+    .name {
+      font-size: 20px;
+      .lastName {
         display: none;
       }
+    }
+  }
+}
+.navbar .wrapper .right {
+  align-items: center;
+}
 
-      .hamburger {
-        // padding-left: 40px;
-        overflow-y: hidden;
-        display: flex;
-        flex-direction: column;
-        width: 32px;
-        height: 26px;
+.navbar .wrapper .right .link {
+  padding: 0px 10px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 21px;
+}
 
-        justify-content: space-between;
-        cursor: pointer;
+.navbar .wrapper .right .link .contactLink {
+  margin-right: 50px;
+}
 
-        span {
-          transform-origin: right;
-          transition: all 0.75s ease;
-          width: 100%;
-          height: 3px;
-          background-color: $secondaryColour;
-          // padding-right: 4px;
-        }
-      }
-      @media only screen and (min-width: $hamburgerWidth) {
-        .hamburger {
-          display: none;
-        }
-      }
+.navbar .wrapper .right .link .allLinks {
+  margin-right: 10px;
+}
+
+.navbar .wrapper .right .allLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .wrapper .right .link::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background: $secondaryColour;
+  transition: 0.4s;
+}
+
+.navbar .wrapper .right .link:hover::after {
+  width: 100%;
+}
+
+.navbar .wrapper .right {
+  @media only screen and (max-width: $hamburgerWidth) {
+    .link {
+      display: none;
+    }
+  }
+}
+
+.navbar .wrapper .right .hamburger {
+  display: none;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 32px;
+  height: 26px;
+
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.navbar .wrapper .right {
+  .hamburger {
+    span {
+      transform-origin: right;
+      transition: all 0.75s ease;
+      width: 100%;
+      height: 3px;
+      background-color: $secondaryColour;
+    }
+  }
+  @media only screen and (min-width: $hamburgerWidth) {
+    .hamburger {
+      display: none;
     }
   }
 
   &.active {
-    // transition-duration: 200ms;
-
     background-color: $secondaryColour;
     color: $mainColor;
     .left {

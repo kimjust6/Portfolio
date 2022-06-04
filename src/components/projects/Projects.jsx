@@ -191,9 +191,9 @@ function ImageCarousel(props) {
   return (
     <Carousel
       className="images"
-      navButtonsAlwaysVisible={false}
+      navButtonsAlwaysVisible={true}
       animation="slide"
-      autoPlay={true}
+      autoPlay={false}
       duration="450"
       interval="5000"
     >

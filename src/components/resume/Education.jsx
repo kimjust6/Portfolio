@@ -19,51 +19,62 @@ const Education = () => {
       <div className="courses">
         <div className="courseWork">
           <h1>Work Experience</h1>
+
+          <div className="myAccordian">
+            <Accordion>
+              <AccordionSummary
+                onClick={handleClick}
+                className={"bgc-main c-lightSecondary bright"}
+              >
+                <div className="workExperience ">
+                  <ul className="aList">
+                    <div className="positionTitle">Software Developer Coop</div>
+                    <li>Partech, Inc.</li>
+                    <li>25 Centurian Drive</li>
+                    <li>Markham, Ontario</li>
+                  </ul>
+                </div>
+                <ul className="rotate">
+                  <li className="positionTitle">
+                    May 2022 – Present
+                    <div className="expandIcon">
+                      <ExpandCircleDownIcon
+                        className={
+                          isExpanded ? "down expandMore" : "expandMore"
+                        }
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </AccordionSummary>
+              <AccordionDetails className={"bgc-main c-lightSecondary"}>
+                <div className="maxwidth-60rem">
+                  <ul className={" listStyle-circle workDescription"}>
+                    <ListItem>
+                      • Worked using Agile/Scrum methodologies.
+                    </ListItem>
+                    <ListItem>
+                      • Developed new stories/features and debugged existing
+                      Angular web components with typescript/html/css.
+                    </ListItem>
+                    <ListItem>
+                      • Developed new and debugged existing RESTful apis in Java
+                      with the tools such as the eclipse debugger, postman, and
+                      mySQL workbench.
+                    </ListItem>
+                    <ListItem>
+                      • Heavy exposure to material design, Jira, gridster2,
+                      wijmo, bitbucket, postman, and mySQL Workbench.
+                    </ListItem>
+                    <ListItem>• Performed code reviews.</ListItem>
+                  </ul>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          {/* <Divider light="true" className="divide" style={{ width: "100%" }} /> */}
         </div>
-        <Accordion>
-          <AccordionSummary
-            onClick={handleClick}
-            className={"bgc-main c-lightSecondary"}
-          >
-            <div className="workExperience ">
-              <ul className="aList">
-                <div className="positionTitle">Software Developer Coop </div>
-                <li>Partech, Inc.</li>
-                <li>25 Centurian Drive</li>
-                <li>Markham, Ontario</li>
-              </ul>
-              <ul className="rotate">
-                <li className="positionTitle">
-                  May 2022 – Present{" "}
-                  <ExpandCircleDownIcon
-                    className={isExpanded ? "down expandMore" : "expandMore"}
-                  />
-                </li>
-              </ul>
-            </div>
-          </AccordionSummary>
-          <AccordionDetails className={"bgc-main c-lightSecondary"}>
-            <ul className={"maxwidth-60rem listStyle-circle workDescription"}>
-              <ListItem>• Worked using Agile/Scrum methodologies.</ListItem>
-              <ListItem>
-                • Developed new stories/features and debugged existing Angular
-                web components with typescript/html/css.
-              </ListItem>
-              <ListItem>
-                • Developed new and debugged existing RESTful apis in Java with
-                the tools such as the eclipse debugger, postman, and mySQL
-                workbench.
-              </ListItem>
-              <ListItem>
-                • Heavy exposure to material design, Jira, gridster2, wijmo,
-                bitbucket, postman, and mySQL Workbench.
-              </ListItem>
-              <ListItem>• Performed code reviews.</ListItem>
-            </ul>
-          </AccordionDetails>
-        </Accordion>
       </div>
-      {/* <Divider light="true" className="divide" style={{ width: "100%" }} /> */}
 
       <div className="school">
         <div className="title">

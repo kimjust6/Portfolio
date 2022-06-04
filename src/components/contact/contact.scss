@@ -10,46 +10,45 @@
   align-items: center;
   font-size: 24px;
   color: $secondaryColour;
-  .title {
-      margin-bottom: 0;
-    h1 {
-      border-bottom: 2px solid $secondaryColour;
-    }
-  }
+}
 
-  .links {
-    width: 80px;
-    div {
-      a {
-        color: $secondaryColour;
-        text-decoration: none;
-        margin-left: 5px;
-        margin-right: 5px;
-        font-size: 32px;
-        margin: 10px;
-      }
-      a:hover{
-        color: $iconHoverColour;
-      }
-    }
-    display: flex;
-    width: 40%;
+.contact .title {
+  margin-bottom: 0;
+}
 
-    justify-content: space-around;
-    flex-wrap: wrap;
-    div {
-      a {
-        display: flex;
-        // background-color: orange;
-        flex-wrap: nowrap;
-      }
-    }
-  }
-  .myIcon{
-      padding-right: 5px;
-  }
-  .myIcon2{
-      padding-right: 8px;
-  }
+.contact .title h1 {
+  border-bottom: 2px solid $secondaryColour;
+}
+
+.links {
+  width: 80px;
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact .links div a {
+  color: $secondaryColour;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 32px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 0.2s ease;
+}
+
+.contact .links div a:hover {
+  color: $iconHoverColour;
+}
+
+.contact .myIcon {
+  padding-right: 5px;
+}
+
+.contact .myIcon2 {
+  padding-right: 8px;
 }
 
