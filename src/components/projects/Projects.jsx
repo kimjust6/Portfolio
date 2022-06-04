@@ -131,7 +131,7 @@ const Projects = () => {
           <Button
             className="but1"
             target="_blank"
-            href="https://github.com/kimjust6/portfolio2"
+            href="https://github.com/kimjust6/portfolio"
             variant="contained"
           >
             <GitHub className="icon" /> Github
@@ -147,7 +147,7 @@ const Projects = () => {
           </Button>
         </div>
         <div className="screen">
-          <img src="https://i.imgur.com/uB6c6X6.png" alt=""></img>
+          <img src="https://i.imgur.com/ITIYoji.png" alt=""></img>
         </div>
       </div>
       <Divider style={{ width: "100%" }} variant="middle" />
@@ -196,6 +196,7 @@ function ImageCarousel(props) {
       autoPlay={false}
       duration="450"
       interval="5000"
+      cycleNavigation={false}
     >
       {props.myImage.map((item, i) => (
         <Item key={i} item={item} />
