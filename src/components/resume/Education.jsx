@@ -28,7 +28,9 @@ const Education = () => {
               >
                 <div className="workExperience ">
                   <ul className="aList">
-                    <div className="positionTitle">Software Developer Coop</div>
+                    <div className="positionTitle">
+                      Software Developer Co-op
+                    </div>
                     <li>Partech, Inc.</li>
                     <li>25 Centurian Drive</li>
                     <li>Markham, Ontario</li>
@@ -37,12 +39,18 @@ const Education = () => {
                 <ul className="rotate">
                   <li className="positionTitle">
                     May 2022 – Present
-                    <div className="expandIcon">
-                      <ExpandCircleDownIcon
-                        className={
-                          isExpanded ? "down expandMore" : "expandMore"
-                        }
-                      />
+                    <div class="bounce-base">
+                      <div class={isExpanded ? "" :"bounce-in bounce-1"}>
+                        <div className="expandIcon">
+                          <ExpandCircleDownIcon
+                            className={
+                              isExpanded
+                                ? "down expandMore"
+                                : "expandMore"
+                            }
+                          />
+                        </div>
+                      </div>
                     </div>
                   </li>
                 </ul>
