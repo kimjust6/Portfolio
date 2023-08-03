@@ -8,15 +8,16 @@ import { classicNameResolver } from "typescript";
 
 const NavBar = () => {
     return (
-        <header className="z-100 relative">
+        <header className="z-100 relative transition-all">
             <motion.div
                 className="w-full justify-center flex"
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", delay: 0.05, duration: 0.15 }}
             >
                 <div
-                    className="flex justify-center fixed top-0 sm:rounded-full bg-amber-200 opacity-95
-                bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-80 shadow-md sm:shadow-lg shadow-black 
+                    className="flex justify-center fixed  sm:rounded-full bg-amber-200 opacity-95
+                bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-black 
                 sm:mt-6 px-4 py-2 rounded-md border sm:border-amber-100 w-full sm:w-fit text-lg"
                 >
                     <ul className="flex max-w-xl ">
