@@ -1,9 +1,7 @@
-import React from 'react'
+// import PageWrapper from "@/components/page-wrapper";
 
 const page = () => {
-  return (
-    <div>resume</div>
-  )
-}
+    return <div>resume</div>;
+};
 
-export default page
+export default page;

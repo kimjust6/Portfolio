@@ -1,11 +1,12 @@
-import Navbar from "@/components/navbar";
-import Image from "next/image";
+
+import PageWrapper from "@/components/page-wrapper";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            
-            Home
-        </main>
+        // <PageWrapper>
+            <main className="flex min-h-screen flex-col items-center justify-between p-24">
+                Home
+            </main>
+        // </PageWrapper>
     );
 }
