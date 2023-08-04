@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import SectionHeading from "./section-heading";
+import SectionHeading from "./utils/section-heading";
 
 const About = () => {
     return (
