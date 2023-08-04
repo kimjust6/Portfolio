@@ -21,7 +21,7 @@ const Projects = () => {
                         className="w-screen w-100 flex justify-center"
                     >
                         <div>
-                            <div className="max-w-xl bg-gray-100  rounded-xl border border-gray-200 shadow-md shadow-gray-300">
+                            <div className="max-w-xl pb-2 bg-gray-100  rounded-xl border border-gray-200 shadow-md shadow-gray-300">
                                 {project?.carouselImage[0].image && (
                                     <Image
                                         className="rounded-t-xl"
@@ -34,8 +34,8 @@ const Projects = () => {
                                     ></Image>
                                 )}
                                 {/* card body */}
-                                <div className="sm:max-w-2xl m-2 pb-7 px-7">
-                                    <h1 className="font-bold text-xl ">{project.title}</h1>
+                                <div className="sm:max-w-2xl m-2  px-7">
+                                    <h1 className="font-bold text-xl pb-2">{project.title}</h1>
                                     {/* tech */}
                                     <div className="gap-1.5 flex flex-row flex-wrap justify-center sm:justify-start">
                                         {project.tech.map((technology: any) => {
@@ -50,7 +50,7 @@ const Projects = () => {
                                             );
                                         })}
                                     </div>
-                                    <p>{project.description}</p>
+                                    <p className="py-4">{project.description}</p>
 
                                     <Link
                                         target="_blank"

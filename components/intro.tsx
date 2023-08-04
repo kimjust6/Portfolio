@@ -41,10 +41,10 @@ const Intro = () => {
                         className="flex justify-center sm:gap-4 min-w-96 gap-3 flex-col sm:flex-row items-center"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ type: "spring", delay: 0.10, duration: 0.1 }}
+                        transition={{ type: "spring", delay: 0.1, duration: 0.1 }}
                     >
                         <motion.button
-                            className="bg-zinc-50 button px-4 py-2 flex justify-center items-center gap-2 shadow-sm shadow-zinc-500 sm:w-fit w-44 group border border-zinc-400"
+                            className="button_secondary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
                         >
@@ -52,7 +52,7 @@ const Intro = () => {
                             <BsEnvelope className="group-hover:translate-x-1 transition-all" />
                         </motion.button>
                         <motion.button
-                            className="bg-zinc-800 button px-4 py-2 flex justify-center items-center gap-3 text-zinc-50 shadow-sm shadow-zinc-500 sm:w-fit w-44 group border border-zinc-400"
+                            className="button_primary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
                         >
@@ -65,7 +65,7 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button p-2.5 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
+                                className="bg-zinc-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
@@ -81,7 +81,7 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
+                                className="bg-zinc-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >

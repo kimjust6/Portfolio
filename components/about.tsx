@@ -15,8 +15,9 @@ const About = () => {
                     transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
                 >
                     I graduated from Seneca College with a BSc. in Software Development and worked
-                    as full stack developer at Partech Inc. At Partech I assisted in launching the
-                    new Angular web portal and launched two features including a new{" "}
+                    as a full stack developer at Partech Inc where I assisted in developing and
+                    launching the new Angular web portal. In addition, I developed two features
+                    including a new{" "}
                     <Link
                         className="text-indigo-600 underline"
                         target="_blank"
@@ -24,7 +25,7 @@ const About = () => {
                     >
                         dashboard
                     </Link>
-                    . love rising up to a challenge and I consider my love of learning and strong
+                    . I love rising up to a challenge and I consider my love of learning and strong
                     work ethic to be some of my greatest assets.
                 </motion.p>
                 <motion.p
