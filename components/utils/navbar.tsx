@@ -32,6 +32,7 @@ const NavBar = () => {
                                         className="mx-2 text-zinc-9500 opacity-100"
                                         key={uuidv4()}
                                         href={link.hash}
+                                        
                                     >
                                         {link.name}
                                     </Link>

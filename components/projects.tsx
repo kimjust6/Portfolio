@@ -14,7 +14,7 @@ import Reveal from "./utils/reveal";
 
 const Projects = () => {
     return (
-        <section>
+        <section id="projects" className="scroll-m-28">
             <Reveal>
                 <SectionHeading>PROJECTS</SectionHeading>
             </Reveal>

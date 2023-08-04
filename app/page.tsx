@@ -1,13 +1,28 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
+import Intro from "@/components/intro";
+import About from "@/components/about";
+import Divider from "@/components/utils/divider";
+import Projects from "@/components/projects";
+import Experience from "@/components/experience";
+import Skills from "@/components/skills";
+import Contact from "@/components/contact";
 
 export default function Home() {
     return (
         <AnimatePresence>
             <main className="">
-                <div className="flex min-h-xl flex-col items-center justify-between p-24 ">
-                    Home Page
-                </div>
+                <Intro />
+                <Divider />
+                <About />
+                <Divider />
+                <Experience />
+                <Divider />
+                <Projects />
+                <Divider />
+                <Skills />
+                <Divider />
+                <Contact />
             </main>
         </AnimatePresence>
     );

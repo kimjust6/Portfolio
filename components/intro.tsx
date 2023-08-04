@@ -9,7 +9,10 @@ import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Intro = () => {
     return (
-        <section id={links[0].toString()}>
+        <section
+            id="intro"
+            className="scroll-m-28"
+        >
             <motion.div
                 className="flex items-center justify-center"
                 initial={{ y: -25, opacity: 0 }}

@@ -5,7 +5,7 @@ import SectionHeading from "./utils/section-heading";
 
 const About = () => {
     return (
-        <section>
+        <section id="about" className="scroll-m-28">
             <div className="flex flex-col items-center justify-center text-md">
                 <SectionHeading>ABOUT ME</SectionHeading>
                 <motion.p
