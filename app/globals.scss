@@ -41,6 +41,20 @@ $transparent: rgba(0, 0, 0, 0);
     background-color: rgb(253, 251, 232);
 }
 
+
+// so navbar doesn't move on bold
+.my_navbar::before{
+    // font-weight: bold;
+    font-weight: 600;
+    content: attr(data-text);
+    height: 0;
+    visibility: hidden;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+}
+
 // add the code bellow
 @layer utilities {
     @variants responsive {
