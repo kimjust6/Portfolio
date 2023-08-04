@@ -16,8 +16,8 @@ const NavBar = () => {
                 transition={{ type: "spring", delay: 0.05, duration: 0.15 }}
             >
                 <div
-                    className="flex justify-center fixed  sm:rounded-full bg-amber-200 opacity-95
-                bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-black 
+                    className="flex justify-center fixed sm:rounded-full bg-amber-200 opacity-95
+                bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-gray-300 
                 sm:mt-6 px-4 py-2 rounded-md border sm:border-amber-100 w-full sm:w-fit text-lg"
                 >
                     <ul className="flex max-w-xl ">
@@ -29,7 +29,7 @@ const NavBar = () => {
                             {links.map((link) => {
                                 return (
                                     <Link
-                                        className="mx-2 text-zinc-800 opacity-100"
+                                        className="mx-2 text-zinc-9500 opacity-100"
                                         key={uuidv4()}
                                         href={link.hash}
                                     >
