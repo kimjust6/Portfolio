@@ -1,9 +1,9 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter, My_Soul } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import Navigation from "@/components/utils/navbar";
-import Mynav from "@/components/utils/mynav";
+import ActiveSectionContextProvider from "./context/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +22,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className={`${inter.className} bg-gray-50 text-gray-00 transition-all background 
                 overflow-y-scroll no-scrollbar`}
             >
-                <Navigation />
-                {children}
+                <ActiveSectionContextProvider>
+                    <Navigation />
+                    {children}
+                </ActiveSectionContextProvider>
             </body>
         </html>
     );

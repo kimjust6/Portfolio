@@ -10,7 +10,7 @@ import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
 const Intro = () => {
     return (
         <section
-            id="intro"
+            id="home"
             className="scroll-m-28"
         >
             <motion.div

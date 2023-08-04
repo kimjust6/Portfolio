@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "./utils/section-heading";
 import { projectsData } from "@/lib/data";
 import { v4 as uuidv4 } from "uuid";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
@@ -14,7 +14,10 @@ import Reveal from "./utils/reveal";
 
 const Projects = () => {
     return (
-        <section id="projects" className="scroll-m-28">
+        <section
+            id="projects"
+            className="scroll-m-28"
+        >
             <Reveal>
                 <SectionHeading>PROJECTS</SectionHeading>
             </Reveal>
@@ -32,6 +35,7 @@ const Projects = () => {
 export default Projects;
 
 function RenderProjects(projectsData: any) {
+
     return projectsData.map((project: any) => {
         return (
             // card
