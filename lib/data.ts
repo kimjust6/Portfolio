@@ -349,3 +349,10 @@ export const skillsData = [
     "Django",
     "Framer Motion",
 ] as const;
+
+export const useInViewSettings = {
+    // threshold: 0.8,
+    // initialInView: true,
+    // triggerOnce: true,
+    rootMargin: "-40% 0% -40% 0%",
+} as const;

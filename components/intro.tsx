@@ -3,11 +3,28 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { links } from "@/lib/data";
+import { links, useInViewSettings } from "@/lib/data";
 import Link from "next/link";
 import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
+import { useActiveSection } from "@/app/context/active-section-context";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Intro = () => {
+    const { ref, inView } = useInView({
+        // threshold: 0.1,
+        initialInView: true,
+        rootMargin: "-30% 0% -70% 0%",
+    });
+    const { setActiveSection, timeOfLastClick } = useActiveSection();
+
+    useEffect(() => {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
+            setActiveSection("Home");
+        }
+    }, [inView, setActiveSection, timeOfLastClick]);
+
+
     return (
         <section
             id="home"
@@ -20,6 +37,7 @@ const Intro = () => {
                 transition={{ type: "spring", delay: 0, duration: 0.25 }}
             >
                 <Image
+                    ref={ref}
                     className="rounded-xl border-4 border-zinc-100 sm:mt-36 mt-24 shadow-sm shadow-zinc-800"
                     src="https://i.imgur.com/R4NkK6G.jpg"
                     width={200}

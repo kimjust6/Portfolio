@@ -21,7 +21,7 @@ const Navigation = () => {
                 {links.map((link) => {
                     return (
                         <motion.li
-                            key={link.name}
+                            key={link.name }
                             className="flex justify-center relative"
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}

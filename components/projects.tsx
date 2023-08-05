@@ -2,25 +2,41 @@
 
 import { motion } from "framer-motion";
 import SectionHeading from "./utils/section-heading";
-import { projectsData } from "@/lib/data";
-import React, { useState } from "react";
+import { projectsData, useInViewSettings } from "@/lib/data";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import { BsCloud } from "react-icons/bs";
 import Reveal from "./utils/reveal";
+import { useActiveSection } from "@/app/context/active-section-context";
+import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
+    const { ref, inView } = useInView(useInViewSettings);
+    const { setActiveSection, timeOfLastClick } = useActiveSection();
+
+    useEffect(() => {
+        return () => {
+            console.log("projects")
+            if (inView && Date.now() - timeOfLastClick > 1000) {
+                setActiveSection("Projects");
+            }
+        };
+    }, [inView, setActiveSection, timeOfLastClick]);
+
     return (
         <section
             id="projects"
             className="scroll-m-28"
         >
-            <Reveal>
+            <div
+                ref={ref}
+                className="mb-4"
+            >
                 <SectionHeading>PROJECTS</SectionHeading>
-            </Reveal>
-            <div className="mb-4"></div>
+            </div>
             <div className="w-screen flex justify-center">
                 <div className="flex flex-wrap w-screen justify-center max-w-7xl ">
                     {/* projects */}
@@ -34,11 +50,10 @@ const Projects = () => {
 export default Projects;
 
 function RenderProjects(projectsData: any) {
-
     return projectsData.map((project: any) => {
         return (
             // card
-            <Reveal key={project.title}>
+            <Reveal key={project.name + project.description}>
                 <div
                     // className=" flex justify-center my-8 px-8"
                     className=" flex justify-center my-8 px-8 items-baseline"
@@ -68,7 +83,7 @@ function RenderProjects(projectsData: any) {
                                             <div
                                                 className=" bg-white p-1 px-1.5  my-1 rounded-full flex select-none
                             justify-center items-center shadow-sm shadow-gray-300 text-sm"
-                                                key={project.title}
+                                                key={project.name + technology}
                                             >
                                                 {technology}{" "}
                                             </div>
