@@ -2,16 +2,14 @@
 
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
-import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
 import { useActiveSection } from "@/app/context/active-section-context";
+import { useRouter } from "next/navigation";
 
 const Navigation = () => {
     const { activeSection, setActiveSection } = useActiveSection();
-
-    // setActiveSection("Contact");
+    const router = useRouter();
 
     return (
         <header className="z-100  transition-all">
@@ -30,16 +28,13 @@ const Navigation = () => {
                         {links.map((link) => {
                             return (
                                 <motion.li
-                                    onClick={() => {
-                                        setActiveSection(link.name);
-                                        // setActiveSection("Skills");
-                                    }}
-                                    key={uuidv4()}
+                                    key={link.name}
                                     className="flex flex-wrap justify-center w-full relative"
-                                    initial={{ y: 0, opacity: 1 }}
+                                    initial={{ y: -50, opacity: 1 }}
                                     animate={{ y: 0, opacity: 1 }}
                                 >
                                     <Link
+                                        href={link.hash}
                                         data-text={link.name}
                                         className={clsx(
                                             "my_navbar text-gray-700 mx-2 text-zinc-9500 opacity-100 hover:text-gray-950 hover:font-semibold transition-all data-text=title",
@@ -48,20 +43,11 @@ const Navigation = () => {
                                                     activeSection === link.name,
                                             }
                                         )}
-                                        href={link.hash}
+                                        onClick={() => {
+                                            setActiveSection(link.name);
+                                        }}
                                     >
                                         {link.name}
-                                        {/* {link.name === activeSection && (
-                                            <motion.span
-                                                className="bg-amber-100 rounded-full absolute inset-0 -z-10 px-5"
-                                                layoutId="nice"
-                                                transition={{
-                                                    type: "spring",
-                                                    stiffness: 380,
-                                                    damping: 30,
-                                                }}
-                                            ></motion.span>
-                                        )} */}
 
                                         {link.name === activeSection && (
                                             <motion.div

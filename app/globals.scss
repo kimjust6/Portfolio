@@ -13,19 +13,19 @@ $color2: rgb(253, 191, 204);
 $transparent: rgba(0, 0, 0, 0);
 
 .button_primary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900;
 }
 
 .button_secondary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-zinc-100;
 }
 
 .button_accent {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-amber-200;
 }
 
 .button_shape {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 py-2 sm:w-fit w-44  border border-zinc-400;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 py-2 sm:w-fit w-44 border border-zinc-400;
 }
 
 @media only screen and (min-width: 640px) {

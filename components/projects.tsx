@@ -69,7 +69,7 @@ function RenderProjects(projectsData: any) {
                                             <div
                                                 className=" bg-white p-1 px-1.5  my-1 rounded-full flex select-none
                             justify-center items-center shadow-sm shadow-gray-300 text-sm"
-                                                key={uuidv4()}
+                                                key={project.title}
                                             >
                                                 {technology}{" "}
                                             </div>

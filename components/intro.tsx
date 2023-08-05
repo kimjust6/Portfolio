@@ -68,7 +68,7 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
+                                className="bg-zinc-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2 hover:bg-zinc-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
@@ -84,7 +84,7 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2"
+                                className="bg-zinc-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2 hover:bg-zinc-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
