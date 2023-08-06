@@ -59,7 +59,7 @@ export const skillsData = [
         ],
     },
     {
-        title: "Databases",
+        title: "Database Management",
         skills: [
             { name: "MongoDB", svg: mongodb },
             { name: "postgreSQL", svg: postgres },
@@ -76,10 +76,9 @@ export const skillsData = [
             { name: "Docker", svg: docker },
             { name: "Git", svg: git },
             { name: "Postman", svg: postman },
-            { name: "Heroku", svg: heroku },
-            { name: "Vercel", svg: vercel },
-            { name: "Netlify", svg: netlify },
-
+            // { name: "Heroku", svg: heroku },
+            // { name: "Vercel", svg: vercel },
+            // { name: "Netlify", svg: netlify },
             ,
         ],
     },

@@ -70,7 +70,7 @@ const Intro = () => {
                             whileTap={{ scale: 0.97 }}
                         >
                             Contact Me{" "}
-                            <BsEnvelope className="group-hover:translate-x-1 transition-all" />
+                            <BsEnvelope className="group-hover:translate-x-0.5 transition-all" />
                         </motion.button>
                         <motion.button
                             className="button_primary group"
@@ -78,7 +78,7 @@ const Intro = () => {
                             whileTap={{ scale: 0.97 }}
                         >
                             Download CV{" "}
-                            <BsDownload className="group-hover:translate-y-1 transition-all" />
+                            <BsDownload className="group-hover:translate-y-0.5 transition-all" />
                         </motion.button>
 
                         <Link

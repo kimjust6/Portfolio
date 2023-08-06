@@ -19,7 +19,7 @@ const Projects = () => {
 
     useEffect(() => {
         return () => {
-            console.log("projects")
+            console.log("projects");
             if (inView && Date.now() - timeOfLastClick > 1000) {
                 setActiveSection("Projects");
             }
@@ -55,12 +55,12 @@ function RenderProjects(projectsData: any) {
             // card
             <Reveal key={project.name + project.description}>
                 <div
-                    // className=" flex justify-center my-8 px-8"
-                    className=" flex justify-center my-8 px-8 items-baseline"
+                    // className=" flex justify-center my-8 sm:px-8"
+                    className=" flex justify-center my-8 sm:px-8 px-4 items-baseline"
                 >
                     {/* image */}
-                    {/* <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100  rounded-xl border  shadow-md shadow-gray-300 flex flex-col justify-between"> */}
-                    <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100  rounded-xl border  shadow-md shadow-gray-300 flex flex-col ">
+                    {/* <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col justify-between"> */}
+                    <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col ">
                         <div className="">
                             {project?.carouselImage[0]?.image && (
                                 <Image
@@ -74,7 +74,7 @@ function RenderProjects(projectsData: any) {
                                 ></Image>
                             )}
                             {/* card body */}
-                            <div className="sm:max-w-2xl px-7 mt-6">
+                            <div className="sm:max-w-2xl px-5 sm:px-7 mt-6">
                                 <h1 className="font-bold text-xl pb-2">{project.title}</h1>
                                 {/* tech */}
                                 <div className="gap-1.5 flex flex-row flex-wrap justify-center sm:justify-start">

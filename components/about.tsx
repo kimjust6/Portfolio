@@ -43,7 +43,7 @@ const About = () => {
                 full stack developer at Partech Inc where I assisted in developing and launching the
                 new Angular web portal. In addition, I developed two features including a new{" "}
                 <Link
-                    className="text-indigo-600 underline"
+                    className="text-indigo-600 font-semibold underline"
                     target="_blank"
                     href="https://www.youtube.com/watch?v=7nD-0ziK3VY"
                 >
@@ -62,7 +62,7 @@ const About = () => {
                 markets. Have a look at what kind of projects I have been working on and feel free
                 to contact me using the button above or at{" "}
                 <Link
-                    className=" text-indigo-600 underline"
+                    className=" text-indigo-600 font-semibold underline"
                     href="mailto:kimjust6@gmail.com"
                 >
                     kimjust6@gmail.com{" "}

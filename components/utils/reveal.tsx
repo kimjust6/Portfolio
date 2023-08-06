@@ -27,16 +27,15 @@ const Reveal = ({ index, children }: Props) => {
     }, [isInView, mainControls]);
 
     return (
-        <div ref={ref}>
-            <motion.div
-                variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{ duration: 0.25, delay: index ? index * 0.08 : 0.25 }}
-            >
-                {children}
-            </motion.div>
-        </div>
+        <motion.div
+            ref={ref}
+            variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.25, delay: index ? index * 0.08 : 0.25 }}
+        >
+            {children}
+        </motion.div>
     );
 };
 
