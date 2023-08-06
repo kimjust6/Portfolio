@@ -8,11 +8,13 @@ import { useInViewSettings } from "@/lib/data";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import sendEmail from "@/actions/send-email";
+import getErrorMessage from "@/components/utils/errorHandler";
 
 const Contact = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
     useEffect(() => {
         return () => {
             if (inView && Date.now() - timeOfLastClick > 1000) {
@@ -48,6 +50,10 @@ const Contact = () => {
             </motion.p>
             <motion.form
                 action={async (formData) => {
+                    try {
+                    } catch (error) {
+                        setErrorMessage(getErrorMessage(error));
+                    }
                     await sendEmail(
                         formData.get("senderEmail")?.toString() ?? "",
                         formData.get("senderMessage")?.toString() ?? ""
@@ -60,6 +66,7 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
+                {errorMessage && <p className="text-red-500">Error: {errorMessage}</p>}
                 <input
                     disabled={emailSent}
                     type="email"
