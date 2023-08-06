@@ -15,7 +15,7 @@ $color2: rgb(253, 191, 204);
 $transparent: rgba(0, 0, 0, 0);
 
 .button_primary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 cursor-pointer disabled:bg-zinc-700 disabled:cursor-default ;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 cursor-pointer disabled:bg-zinc-800 disabled:cursor-default disabled:opacity-70;
 }
 
 .button_secondary {
@@ -36,6 +36,13 @@ $transparent: rgba(0, 0, 0, 0);
     }
 }
 
+input:valid{
+    @apply bg-gray-50;
+}
+
+textarea:valid{
+    @apply bg-gray-50;
+}
 .background {
     // backdrop-filter: blur(6px);
     background: linear-gradient(15deg, $transparent 50%, $color 50%, $color 55%, $transparent 30%);

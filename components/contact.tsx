@@ -5,16 +5,15 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import SectionHeading from "./utils/section-heading";
 import { useInViewSettings } from "@/lib/data";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
-import sendEmail from "@/actions/send-email";
 import getErrorMessage from "@/components/utils/errorHandler";
 import SubmitBtn from "./utils/submit-btn";
+import sendEmail from "@/actions/send-email";
 
 const Contact = () => {
-    function sleep(ms: number) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-    }
+    // function sleep(ms: number) {
+    //     return new Promise((resolve) => setTimeout(resolve, ms));
+    // }
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
@@ -55,11 +54,11 @@ const Contact = () => {
             <motion.form
                 action={async (formData) => {
                     try {
-                        await sleep(1000);
-                        // await sendEmail(
-                        //     formData.get("senderEmail")?.toString() ?? "",
-                        //     formData.get("senderMessage")?.toString() ?? ""
-                        // );
+                        // await sleep(1000);
+                        await sendEmail(
+                            formData.get("senderEmail")?.toString() ?? "",
+                            formData.get("senderMessage")?.toString() ?? ""
+                        );
                     } catch (error) {
                         setErrorMessage(getErrorMessage(error));
                     }
@@ -76,7 +75,7 @@ const Contact = () => {
                     disabled={emailSent}
                     type="email"
                     name="senderEmail"
-                    className="rounded-lg border h-10 px-4 shadow-md shadow-gray-300"
+                    className="rounded-lg border h-10 px-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
                     placeholder="Your Email"
                     required
                     maxLength={100}
@@ -85,12 +84,12 @@ const Contact = () => {
                     disabled={emailSent}
                     required
                     name="senderMessage"
-                    className="rounded-lg h-52 border p-4 shadow-md shadow-gray-300"
+                    className="rounded-lg h-52 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
                     placeholder="Your Message"
                     maxLength={1000}
                 ></textarea>
                 <div className="flex justify-end">
-                    <SubmitBtn emailSent={emailSent}/>
+                    <SubmitBtn emailSent={emailSent} />
                 </div>
             </motion.form>
         </section>

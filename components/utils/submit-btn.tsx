@@ -37,7 +37,6 @@ function SubmitBtn({ emailSent }: { emailSent: boolean }) {
                 </>
             )}
 
-            {/* {emailSent ? "Email Sent!" : "Send Email"} */}
         </motion.button>
     );
 }
