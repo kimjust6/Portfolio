@@ -9,8 +9,12 @@ import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import sendEmail from "@/actions/send-email";
 import getErrorMessage from "@/components/utils/errorHandler";
+import SubmitBtn from "./utils/submit-btn";
 
 const Contact = () => {
+    function sleep(ms: number) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
@@ -51,13 +55,14 @@ const Contact = () => {
             <motion.form
                 action={async (formData) => {
                     try {
+                        await sleep(1000);
+                        // await sendEmail(
+                        //     formData.get("senderEmail")?.toString() ?? "",
+                        //     formData.get("senderMessage")?.toString() ?? ""
+                        // );
                     } catch (error) {
                         setErrorMessage(getErrorMessage(error));
                     }
-                    await sendEmail(
-                        formData.get("senderEmail")?.toString() ?? "",
-                        formData.get("senderMessage")?.toString() ?? ""
-                    );
                     setEmailSent(true);
                 }}
                 className="mt-10 flex flex-col gap-4 sm:gap-4 min-w-[min(100%,38rem)] px-8"
@@ -85,21 +90,7 @@ const Contact = () => {
                     maxLength={1000}
                 ></textarea>
                 <div className="flex justify-end">
-                    <motion.button
-                        disabled={emailSent}
-                        className="button_primary group mt-2 "
-                        whileHover={{ scale: emailSent ? 1 : 1.04 }}
-                        whileTap={{ scale: emailSent ? 1 : 0.97 }}
-                    >
-                        {emailSent ? "Email Sent!" : "Send Email"}
-                        <FaPaperPlane
-                            className={
-                                emailSent
-                                    ? ""
-                                    : "group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
-                            }
-                        />
-                    </motion.button>
+                    <SubmitBtn emailSent={emailSent}/>
                 </div>
             </motion.form>
         </section>
