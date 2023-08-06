@@ -41,7 +41,9 @@ $transparent: rgba(0, 0, 0, 0);
     background-color: rgb(253, 251, 232);
 }
 
-
+.subheading{
+    @apply text-xl font-bold text-gray-700;
+}
 
 
 // so navbar doesn't move on bold

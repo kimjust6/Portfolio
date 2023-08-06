@@ -1,7 +1,89 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+
 import { LuGraduationCap } from "react-icons/lu";
+import angular from "@/public/logos/angular.svg";
+import react from "@/public/logos/react.svg";
+import typescript from "@/public/logos/typescript.svg";
+import css from "@/public/logos/css.svg";
+import html from "@/public/logos/html.svg";
+import javascript from "@/public/logos/javascript.svg";
+import node from "@/public/logos/node.svg";
+import c from "@/public/logos/c.svg";
+import java from "@/public/logos/java.svg";
+import python from "@/public/logos/python.svg";
+import spring from "@/public/logos/spring.svg";
+import postgres from "@/public/logos/postgres.svg";
+import firebase from "@/public/logos/firebase.svg";
+import framerMotion from "@/public/logos/framer-motion.svg";
+import mysql from "@/public/logos/mysql.svg";
+import docker from "@/public/logos/docker.svg";
+import heroku from "@/public/logos/heroku.svg";
+import postman from "@/public/logos/postman.svg";
+import mongodb from "@/public/logos/mongodb.svg";
+import bash from "@/public/logos/bash.svg";
+import next from "@/public/logos/next.svg";
+import aws from "@/public/logos/aws.svg";
+import ionic from "@/public/logos/ionic.svg";
+import cplusplus from "@/public/logos/c++.svg";
+import vercel from "@/public/logos/vercel.svg";
+import netlify from "@/public/logos/netlify.svg";
+import s3 from "@/public/logos/amazon-s3.svg";
+
+
+export const skillsData = [
+    {
+        title: "Web Development",
+        skills: [
+            { name: "React", svg: react },
+            { name: "Next.js", svg: next },
+            { name: "Angular", svg: angular },
+            { name: "Node.js", svg: node },
+            { name: "Framer Motion", svg: framerMotion },
+            { name: "Typescript", svg: typescript },
+            { name: "Javascript", svg: javascript },
+            { name: "HTML5", svg: html },
+            { name: "CSS3", svg: css },
+            { name: "Ionic", svg: ionic },
+        ],
+    },
+    {
+        title: "Programming & Scripting",
+        skills: [
+            { name: "Java", svg: java },
+            { name: "Python", svg: python },
+            // { name: "Spring", svg: spring },
+            // { name: "C", svg: c },
+            { name: "C++", svg: cplusplus },
+            { name: "Shell Scripting", svg: bash },
+        ],
+    },
+    {
+        title: "Databases",
+        skills: [
+            { name: "MongoDB", svg: mongodb },
+            { name: "postgreSQL", svg: postgres },
+            // { name: "MySQL", svg: mysql },
+            { name: "MySQL", svg: mysql },
+            { name: "Firebase", svg: firebase },
+            { name: "Amazon S3", svg: s3 },
+        ],
+    },
+    {
+        title: "Tools & Misc.",
+        skills: [
+            { name: "AWS", svg: aws },
+            { name: "Docker", svg: docker },
+            { name: "Postman", svg: postman },
+            { name: "Heroku", svg: heroku },
+            { name: "Vercel", svg: vercel },
+            { name: "Netlify", svg: netlify },
+            
+            ,
+        ],
+    },
+] as const;
 
 export const links = [
     {
@@ -326,28 +408,6 @@ export const showMoreProjectsList = [
         videoDemoURL: "https://www.youtube.com/watch?v=kSDaNuoXWMQ",
         image: "https://i.imgur.com/a3yG8xX.png",
     },
-] as const;
-
-export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
-    "PostgreSQL",
-    "Python",
-    "Django",
-    "Framer Motion",
 ] as const;
 
 export const useInViewSettings = {
