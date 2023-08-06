@@ -6,6 +6,8 @@ import SectionHeading from "./utils/section-heading";
 import { useInViewSettings } from "@/lib/data";
 import Image from "next/image";
 import { skillsData } from "@/lib/data";
+import { motion, useAnimation } from "framer-motion";
+import Reveal from "./utils/reveal";
 
 const Skills = () => {
     const { ref, inView } = useInView(useInViewSettings);
@@ -36,34 +38,38 @@ const Skills = () => {
                             className="flex flex-col p-4 items-center  "
                             key={skill.title}
                         >
-                            <h2 className="subheading">{skill.title}</h2>
+                            <Reveal>
+                                <h2 className="subheading">{skill.title}</h2>
+                            </Reveal>
                             <div className="flex items-end justify-center flex-wrap my-4">
-                                {skill.skills.map((s) => {
+                                {skill.skills.map((s, index) => {
                                     return (
                                         // because s can be undefined sometimes
                                         s && (
-                                            <li
-                                                className="flex flex-col items-center px-5 py-2 "
+                                            <Reveal
                                                 key={s.name}
+                                                index={index}
                                             >
-                                                <Image
-                                                    className="hidden sm:block mb-2 "
-                                                    src={s.svg}
-                                                    alt={s.name}
-                                                    width={60}
-                                                    height={60}
-                                                ></Image>
-                                                <Image
-                                                    className="sm:hidden "
-                                                    src={s.svg}
-                                                    alt={s.name}
-                                                    width={45}
-                                                    height={45}
-                                                ></Image>
-                                                <div className="text-sm text-gray-600">
-                                                    {s.name}
-                                                </div>
-                                            </li>
+                                                <li className="flex flex-col items-center px-5 py-2 ">
+                                                    <Image
+                                                        className="hidden sm:block mb-2 "
+                                                        src={s.svg}
+                                                        alt={s.name}
+                                                        width={60}
+                                                        height={60}
+                                                    ></Image>
+                                                    <Image
+                                                        className="sm:hidden "
+                                                        src={s.svg}
+                                                        alt={s.name}
+                                                        width={45}
+                                                        height={45}
+                                                    ></Image>
+                                                    <div className="text-sm text-gray-600">
+                                                        {s.name}
+                                                    </div>
+                                                </li>
+                                            </Reveal>
                                         )
                                     );
                                 })}

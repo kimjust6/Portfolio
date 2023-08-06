@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 
 import { LuGraduationCap } from "react-icons/lu";
 import angular from "@/public/logos/angular.svg";
@@ -10,10 +9,10 @@ import css from "@/public/logos/css.svg";
 import html from "@/public/logos/html.svg";
 import javascript from "@/public/logos/javascript.svg";
 import node from "@/public/logos/node.svg";
-import c from "@/public/logos/c.svg";
+// import c from "@/public/logos/c.svg";
 import java from "@/public/logos/java.svg";
 import python from "@/public/logos/python.svg";
-import spring from "@/public/logos/spring.svg";
+// import spring from "@/public/logos/spring.svg";
 import postgres from "@/public/logos/postgres.svg";
 import firebase from "@/public/logos/firebase.svg";
 import framerMotion from "@/public/logos/framer-motion.svg";
@@ -30,7 +29,7 @@ import cplusplus from "@/public/logos/c++.svg";
 import vercel from "@/public/logos/vercel.svg";
 import netlify from "@/public/logos/netlify.svg";
 import s3 from "@/public/logos/amazon-s3.svg";
-
+import git from "@/public/logos/git.svg";
 
 export const skillsData = [
     {
@@ -67,7 +66,7 @@ export const skillsData = [
             // { name: "MySQL", svg: mysql },
             { name: "MySQL", svg: mysql },
             { name: "Firebase", svg: firebase },
-            { name: "Amazon S3", svg: s3 },
+            // { name: "Amazon S3", svg: s3 },
         ],
     },
     {
@@ -75,11 +74,12 @@ export const skillsData = [
         skills: [
             { name: "AWS", svg: aws },
             { name: "Docker", svg: docker },
+            { name: "Git", svg: git },
             { name: "Postman", svg: postman },
             { name: "Heroku", svg: heroku },
             { name: "Vercel", svg: vercel },
             { name: "Netlify", svg: netlify },
-            
+
             ,
         ],
     },

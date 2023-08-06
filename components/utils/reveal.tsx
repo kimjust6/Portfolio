@@ -5,10 +5,11 @@ import { useRef } from "react";
 import { useEffect, useState } from "react";
 
 interface Props {
+    index?: number;
     children: JSX.Element;
 }
 
-const Reveal = ({ children }: Props) => {
+const Reveal = ({ index, children }: Props) => {
     const ref = useRef(null);
 
     const isInView = useInView(ref, { once: true });
@@ -19,18 +20,15 @@ const Reveal = ({ children }: Props) => {
         if (isInView) {
             mainControls.start("visible");
         }
-    }, [isInView]);
+    }, [isInView, mainControls]);
 
     return (
-        <div
-            ref={ref}
-            className=""
-        >
+        <div ref={ref}>
             <motion.div
                 variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.25, delay: 0.25 }}
+                transition={{ duration: 0.25, delay: index ? index * 0.07 : 0.25 }}
             >
                 {children}
             </motion.div>
