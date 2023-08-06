@@ -9,6 +9,10 @@ interface Props {
     children: JSX.Element;
 }
 
+// function getRnd(min: number, max: number) {
+//     return Math.random() * (max - min) + min;
+// }
+
 const Reveal = ({ index, children }: Props) => {
     const ref = useRef(null);
 
@@ -28,7 +32,7 @@ const Reveal = ({ index, children }: Props) => {
                 variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.25, delay: index ? index * 0.07 : 0.25 }}
+                transition={{ duration: 0.25, delay: index ? index * 0.08 : 0.25 }}
             >
                 {children}
             </motion.div>

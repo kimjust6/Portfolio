@@ -25,7 +25,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="scroll-m-28 flex flex-col items-center justify-center text-md"
+            className="scroll-m-28 flex flex-col items-center justify-center text-md mx-6"
         >
             <div
                 ref={ref}

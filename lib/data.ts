@@ -99,12 +99,12 @@ export const links = [
         hash: "#experience",
     },
     {
-        name: "Projects",
-        hash: "#projects",
-    },
-    {
         name: "Skills",
         hash: "#skills",
+    },
+    {
+        name: "Projects",
+        hash: "#projects",
     },
     {
         name: "Contact",
@@ -121,30 +121,36 @@ export const workExperience = [
         title: "Full-Stack Developer",
         company: "Partech Inc.",
         location: "Markham, ON",
-        description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+        description: [
+            "Maintained ownership of dashboard that clients utilized to view organization performance metrics",
+            "Reduced dashboard API calls up to 30% by serializing API calls with RxJS and custom lazy loading logic",
+            "Architected and implemented store portal dashboard to improve scalability by transitioning API calls to client databases",
+            "Repaired production server by diagnosing and fixing an API endpoint that caused database connection leaks ",
+        ],
         icon: React.createElement(CgWorkAlt),
-        date: "2022 - present",
+        date: "May 2022 - Apr 2023",
     },
 
     {
-        title: "Student",
+        title: "Bsc. Software Development",
         company: "Seneca College",
         location: "North York, ON",
-        description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+        description: ["President's Honour List from 2020-2023", "GPA - 3.9", ],
         icon: React.createElement(LuGraduationCap),
-        date: "2019 - 2023",
+        date: "Sep 2019 - Aug 2023",
     },
-    {
-        title: "Project Coordinator",
-        company: "Quantech Electrical Contractors Ltd.",
-        location: "Thornhill, ON",
-        description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2016-2019",
-    },
+    // {
+    //     title: "Project Coordinator",
+    //     company: "Quantech Electrical Contractors Ltd.",
+    //     location: "Thornhill, ON",
+    //     description: [
+    //         "Created, updated, and debugged VBA scripts to automate emailing paystubs to employees",
+    //         "Coordinated between project managers, foreman on job sites, and suppliers for deliveries",
+    //         "Oversaw the organization of shop drawings for engineering sign offs, employee training records",
+    //     ],
+    //     icon: React.createElement(CgWorkAlt),
+    //     date: "2016-2019",
+    // },
 ] as const;
 
 export const projectImages = [

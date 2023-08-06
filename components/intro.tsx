@@ -53,7 +53,7 @@ const Intro = () => {
                         transition={{ type: "spring", delay: 0.05, duration: 0.1 }}
                         className="text-2xl sm:text-3xl font-sans my-10"
                     >
-                        My name is <span className="font-bold">Justin</span> and I'm a{" "}
+                        I'm <span className="font-bold">Justin</span>, a{" "}
                         <span className="font-bold">full stack developer </span> who is{" "}
                         <span className="italic">passionate</span> about creating modern{" "}
                         <span className="italic">user centered </span> web applications.
