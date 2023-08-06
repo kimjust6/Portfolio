@@ -19,7 +19,6 @@ const Projects = () => {
 
     useEffect(() => {
         return () => {
-            console.log("projects");
             if (inView && Date.now() - timeOfLastClick > 1000) {
                 setActiveSection("Projects");
             }

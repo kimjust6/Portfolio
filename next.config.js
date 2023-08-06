@@ -5,6 +5,9 @@ const nextConfig = {
         protocols: ["https"],
         remotePatterns: [{ hostname: "i.imgur.com" }],
     },
+    experimental: {
+        serverActions: true,
+    },
 };
 
 module.exports = nextConfig;
