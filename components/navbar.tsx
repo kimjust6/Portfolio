@@ -8,7 +8,7 @@ import { useActiveSection } from "@/app/context/active-section-context";
 import { useRouter } from "next/navigation";
 
 const Navigation = () => {
-    const { activeSection, setActiveSection } = useActiveSection();
+    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection();
     const router = useRouter();
 
     return (
@@ -21,7 +21,7 @@ const Navigation = () => {
                 {links.map((link) => {
                     return (
                         <motion.li
-                            key={link.name }
+                            key={link.name}
                             className="flex justify-center relative"
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -37,6 +37,7 @@ const Navigation = () => {
                                 )}
                                 onClick={() => {
                                     setActiveSection(link.name);
+                                    setTimeOfLastClick(Date.now());
                                 }}
                             >
                                 {link.name}

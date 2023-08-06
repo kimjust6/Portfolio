@@ -3,14 +3,15 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { links, useInViewSettings } from "@/lib/data";
 import Link from "next/link";
 import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
 import { useActiveSection } from "@/app/context/active-section-context";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 
 const Intro = () => {
+    const router = useRouter();
     const { ref, inView } = useInView({
         // threshold: 0.1,
         initialInView: true,
@@ -23,7 +24,6 @@ const Intro = () => {
             setActiveSection("Home");
         }
     }, [inView, setActiveSection, timeOfLastClick]);
-
 
     return (
         <section
@@ -68,25 +68,31 @@ const Intro = () => {
                             className="button_secondary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
+                            onClick={() => {
+                                router.push("#contact");
+                                setActiveSection("Contact");
+                            }}
                         >
                             Contact Me{" "}
                             <BsEnvelope className="group-hover:translate-x-0.5 transition-all" />
                         </motion.button>
-                        <motion.button
+                        <motion.a
+                            href="/Justin Kim Resume 2023.pdf"
+                            download
                             className="button_primary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
                         >
                             Download CV{" "}
                             <BsDownload className="group-hover:translate-y-0.5 transition-all" />
-                        </motion.button>
+                        </motion.a>
 
                         <Link
                             href="https://www.linkedin.com/in/justin-kim6/"
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2 hover:bg-zinc-100"
+                                className="bg-gray-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
@@ -102,7 +108,7 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-zinc-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-zinc-400 flex justify-center items-center gap-2 hover:bg-zinc-100"
+                                className="bg-gray-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
