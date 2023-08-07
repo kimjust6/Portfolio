@@ -149,7 +149,7 @@ export const workExperience = [
 
 export const education = [
     {
-        title: "Bsc. Software Development",
+        title: "BSc. Software Development",
         company: "Seneca College",
         location: "North York, ON",
         description: ["President's Honour List from 2020-2023"],
