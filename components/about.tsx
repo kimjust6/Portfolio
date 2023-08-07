@@ -47,7 +47,7 @@ const About = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 0.25, duration: 0.25 }}
             >
-                In addition to programming, I love rock climbing/bouldering and enjoy following
+                Aside from programming, I enjoy rock climbing/bouldering and following
                 financial markets. Have a look around to learn about me and see what of projects I
                 have been working on!
             </motion.p>
