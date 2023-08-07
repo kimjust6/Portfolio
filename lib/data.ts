@@ -121,7 +121,7 @@ export const links = [
 
 export const workExperience = [
     {
-        title: "Full-Stack Developer",
+        title: "Full Stack Developer",
         company: "Partech Inc.",
         location: "Markham, ON",
         description: [

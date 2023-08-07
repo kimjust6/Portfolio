@@ -38,8 +38,8 @@ const About = () => {
                 transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
             >
                 My name Justin and I'm a full stack developer who is passionate about creating
-                modern responsive user centered websites. I love rising up to a challenge and I
-                consider my love of learning and strong work ethic to be some of my greatest assets.
+                modern responsive user centered websites. I love rising up to a challenge and my
+                and strong work ethic eagerness to learn are some of my greatest assets.
             </motion.p>
             <motion.p
                 className="text-center max-w-md sm:max-w-3xl text-md mt-2 sm:mt-4"
