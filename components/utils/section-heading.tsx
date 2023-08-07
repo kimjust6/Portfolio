@@ -7,7 +7,7 @@ const SectionHeading = ({ children }: SectionHeadingProps) => {
     return (
         <div className="flex flex-col items-center justify-center text-md">
             <motion.h2
-                className="text-2xl font-bold sm:text-3xl"
+                className="text-2xl font-bold sm:text-3xl uppercase"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 0.2, duration: 0.25 }}

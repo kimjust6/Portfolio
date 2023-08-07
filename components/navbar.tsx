@@ -5,11 +5,9 @@ import { links } from "@/lib/data";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const Navigation = () => {
     const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection();
-    const router = useRouter();
 
     return (
         <header className="flex justify-center flex-row w-screen">

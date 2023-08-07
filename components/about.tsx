@@ -1,4 +1,3 @@
-"use client";
 
 import { useActiveSection } from "@/app/context/active-section-context";
 import { motion } from "framer-motion";
@@ -8,7 +7,6 @@ import SectionHeading from "./utils/section-heading";
 
 const About = () => {
     const { ref, inView } = useInView({
-        // initialInView: true,
         rootMargin: "-50% 0% -50% 0%",
     });
     const { setActiveSection, timeOfLastClick } = useActiveSection();

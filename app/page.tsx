@@ -7,6 +7,7 @@ import Projects from "@/components/projects";
 import Experience from "@/components/experience";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import Education from "@/components/education";
 
 export default function Home() {
     return (
@@ -17,6 +18,8 @@ export default function Home() {
                 <About />
                 <Divider />
                 <Experience />
+                <Divider />
+                <Education />
                 <Divider />
                 <Skills />
                 <Divider />

@@ -1,22 +1,22 @@
 "use client";
 
 import { useActiveSection } from "@/app/context/active-section-context";
-import { useInViewSettings, workExperience } from "@/lib/data";
-import { useEffect } from "react";
+import { useInViewSettings, education } from "@/lib/data";
+import { SetStateAction, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
 
-const Experience = () => {
+const Education = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
 
     useEffect(() => {
         return () => {
             if (inView && Date.now() - timeOfLastClick > 1000) {
-                setActiveSection("Experience");
+                setActiveSection("Education");
             }
         };
     }, [inView, setActiveSection, timeOfLastClick]);
@@ -30,18 +30,17 @@ const Experience = () => {
                 ref={ref}
                 className="mb-4 "
             >
-                <SectionHeading>EXPERIENCE</SectionHeading>
+                <SectionHeading>EDUCATION</SectionHeading>
             </div>
-            <div className="max-w-3xl">
+            <div className="min-w-[min(50em,100%)]">
                 <VerticalTimeline
                     lineColor=""
                     layout="1-column-left"
                 >
-                    {workExperience.map((exp) => {
+                    {education.map((edu) => {
                         return (
-                            // <React.Fragment key={exp.company + exp.date}>
                             <VerticalTimelineElement
-                                key={exp.company + exp.date}
+                                key={edu.company + edu.date}
                                 contentStyle={{
                                     background: "#fef6c7",
                                     boxShadow: "none",
@@ -51,14 +50,14 @@ const Experience = () => {
                                 contentArrowStyle={{
                                     borderRight: "7px solid #d1d5db",
                                 }}
-                                icon={exp.icon}
+                                icon={edu.icon}
                                 iconStyle={{ background: "#fef6c7", fontSize: "1.5rem" }}
-                                date={exp.date}
+                                date={edu.date}
                             >
-                                <h3 className="text-2xl font-bold">{exp.company}</h3>
-                                <h4 className="text-xl font-semibold">{exp.title}</h4>
-                                <p className="text-md !mt-0 !mb-2 text-gray-700">{exp.location}</p>
-                                {exp.description.map((list, index) => {
+                                <h3 className="text-2xl font-bold">{edu.company}</h3>
+                                <h4 className="text-xl font-semibold">{edu.title}</h4>
+                                <p className="text-md !mt-0 !mb-2 text-gray-700">{edu.location}</p>
+                                {edu.description.map((list, index) => {
                                     return (
                                         <Reveal key={index}>
                                             <li>{list}</li>
@@ -66,7 +65,6 @@ const Experience = () => {
                                     );
                                 })}
                             </VerticalTimelineElement>
-                            // </React.Fragment>
                         );
                     })}
                 </VerticalTimeline>
@@ -75,4 +73,4 @@ const Experience = () => {
     );
 };
 
-export default Experience;
+export default Education;

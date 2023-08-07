@@ -62,7 +62,7 @@ export const skillsData = [
         title: "Database Management",
         skills: [
             { name: "MongoDB", svg: mongodb },
-            { name: "postgreSQL", svg: postgres },
+            { name: "PostgreSQL", svg: postgres },
             // { name: "MySQL", svg: mysql },
             { name: "MySQL", svg: mysql },
             { name: "Firebase", svg: firebase },
@@ -98,6 +98,10 @@ export const links = [
         hash: "#experience",
     },
     {
+        name: "Education",
+        hash: "#education",
+    },
+    {
         name: "Skills",
         hash: "#skills",
     },
@@ -129,27 +133,29 @@ export const workExperience = [
         icon: React.createElement(CgWorkAlt),
         date: "May 2022 - Apr 2023",
     },
+    {
+        title: "Project Coordinator",
+        company: "Quantech Electrical Contractors Ltd.",
+        location: "Thornhill, ON",
+        description: [
+            "Created, updated, and debugged VBA scripts to automate emailing paystubs to employees",
+            "Coordinated between project managers, foreman on job sites, and suppliers for deliveries",
+            "Oversaw the organization of shop drawings for engineering sign offs, employee training records",
+        ],
+        icon: React.createElement(CgWorkAlt),
+        date: "2016-2019",
+    },
+] as const;
 
+export const education = [
     {
         title: "Bsc. Software Development",
         company: "Seneca College",
         location: "North York, ON",
-        description: ["President's Honour List from 2020-2023", "GPA - 3.9", ],
+        description: ["President's Honour List from 2020-2023"],
         icon: React.createElement(LuGraduationCap),
         date: "Sep 2019 - Aug 2023",
     },
-    // {
-    //     title: "Project Coordinator",
-    //     company: "Quantech Electrical Contractors Ltd.",
-    //     location: "Thornhill, ON",
-    //     description: [
-    //         "Created, updated, and debugged VBA scripts to automate emailing paystubs to employees",
-    //         "Coordinated between project managers, foreman on job sites, and suppliers for deliveries",
-    //         "Oversaw the organization of shop drawings for engineering sign offs, employee training records",
-    //     ],
-    //     icon: React.createElement(CgWorkAlt),
-    //     date: "2016-2019",
-    // },
 ] as const;
 
 export const projectImages = [
