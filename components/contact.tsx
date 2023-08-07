@@ -18,9 +18,11 @@ const Contact = () => {
     const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+
     useEffect(() => {
+        const time = Date.now();
         return () => {
-            if (inView && Date.now() - timeOfLastClick > 1000) {
+            if (inView && time - timeOfLastClick > 1000) {
                 setActiveSection("Contact");
             }
         };
@@ -29,7 +31,7 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="scroll-m-28 flex flex-col items-center w-screen min-h-[40em] text-center "
+            className="scroll-m-28 flex flex-col items-center w-screen min-h-[44em] text-center "
         >
             <div ref={ref}>
                 <SectionHeading>Contact Me</SectionHeading>
@@ -84,7 +86,7 @@ const Contact = () => {
                     disabled={emailSent}
                     required
                     name="senderMessage"
-                    className="rounded-lg h-52 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
+                    className="rounded-lg h-80 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
                     placeholder="Your Message"
                     maxLength={1000}
                 ></textarea>

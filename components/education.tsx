@@ -23,7 +23,7 @@ const Education = () => {
 
     return (
         <section
-            id="experience"
+            id="education"
             className="scroll-m-28 sm:mx-8 m-4 flex flex-col items-center"
         >
             <div

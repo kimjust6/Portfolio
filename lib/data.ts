@@ -12,7 +12,7 @@ import node from "@/public/logos/node.svg";
 // import c from "@/public/logos/c.svg";
 import java from "@/public/logos/java.svg";
 import python from "@/public/logos/python.svg";
-// import spring from "@/public/logos/spring.svg";
+import spring from "@/public/logos/spring.svg";
 import postgres from "@/public/logos/postgres.svg";
 import firebase from "@/public/logos/firebase.svg";
 import framerMotion from "@/public/logos/framer-motion.svg";
@@ -51,8 +51,8 @@ export const skillsData = [
         title: "Programming & Scripting",
         skills: [
             { name: "Java", svg: java },
+            { name: "Spring", svg: spring },
             { name: "Python", svg: python },
-            // { name: "Spring", svg: spring },
             // { name: "C", svg: c },
             { name: "C++", svg: cplusplus },
             { name: "Shell Scripting", svg: bash },
@@ -122,7 +122,7 @@ export const links = [
 export const workExperience = [
     {
         title: "Full Stack Developer",
-        company: "Partech Inc.",
+        company: "ParTech Inc.",
         location: "Markham, ON",
         description: [
             "Maintained ownership of dashboard that clients utilized to view organization performance metrics",

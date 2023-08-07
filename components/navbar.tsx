@@ -8,7 +8,6 @@ import Link from "next/link";
 
 const Navigation = () => {
     const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection();
-
     return (
         <header className="flex justify-center flex-row w-screen">
             <div
@@ -35,7 +34,8 @@ const Navigation = () => {
                                 )}
                                 onClick={() => {
                                     setActiveSection(link.name);
-                                    setTimeOfLastClick(Date.now());
+                                    const time = Date.now();
+                                    setTimeOfLastClick(time);
                                 }}
                             >
                                 {link.name}
