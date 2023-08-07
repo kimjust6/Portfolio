@@ -1,17 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
-import SectionHeading from "./utils/section-heading";
-import { projectsData, useInViewSettings } from "@/lib/data";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
-import { BsCloud } from "react-icons/bs";
-import Reveal from "./utils/reveal";
 import { useActiveSection } from "@/app/context/active-section-context";
+import { projectsData, useInViewSettings } from "@/lib/data";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
+import { BsCloud, BsGithub, BsYoutube } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
+import Reveal from "./utils/reveal";
+import SectionHeading from "./utils/section-heading";
 
 const Projects = () => {
     const { ref, inView } = useInView(useInViewSettings);

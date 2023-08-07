@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import { useActiveSection } from "@/app/context/active-section-context";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
-import { useActiveSection } from "@/app/context/active-section-context";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
+import { useInView } from "react-intersection-observer";
 
 const Intro = () => {
     const router = useRouter();

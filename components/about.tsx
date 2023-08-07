@@ -1,11 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import SectionHeading from "./utils/section-heading";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
+
 import { useActiveSection } from "@/app/context/active-section-context";
-import { useInViewSettings } from "@/lib/data";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import SectionHeading from "./utils/section-heading";
 
 const About = () => {
     const { ref, inView } = useInView({

@@ -1,13 +1,11 @@
 "use client";
 import { useActiveSection } from "@/app/context/active-section-context";
+import { skillsData, useInViewSettings } from "@/lib/data";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import SectionHeading from "./utils/section-heading";
-import { useInViewSettings } from "@/lib/data";
-import Image from "next/image";
-import { skillsData } from "@/lib/data";
-import { motion, useAnimation } from "framer-motion";
 import Reveal from "./utils/reveal";
+import SectionHeading from "./utils/section-heading";
 
 const Skills = () => {
     const { ref, inView } = useInView(useInViewSettings);

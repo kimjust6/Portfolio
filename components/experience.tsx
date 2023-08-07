@@ -1,13 +1,11 @@
 import { useActiveSection } from "@/app/context/active-section-context";
-import React, { useEffect } from "react";
+import { useInViewSettings, workExperience } from "@/lib/data";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import SectionHeading from "./utils/section-heading";
-import { useInViewSettings } from "@/lib/data";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { workExperience } from "@/lib/data";
 import Reveal from "./utils/reveal";
-import { isTemplateExpression } from "typescript";
+import SectionHeading from "./utils/section-heading";
 
 const Experience = () => {
     const { ref, inView } = useInView(useInViewSettings);

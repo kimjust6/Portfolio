@@ -1,10 +1,10 @@
 "use client";
 
+import { useActiveSection } from "@/app/context/active-section-context";
 import { links } from "@/lib/data";
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import clsx from "clsx";
-import { useActiveSection } from "@/app/context/active-section-context";
 import { useRouter } from "next/navigation";
 
 const Navigation = () => {

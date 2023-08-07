@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Props {
     index?: number;
