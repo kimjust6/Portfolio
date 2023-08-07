@@ -61,6 +61,7 @@ function RenderProjects(projectsData: any) {
                         <div className="">
                             {project?.carouselImage[0]?.image && (
                                 <Image
+                                    priority={true}
                                     className="rounded-t-xl"
                                     alt={project?.carouselImage[0].alt}
                                     src={project?.carouselImage[0].image}
