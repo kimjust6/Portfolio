@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import { useActiveSection } from "@/app/context/active-section-context";
 import { motion } from "framer-motion";
