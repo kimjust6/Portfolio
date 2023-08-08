@@ -27,7 +27,7 @@ const Navigation = () => {
                                 href={link.hash}
                                 data-text={link.name}
                                 className={clsx(
-                                    "my_navbar text-gray-700 mx-2 text-zinc-9500 opacity-100 hover:text-gray-950 hover:font-semibold py-1 data-text=title",
+                                    "my_navbar text-gray-700 mx-2 text-zinc-9500 opacity-100 hover:text-gray-950 hover:font-semibold py-1 data-text=title select-none",
                                     {
                                         "font-semibold text-gray-950": activeSection === link.name,
                                     }
