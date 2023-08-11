@@ -32,7 +32,7 @@ const Projects = () => {
                 ref={ref}
                 className="mb-4"
             >
-                <SectionHeading>PROJECTS</SectionHeading>
+                <SectionHeading>MY PROJECTS</SectionHeading>
             </div>
             <div className="w-screen flex justify-center">
                 <div className="flex flex-wrap w-screen justify-center max-w-7xl ">

@@ -30,7 +30,7 @@ const Education = () => {
                 ref={ref}
                 className="mb-4 "
             >
-                <SectionHeading>EDUCATION</SectionHeading>
+                <SectionHeading>MY EDUCATION</SectionHeading>
             </div>
             <div className="min-w-[min(50em,100%)]">
                 <VerticalTimeline

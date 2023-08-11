@@ -27,7 +27,7 @@ const Skills = () => {
                 ref={ref}
                 className="mb-8"
             >
-                <SectionHeading>Skills</SectionHeading>
+                <SectionHeading>MY Skills</SectionHeading>
             </div>
             <div className="w-screen flex justify-center max-w-6xl flex-wrap gap-8 ">
                 {skillsData.map((skill) => {

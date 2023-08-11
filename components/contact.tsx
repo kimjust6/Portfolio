@@ -34,7 +34,7 @@ const Contact = () => {
             className="scroll-m-28 flex flex-col items-center w-screen min-h-[44em] text-center "
         >
             <div ref={ref}>
-                <SectionHeading>Contact Me</SectionHeading>
+                <SectionHeading>CONTACT ME</SectionHeading>
             </div>
 
             <motion.p

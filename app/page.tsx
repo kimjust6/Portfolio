@@ -8,7 +8,7 @@ import Experience from "@/components/experience";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
 import Education from "@/components/education";
-
+import Footer from "@/components/footer";
 
 export default function Home() {
     return (
@@ -27,6 +27,7 @@ export default function Home() {
                 <Projects />
                 <Divider />
                 <Contact />
+                <Footer />
             </main>
         </AnimatePresence>
     );

@@ -30,7 +30,7 @@ const Experience = () => {
                 ref={ref}
                 className="mb-4 "
             >
-                <SectionHeading>EXPERIENCE</SectionHeading>
+                <SectionHeading>MY EXPERIENCE</SectionHeading>
             </div>
             <div className="max-w-3xl">
                 <VerticalTimeline
