@@ -1,4 +1,5 @@
 'use client';
+import { color } from 'framer-motion';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = "light" | "dark";
@@ -15,29 +16,39 @@ const ThemeContextProvider = ({children}:ThemeContextProviderProps) => {
 
     const [theme, setTheme] = useState<Theme>("light");
 
-    const toggleTheme = () => {
+    const themeSet = (theme: Theme) => {
+
         if (theme === "light") {
-            setTheme("dark");
-            window.localStorage.setItem("theme", "dark");
-            document.documentElement.classList.add("dark");
-        } else {
             setTheme("light");
             window.localStorage.setItem("theme", "light");
             document.documentElement.classList.remove("dark");
+        } else {
+            setTheme("dark");
+            window.localStorage.setItem("theme", "dark");
+            document.documentElement.classList.add("dark");
+        }
+    }
+
+    const toggleTheme = () => {
+        if (theme === "light") {
+            themeSet("dark")
+        } else {
+            themeSet("light")
         }
     };
 
     useEffect(() => {
         const localTheme = window.localStorage.getItem("theme");
+        console.log({localTheme: localTheme });
 
         if (localTheme === "dark") {
-            setTheme("dark");
+            themeSet("dark")
         } else if (localTheme === "light") {
-            setTheme("light");
+            themeSet("light");
         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
+            themeSet("dark");
         } else {
-            setTheme("light");
+            themeSet("light");
         }
     }, []);
 
