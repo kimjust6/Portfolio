@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 const ThemeToggle = () => {
@@ -33,17 +33,15 @@ const ThemeToggle = () => {
 
     return (
         <button
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
             className="transition-all text-lg ml-2 border border-solid border-gray-600 
         opacity-80 hover:opacity-100 rounded-full w-7 h-7 sm:h-10 sm:w-10 flex justify-center items-center bg-yellow-50
-        dark:bg-black dark:text-yellow-50 dark:backdrop-filter dark:backdrop-blur-lg"
+        dark:bg-black dark:text-yellow-200 dark:backdrop-filter dark:backdrop-blur-lg"
             onClick={toggleTheme}
         >
             {theme === "light" ? (
-                <BsSun className="text-xl sm:text-2xl" />
-            ) : (
                 <BsMoon className="text-xl sm:text-2xl" />
+            ) : (
+                <BsSun className="text-xl sm:text-2xl" />
             )}
         </button>
     );

@@ -2,7 +2,7 @@
 
 import { useActiveSection } from "@/app/context/active-section-context";
 import { useInViewSettings, workExperience } from "@/lib/data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -12,6 +12,9 @@ import SectionHeading from "./utils/section-heading";
 const Experience = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
+    // const [theme, setTheme] = useState("");
+
+    
 
     useEffect(() => {
         return () => {

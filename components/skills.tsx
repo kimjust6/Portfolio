@@ -63,7 +63,7 @@ const Skills = () => {
                                                         width={45}
                                                         height={45}
                                                     ></Image>
-                                                    <div className="text-sm text-gray-600">
+                                                    <div className="text-sm text-gray-600 dark:text-gray-300">
                                                         {s.name}
                                                     </div>
                                                 </li>

@@ -51,7 +51,7 @@ export const skillsData = [
         title: "Programming & Scripting",
         skills: [
             { name: "Java", svg: java },
-            { name: "Spring", svg: spring },
+            { name: "Spring Boot", svg: spring },
             { name: "Python", svg: python },
             // { name: "C", svg: c },
             { name: "C++", svg: cplusplus },

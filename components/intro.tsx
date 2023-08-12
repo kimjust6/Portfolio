@@ -99,7 +99,7 @@ const Intro = () => {
                                 <span className="display sm:hidden">LinkedIn</span>
                                 <BsLinkedin
                                     size={20}
-                                    className="text-blue-800"
+                                    className="text-blue-800 dark:text-blue-500"
                                 />
                             </motion.div>
                         </Link>
