@@ -322,10 +322,9 @@ export const projectsData = [
         title: "Stable Prompts Full Stack Application",
         tech: ["Next.js", "React", "MongoDB", "Oauth2", "Tailwind", "CSS"],
         description: `This Next.js full stack application allows users to sign in with their existing google account and create, update, 
-        and delete prompts for Stable Diffusion. Posts are saved to MongoDB and can be filtered on the home page. Tip: When trying the demo, 
-        you may need to refresh the page to warm up the MongoDB server.`,
+        and delete prompts for Stable Diffusion. Posts are saved to MongoDB and can be filtered on the home page.`,
         codeURL: "https://github.com/kimjust6/StablePrompts",
-        liveDemoURL: "https://prompts-mocha-seven.vercel.app",
+        liveDemoURL: "https://stable-prompts.netlify.app/home",
         carouselImage: projectImages[0],
     },
     {
