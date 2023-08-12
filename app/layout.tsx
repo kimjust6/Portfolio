@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Navigation from "@/components/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import ActiveSectionContextProvider from "./context/active-section-context";
-import ThemeToggle from "@/components/theme-toggle";
+import ThemeContextProvider from "./context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 dark:text-opacity-95 dark:bg-auto`}
             >
                 <ActiveSectionContextProvider>
-                    <Navigation />
-                    {children}
-                    <Analytics />
-                    <Footer />
+                    <ThemeContextProvider>
+                        <Navigation />
+                        {children}
+                        <Analytics />
+                        <Footer />
+                    </ThemeContextProvider>
                 </ActiveSectionContextProvider>
             </body>
         </html>

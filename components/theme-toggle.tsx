@@ -1,36 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useTheme } from "@/app/context/theme-context";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState("light");
-
-    const toggleTheme = () => {
-        if (theme === "light") {
-            setTheme("dark");
-            window.localStorage.setItem("theme", "dark");
-            document.documentElement.classList.add("dark");
-        } else {
-            setTheme("light");
-            window.localStorage.setItem("theme", "light");
-            document.documentElement.classList.remove("dark");
-        }
-    };
-
-    useEffect(() => {
-        const localTheme = window.localStorage.getItem("theme");
-
-        if (localTheme === "dark") {
-            setTheme("dark");
-        } else if (localTheme === "light") {
-            setTheme("light");
-        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    }, []);
-
+    
+    const { theme, toggleTheme } = useTheme();
     return (
         <button
             className="transition-all text-lg ml-2 border border-solid border-gray-600 
