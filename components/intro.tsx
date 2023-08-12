@@ -53,10 +53,10 @@ const Intro = () => {
                         transition={{ type: "spring", delay: 0.05, duration: 0.1 }}
                         className="text-2xl sm:text-3xl font-sans my-10"
                     >
-                        I'm <span className="font-bold">Justin</span>, a{" "}
-                        <span className="font-bold">full stack developer </span> who is{" "}
-                        <span className="italic">passionate</span> about creating modern{" "}
-                        <span className="italic">user centered </span> web applications.
+                        I'm <span className="font-bold dark:text-yellow-400">Justin</span>, a{" "}
+                        <span className="font-bold dark:text-yellow-400">Full Stack Developer </span> who is{" "}
+                        <span className="italic dark:text-yellow-100">passionate</span> about creating modern{" "}
+                        <span className="italic dark:text-yellow-100">user centered </span> web applications.
                     </motion.p>
                     <motion.div
                         className="flex justify-center sm:gap-4 min-w-96 gap-3 flex-col sm:flex-row items-center"
@@ -99,7 +99,7 @@ const Intro = () => {
                                 <span className="display sm:hidden">LinkedIn</span>
                                 <BsLinkedin
                                     size={20}
-                                    className="text-blue-800"
+                                    className="text-blue-800 dark:text-blue-500"
                                 />
                             </motion.div>
                         </Link>

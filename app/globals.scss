@@ -14,19 +14,28 @@ $color2: rgb(253, 191, 204);
 $transparent: rgba(0, 0, 0, 0);
 
 .button_primary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 cursor-pointer disabled:bg-zinc-800 disabled:cursor-default disabled:opacity-70;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 
+    cursor-pointer disabled:bg-zinc-800 disabled:cursor-default disabled:opacity-70 dark:bg-yellow-200
+    dark:text-gray-950 dark:shadow-none dark:border-gray-100 dark:hover:bg-yellow-300;
 }
 
 .button_secondary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-zinc-100 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-zinc-100 cursor-pointer
+    dark:bg-gray-900 dark:text-gray-100 dark:shadow-none dark:hover:bg-gray-950;
 }
 
 .button_accent {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-amber-400 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-amber-400 cursor-pointer
+    dark:bg-gray-900 dark:shadow-none dark:border-gray-100 dark:hover:bg-gray-950;
 }
 
 .button_shape {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 py-2 sm:w-fit w-44 border border-zinc-400 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 
+    py-2 sm:w-fit w-44 border border-zinc-400 cursor-pointer dark:bg-gray-900 dark:shadow-none 
+    dark:border-gray-100 dark:hover:bg-gray-950;
 }
 
 @media only screen and (min-width: 640px) {
@@ -35,13 +44,14 @@ $transparent: rgba(0, 0, 0, 0);
     }
 }
 
-input:valid{
+input:valid {
     @apply bg-gray-50;
 }
 
-textarea:valid{
+textarea:valid {
     @apply bg-gray-50;
 }
+
 .background {
     // backdrop-filter: blur(6px);
     background: linear-gradient(15deg, $transparent 50%, $color 50%, $color 55%, $transparent 30%);
@@ -49,8 +59,13 @@ textarea:valid{
     background-color: rgb(253, 251, 232);
 }
 
+.background-dark {
+    background: none !important;
+    background-color: green !important;
+}
+
 .subheading {
-    @apply text-xl font-bold text-gray-700;
+    @apply text-xl font-bold text-gray-700 dark:text-gray-300;
 }
 
 // so navbar doesn't move on bold

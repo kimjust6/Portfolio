@@ -51,7 +51,7 @@ export const skillsData = [
         title: "Programming & Scripting",
         skills: [
             { name: "Java", svg: java },
-            { name: "Spring", svg: spring },
+            { name: "Spring Boot", svg: spring },
             { name: "Python", svg: python },
             // { name: "C", svg: c },
             { name: "C++", svg: cplusplus },
@@ -298,6 +298,13 @@ export const projectImages = [
             alt: "Movie Tracker Image 3",
         },
     ],
+    // Portfolio
+    [
+        {
+            image: "https://i.imgur.com/wePpa2n.png",
+            alt: "Next Portfolio 1",
+        },
+    ],
 ] as const;
 
 export const videos = [
@@ -315,8 +322,7 @@ export const projectsData = [
         title: "Stable Prompts Full Stack Application",
         tech: ["Next.js", "React", "MongoDB", "Oauth2", "Tailwind", "CSS"],
         description: `This Next.js full stack application allows users to sign in with their existing google account and create, update, 
-        and delete prompts for Stable Diffusion. Posts are saved to MongoDB and can be filtered on the home page. Tip: When trying the demo, 
-        you may need to refresh the page to warm up the MongoDB server.`,
+        and delete prompts for Stable Diffusion. Posts are saved to MongoDB and can be filtered on the home page.`,
         codeURL: "https://github.com/kimjust6/StablePrompts",
         liveDemoURL: "https://prompts-mocha-seven.vercel.app",
         carouselImage: projectImages[0],
@@ -332,6 +338,14 @@ export const projectsData = [
         codeURL: "https://github.com/kimjust6/Eventure",
         videoDemoURL: "https://www.youtube.com/watch?v=aNnlid6Ti_4",
         carouselImage: projectImages[1],
+    },
+    {
+        title: "Justin's Portfolio ",
+        tech: ["React", "Next.js", "Tailwind", "Framer Motion"],
+        description: `I created my portfolio with Next.js to showcase my work experience and knowledge of web frameworks such as React/Next.js.`,
+        codeURL: "https://github.com/kimjust6/Portfolio",
+        liveDemoURL: "https://www.justink.dev/",
+        carouselImage: projectImages[6],
     },
     {
         title: "AWS Backend Microservice API",
@@ -364,7 +378,6 @@ export const projectsData = [
         liveDemoURL: "https://wordle-xi.vercel.app/game/1",
         carouselImage: projectImages[2],
     },
-
     {
         title: "Blockchain Banking Full Stack Web Application",
         tech: ["Spring Boot", "Java", "SQL", "Docker", "Thymeleaf", "jNano", "Google ZXing"],

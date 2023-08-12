@@ -2,7 +2,7 @@
 import { useActiveSection } from "@/app/context/active-section-context";
 import { skillsData, useInViewSettings } from "@/lib/data";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
@@ -10,7 +10,6 @@ import SectionHeading from "./utils/section-heading";
 const Skills = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
-
     useEffect(() => {
         return () => {
             if (inView && Date.now() - timeOfLastClick > 1000) {
@@ -27,7 +26,7 @@ const Skills = () => {
                 ref={ref}
                 className="mb-8"
             >
-                <SectionHeading>Skills</SectionHeading>
+                <SectionHeading>MY Skills</SectionHeading>
             </div>
             <div className="w-screen flex justify-center max-w-6xl flex-wrap gap-8 ">
                 {skillsData.map((skill) => {
@@ -50,20 +49,30 @@ const Skills = () => {
                                             >
                                                 <li className="flex flex-col items-center px-5 py-2 ">
                                                     <Image
-                                                        className="hidden sm:block mb-2 "
+                                                        className={
+                                                            "hidden sm:block mb-2 " +
+                                                            (s.name === "Next.js"
+                                                                ? " dark:invert"
+                                                                : "")
+                                                        }
                                                         src={s.svg}
                                                         alt={s.name}
                                                         width={60}
                                                         height={60}
                                                     ></Image>
                                                     <Image
-                                                        className="sm:hidden "
+                                                        className={
+                                                            "sm:hidden " +
+                                                            (s.name === "Next.js"
+                                                                ? " dark:invert"
+                                                                : "")
+                                                        }
                                                         src={s.svg}
                                                         alt={s.name}
                                                         width={45}
                                                         height={45}
                                                     ></Image>
-                                                    <div className="text-sm text-gray-600">
+                                                    <div className="text-sm text-gray-600 dark:text-gray-300">
                                                         {s.name}
                                                     </div>
                                                 </li>
