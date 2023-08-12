@@ -31,7 +31,7 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="scroll-m-28 flex flex-col items-center w-screen min-h-[44em] text-center "
+            className="scroll-m-28 flex flex-col items-center w-screen min-h-[40em] sm:min-h-[48em] text-center "
         >
             <div ref={ref}>
                 <SectionHeading>CONTACT ME</SectionHeading>

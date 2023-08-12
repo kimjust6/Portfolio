@@ -14,19 +14,28 @@ $color2: rgb(253, 191, 204);
 $transparent: rgba(0, 0, 0, 0);
 
 .button_primary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 cursor-pointer disabled:bg-zinc-800 disabled:cursor-default disabled:opacity-70;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-zinc-800 text-zinc-50 px-4 py-2  sm:w-fit w-44 border border-zinc-400 hover:bg-zinc-900 
+    cursor-pointer disabled:bg-zinc-800 disabled:cursor-default disabled:opacity-70 dark:bg-yellow-200
+    dark:text-gray-950 dark:shadow-none dark:border-white;
 }
 
 .button_secondary {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-zinc-100 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-zinc-50 px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-zinc-100 cursor-pointer
+    dark:bg-gray-800 dark:text-gray-100 dark:shadow-none;
 }
 
 .button_accent {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-amber-400 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 
+    bg-amber-300  px-4 py-2 sm:w-fit w-44  border border-zinc-400 hover:bg-amber-400 cursor-pointer
+    dark:bg-gray-800 dark:shadow-none dark:border-gray-700;
 }
 
 .button_shape {
-    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 py-2 sm:w-fit w-44 border border-zinc-400 cursor-pointer;
+    @apply select-none rounded-lg flex justify-center items-center gap-3 shadow-md shadow-gray-300 px-4 
+    py-2 sm:w-fit w-44 border border-zinc-400 cursor-pointer dark:bg-gray-800 dark:shadow-none 
+    dark:border-gray-700;
 }
 
 @media only screen and (min-width: 640px) {
@@ -42,6 +51,7 @@ input:valid{
 textarea:valid{
     @apply bg-gray-50;
 }
+
 .background {
     // backdrop-filter: blur(6px);
     background: linear-gradient(15deg, $transparent 50%, $color 50%, $color 55%, $transparent 30%);

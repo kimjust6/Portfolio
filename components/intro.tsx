@@ -54,7 +54,7 @@ const Intro = () => {
                         className="text-2xl sm:text-3xl font-sans my-10"
                     >
                         I'm <span className="font-bold">Justin</span>, a{" "}
-                        <span className="font-bold">full stack developer </span> who is{" "}
+                        <span className="font-bold">Full Stack Developer </span> who is{" "}
                         <span className="italic">passionate</span> about creating modern{" "}
                         <span className="italic">user centered </span> web applications.
                     </motion.p>
