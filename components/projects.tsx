@@ -14,7 +14,7 @@ import SectionHeading from "./utils/section-heading";
 const Projects = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
-
+    
     useEffect(() => {
         return () => {
             if (inView && Date.now() - timeOfLastClick > 1000) {
@@ -57,7 +57,7 @@ function RenderProjects(projectsData: any) {
                 >
                     {/* image */}
                     {/* <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col justify-between"> */}
-                    <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col dark:bg-gray-800  dark:shadow-none ">
+                    <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col dark:bg-gray-800 dark:border-gray-700 dark:shadow-none ">
                         <div className="">
                             {project?.carouselImage[0]?.image && (
                                 <Image
@@ -80,7 +80,7 @@ function RenderProjects(projectsData: any) {
                                         return (
                                             <div
                                                 className=" bg-white p-1 px-1.5  my-1 rounded-full flex select-none
-                            justify-center items-center shadow-sm shadow-gray-300 text-sm "
+                            justify-center items-center shadow-sm shadow-gray-300 text-sm dark:bg-gray-950 dark:shadow-none dark:border dark:border-gray-700"
                                                 key={project.name + technology}
                                             >
                                                 {technology}{" "}

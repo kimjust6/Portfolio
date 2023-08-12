@@ -44,11 +44,11 @@ $transparent: rgba(0, 0, 0, 0);
     }
 }
 
-input:valid{
+input:valid {
     @apply bg-gray-50;
 }
 
-textarea:valid{
+textarea:valid {
     @apply bg-gray-50;
 }
 
@@ -57,6 +57,11 @@ textarea:valid{
     background: linear-gradient(15deg, $transparent 50%, $color 50%, $color 55%, $transparent 30%);
     background-size: 1em 1em;
     background-color: rgb(253, 251, 232);
+}
+
+.background-dark {
+    background: none !important;
+    background-color: green !important;
 }
 
 .subheading {

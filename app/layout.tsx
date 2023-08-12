@@ -24,8 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
             <body
                 className={`${inter.className} bg-gray-50 text-gray-00 transition-all background 
-                overflow-y-scroll no-scrollbar dark:bg-gray-950 dark:text-gray-50 
-                dark:text-opacity-95 dark:bg-auto`}
+                overflow-y-scroll no-scrollbar dark:background-dark dark:bg-gray-950 dark:text-gray-50 
+                dark:text-opacity-95 dark:bg-auto  dark:bg-gradient-to-r `}
             >
                 <ActiveSectionContextProvider>
                     <ThemeContextProvider>

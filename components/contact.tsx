@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
 
             <motion.p
-                className="text-gray-700 text-sm px-4 mt-2"
+                className="text-gray-700 text-sm px-4 mt-2 dark:text-gray-400"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.25 }}
@@ -77,7 +77,7 @@ const Contact = () => {
                     disabled={emailSent}
                     type="email"
                     name="senderEmail"
-                    className="rounded-lg border h-10 px-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
+                    className="rounded-lg border h-10 px-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70 dark:bg-gray-700 dark:shadow-none dark:border-gray-600"
                     placeholder="Your Email"
                     required
                     maxLength={100}
@@ -86,7 +86,7 @@ const Contact = () => {
                     disabled={emailSent}
                     required
                     name="senderMessage"
-                    className="rounded-lg h-80 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70"
+                    className="rounded-lg h-80 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70 dark:bg-gray-700 dark:shadow-none dark:border-gray-600"
                     placeholder="Your Message"
                     maxLength={1000}
                 ></textarea>
