@@ -15,7 +15,7 @@ const Navigation = () => {
                 className="z-100 flex justify-center items-center fixed sm:rounded-full bg-amber-200 opacity-95 
                 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-gray-300 
                 sm:mt-6 px-4 py-1 sm:py-2 rounded-md border sm:border-amber-300 text-lg z-[999] flex-wrap w-screen sm:w-fit
-                dark:bg-gray-800  dark:border-gray-600"
+                dark:bg-gray-800  dark:border-gray-600 dark:shadow-none"
             >
                 <motion.span
                     className="sm:hidden mr-4"
@@ -74,6 +74,17 @@ const Navigation = () => {
                     <ThemeToggle />
                 </motion.span>
             </div>
+            <motion.button
+                className={
+                    "button_primary  fixed z-20 top-16 right-10 hidden  " 
+                    // + (activeSection === "Home" ? "hidden" : "sm:display")
+                }
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
+            >
+                Download CV
+            </motion.button>
         </header>
     );
 };

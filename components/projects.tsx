@@ -101,7 +101,7 @@ function RenderProjects(projectsData: any) {
                                     target="_blank"
                                     href={project.codeURL}
                                 >
-                                    Github
+                                    GitHub
                                     <BsGithub size={20} />
                                 </Link>
                             </motion.div>
