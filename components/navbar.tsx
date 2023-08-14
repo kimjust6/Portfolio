@@ -74,7 +74,7 @@ const Navigation = () => {
                     <ThemeToggle />
                 </motion.span>
             </div>
-            <motion.button
+            {/* <motion.button
                 className={
                     "button_primary  fixed z-20 top-16 right-10 hidden  " 
                     // + (activeSection === "Home" ? "hidden" : "sm:display")
@@ -84,7 +84,7 @@ const Navigation = () => {
                 transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
             >
                 Download CV
-            </motion.button>
+            </motion.button> */}
         </header>
     );
 };

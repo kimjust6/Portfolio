@@ -10,6 +10,7 @@ import { BsCloud, BsGithub, BsYoutube } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
+import { useTheme } from "@/app/context/theme-context";
 
 const Projects = () => {
     const { ref, inView } = useInView(useInViewSettings);
@@ -22,12 +23,12 @@ const Projects = () => {
             }
         };
     }, [inView, setActiveSection, timeOfLastClick]);
-
+    
     return (
         <section
             id="projects"
             className="scroll-m-28"
-        >
+            >
             <div
                 ref={ref}
                 className="mb-4"
@@ -47,6 +48,7 @@ const Projects = () => {
 export default Projects;
 
 function RenderProjects(projectsData: any) {
+    const {theme} = useTheme();
     return projectsData.map((project: any) => {
         return (
             // card
@@ -97,7 +99,7 @@ function RenderProjects(projectsData: any) {
                                 whileTap={{ scale: 0.97 }}
                             >
                                 <Link
-                                    className="button_primary sm:w-44 "
+                                    className={"sm:w-44 " + (theme == "dark" ? "button_accent" : "button_primary")}
                                     target="_blank"
                                     href={project.codeURL}
                                 >
@@ -110,7 +112,7 @@ function RenderProjects(projectsData: any) {
                                 whileTap={{ scale: 0.97 }}
                             >
                                 <Link
-                                    className="button_accent sm:w-44"
+                                    className={"sm:w-44 " + (theme == "dark" ? "button_primary" : "button_accent")}
                                     target="_blank"
                                     href={project?.liveDemoURL ?? project?.videoDemoURL}
                                 >
