@@ -112,7 +112,7 @@ const Intro = () => {
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
-                                <span className="display sm:hidden">Github</span>
+                                <span className="display sm:hidden">GitHub</span>
                                 <BsGithub size={20} />
                             </motion.div>
                         </Link>
