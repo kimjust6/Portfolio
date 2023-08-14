@@ -38,7 +38,7 @@ const About = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
             >
-                My name Justin and I'm a full stack developer who is passionate about creating
+                My name is Justin and I'm a full stack developer who is passionate about creating
                 modern responsive user centered websites. I love rising up to a challenge and my and
                 strong work ethic eagerness to learn are some of my greatest assets.
             </motion.p>
