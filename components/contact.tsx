@@ -1,14 +1,14 @@
 "use client";
 
+import sendEmail from "@/actions/send-email";
 import { useActiveSection } from "@/app/context/active-section-context";
+import getErrorMessage from "@/components/utils/errorHandler";
+import { useInViewSettings } from "@/lib/data";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import SectionHeading from "./utils/section-heading";
-import { useInViewSettings } from "@/lib/data";
-import { motion } from "framer-motion";
-import getErrorMessage from "@/components/utils/errorHandler";
 import SubmitBtn from "./utils/submit-btn";
-import sendEmail from "@/actions/send-email";
 
 const Contact = () => {
     // function sleep(ms: number) {
