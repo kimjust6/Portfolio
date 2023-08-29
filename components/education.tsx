@@ -1,14 +1,14 @@
 "use client";
 
 import { useActiveSection } from "@/app/context/active-section-context";
-import { useInViewSettings, education } from "@/lib/data";
-import { SetStateAction, useEffect } from "react";
+import { useTheme } from "@/app/context/theme-context";
+import { education, useInViewSettings } from "@/lib/data";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
-import { useTheme } from "@/app/context/theme-context";
 
 const Education = () => {
     const { ref, inView } = useInView(useInViewSettings);
