@@ -28,7 +28,7 @@ const Skills = () => {
             >
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
-            <div className="w-screen flex justify-center max-w-6xl flex-wrap gap-8 ">
+            <div className="w-screen flex justify-center max-w-7xl flex-wrap gap-8 ">
                 {skillsData.map((skill) => {
                     return (
                         <ul
