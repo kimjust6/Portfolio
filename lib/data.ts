@@ -26,6 +26,8 @@ import next from "@/public/logos/next.svg";
 import aws from "@/public/logos/aws.svg";
 import ionic from "@/public/logos/ionic.svg";
 import cplusplus from "@/public/logos/c++.svg";
+import csharp from "@/public/logos/csharp.svg";
+import dotnet from "@/public/logos/dotnet.svg";
 import vercel from "@/public/logos/vercel.svg";
 import netlify from "@/public/logos/netlify.svg";
 import s3 from "@/public/logos/amazon-s3.svg";
@@ -38,6 +40,7 @@ export const skillsData = [
             { name: "React", svg: react },
             { name: "Next.js", svg: next },
             { name: "Angular", svg: angular },
+            { name: "ASP.NET", svg: dotnet },
             { name: "Node.js", svg: node },
             { name: "Framer Motion", svg: framerMotion },
             { name: "Typescript", svg: typescript },
@@ -51,10 +54,11 @@ export const skillsData = [
         title: "Programming & Scripting",
         skills: [
             { name: "Java", svg: java },
-            { name: "Spring Boot", svg: spring },
+            { name: "C#", svg: csharp },
+            { name: "C++", svg: cplusplus },
+            { name: "Spring", svg: spring },
             { name: "Python", svg: python },
             // { name: "C", svg: c },
-            { name: "C++", svg: cplusplus },
             { name: "Shell Scripting", svg: bash },
         ],
     },

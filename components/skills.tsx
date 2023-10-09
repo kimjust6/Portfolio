@@ -2,7 +2,7 @@
 import { useActiveSection } from "@/app/context/active-section-context";
 import { skillsData, useInViewSettings } from "@/lib/data";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
@@ -28,7 +28,7 @@ const Skills = () => {
             >
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
-            <div className="w-screen flex justify-center max-w-6xl flex-wrap gap-8 ">
+            <div className="w-screen flex justify-center max-w-7xl flex-wrap gap-8 ">
                 {skillsData.map((skill) => {
                     return (
                         <ul
