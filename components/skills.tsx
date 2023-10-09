@@ -2,7 +2,7 @@
 import { useActiveSection } from "@/app/context/active-section-context";
 import { skillsData, useInViewSettings } from "@/lib/data";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
