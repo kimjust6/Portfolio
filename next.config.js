@@ -2,9 +2,14 @@
 const nextConfig = {
     // reactStrictMode: true,
     images: {
-        protocols: ["https"],
-        remotePatterns: [{ hostname: "i.imgur.com" }],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "i.imgur.com",
+            },
+        ],
     },
+
     experimental: {
         serverActions: true,
     },
