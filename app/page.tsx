@@ -10,7 +10,7 @@ import Divider from "@/components/utils/divider";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
-    document.documentElement.classList.add("dark");
+    // document.documentElement.classList.add("dark");
     return (
         <AnimatePresence>
             <main className="">

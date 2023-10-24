@@ -344,7 +344,7 @@ export const projectsData = [
         carouselImage: projectImages[1],
     },
     {
-        title: "Justin's Portfolio ",
+        title: "Justin Kim's Portfolio ",
         tech: ["React", "Next.js", "Tailwind", "Framer Motion"],
         description: `I created my portfolio with Next.js to showcase my work experience and knowledge of web frameworks such as React/Next.js.`,
         codeURL: "https://github.com/kimjust6/Portfolio",

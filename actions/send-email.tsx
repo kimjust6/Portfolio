@@ -5,13 +5,10 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-
-
 const sendEmail = async (email: string, message: string) => {
-
     try {
         await resend.emails.send({
-            from: "Justin's Portfolio <onboarding@resend.dev>",
+            from: "Justin Kim's Portfolio <onboarding@resend.dev>",
             to: "mletemps@hotmail.com",
             subject: "Message from Portfolio",
             reply_to: email,
