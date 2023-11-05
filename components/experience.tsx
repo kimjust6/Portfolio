@@ -13,9 +13,7 @@ import SectionHeading from "./utils/section-heading";
 const Experience = () => {
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
-    const {theme} = useTheme();
-
-    
+    const { theme } = useTheme();
 
     useEffect(() => {
         return () => {
@@ -47,7 +45,7 @@ const Experience = () => {
                             <VerticalTimelineElement
                                 key={exp.company + exp.date}
                                 contentStyle={{
-                                    background: theme == "dark" ? "#111827": "#fef6c7",
+                                    background: theme == "dark" ? "#111827" : "#fef6c7",
                                     boxShadow: "none",
                                     border: "1px solid rgba(0, 0, 0, 0.05)",
                                     padding: "1rem 1rem 1rem 1.5rem",
@@ -56,12 +54,19 @@ const Experience = () => {
                                     borderRight: "7px solid #d1d5db",
                                 }}
                                 icon={exp.icon}
-                                iconStyle={{ background: theme == "dark" ? "#111827": "#fef6c7", fontSize: "1.5rem" }}
+                                iconStyle={{
+                                    background: theme == "dark" ? "#111827" : "#fef6c7",
+                                    fontSize: "1.5rem",
+                                }}
                                 date={exp.date}
                             >
                                 <h3 className="text-2xl font-bold">{exp.company}</h3>
-                                <h4 className="text-xl font-semibold dark:text-yellow-400">{exp.title}</h4>
-                                <p className="text-md !mt-0 !mb-2 text-gray-700 dark:text-gray-400">{exp.location}</p>
+                                <h4 className="text-xl font-semibold dark:text-yellow-400">
+                                    {exp.title}
+                                </h4>
+                                <p className="text-md !mt-0 !mb-2 text-gray-700 dark:text-gray-400">
+                                    {exp.location}
+                                </p>
                                 {exp.description.map((list, index) => {
                                     return (
                                         <Reveal key={index}>
