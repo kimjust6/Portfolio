@@ -60,7 +60,6 @@ const Experience = () => {
                                 }}
                                 date={exp.date}
                             >
-                                asdf
                                 <h3 className="text-2xl font-bold">{exp.company}</h3>
                                 <h4 className="text-xl font-semibold dark:text-yellow-400">
                                     {exp.title}
