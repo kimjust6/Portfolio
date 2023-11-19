@@ -11,9 +11,6 @@ import SectionHeading from "./utils/section-heading";
 import SubmitBtn from "./utils/submit-btn";
 
 const Contact = () => {
-    // function sleep(ms: number) {
-    //     return new Promise((resolve) => setTimeout(resolve, ms));
-    // }
     const { ref, inView } = useInView(useInViewSettings);
     const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
