@@ -49,7 +49,7 @@ const About = () => {
                 transition={{ type: "spring", delay: 0.25, duration: 0.25 }}
             >
                 Aside from programming, I enjoy rock climbing/bouldering and following financial
-                markets. Have a look around to learn about me and see what of projects I have been
+                markets. Have a look around to learn about me and see what projects I have been
                 working on!
             </motion.p>
         </section>
