@@ -1,27 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
+'use client';
 
-import { useActiveSection } from "@/app/context/active-section-context";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
+import { useActiveSection } from '@/app/context/active-section-context';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { useInView } from 'react-intersection-observer';
 
 const Intro = () => {
     const router = useRouter();
     const { ref, inView } = useInView({
         // threshold: 0.1,
         initialInView: true,
-        rootMargin: "-30% 0% -70% 0%",
+        rootMargin: '-30% 0% -70% 0%',
     });
     const { setActiveSection, timeOfLastClick } = useActiveSection();
 
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
-            setActiveSection("Home");
+            setActiveSection('Home');
         }
     }, [inView, setActiveSection, timeOfLastClick]);
 
@@ -34,7 +34,7 @@ const Intro = () => {
                 className="flex items-center justify-center"
                 initial={{ y: -25, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", delay: 0, duration: 0.25 }}
+                transition={{ type: 'spring', delay: 0, duration: 0.25 }}
             >
                 <Image
                     ref={ref}
@@ -50,30 +50,34 @@ const Intro = () => {
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ type: "spring", delay: 0.05, duration: 0.1 }}
+                        transition={{ type: 'spring', delay: 0.05, duration: 0.1 }}
                         className="text-2xl sm:text-3xl font-sans my-10"
                     >
-                        I'm <span className="font-bold dark:text-yellow-400">Justin</span>, a{" "}
-                        <span className="font-bold dark:text-yellow-400">Full Stack Developer </span> who is{" "}
-                        <span className="italic dark:text-yellow-100">passionate</span> about creating modern{" "}
-                        <span className="italic dark:text-yellow-100">user centered </span> web applications.
+                        I'm <span className="font-bold dark:text-yellow-400">Justin</span>, a{' '}
+                        <span className="font-bold dark:text-yellow-400">
+                            Full Stack Developer{' '}
+                        </span>{' '}
+                        who is <span className="italic dark:text-yellow-100">passionate</span> about
+                        creating modern{' '}
+                        <span className="italic dark:text-yellow-100">user centered </span> web
+                        applications.
                     </motion.p>
                     <motion.div
                         className="flex justify-center sm:gap-4 min-w-96 gap-3 flex-col sm:flex-row items-center"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ type: "spring", delay: 0.1, duration: 0.1 }}
+                        transition={{ type: 'spring', delay: 0.1, duration: 0.1 }}
                     >
                         <motion.button
                             className="button_secondary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
                             onClick={() => {
-                                router.push("#contact");
-                                setActiveSection("Contact");
+                                router.push('#contact');
+                                setActiveSection('Contact');
                             }}
                         >
-                            Contact Me{" "}
+                            Contact Me{' '}
                             <BsEnvelope className="group-hover:translate-x-0.5 transition-all" />
                         </motion.button>
                         <motion.a
@@ -83,7 +87,7 @@ const Intro = () => {
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
                         >
-                            Download CV{" "}
+                            Download CV{' '}
                             <BsDownload className="group-hover:translate-y-0.5 transition-all" />
                         </motion.a>
 
@@ -92,11 +96,11 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-gray-50 button_shape sm:p-2.5  border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
+                                className="bg-gray-50 button_shape sm:p-2.5 sm:px-6 border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
-                                <span className="display sm:hidden">LinkedIn</span>
+                                <span className="display ">LinkedIn</span>
                                 <BsLinkedin
                                     size={20}
                                     className="text-blue-800 dark:text-blue-500"
@@ -108,11 +112,11 @@ const Intro = () => {
                             target="_blank"
                         >
                             <motion.div
-                                className="bg-gray-50 button_shape sm:p-2.5 px-4 py-2 border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
+                                className="bg-gray-50 button_shape sm:p-2.5 sm:px-8 px-4 py-2 border sm:w-auto w-44 border-gray-400 flex justify-center items-center gap-2 hover:bg-gray-100"
                                 whileHover={{ scale: 1.07 }}
                                 whileTap={{ scale: 0.97 }}
                             >
-                                <span className="display sm:hidden">GitHub</span>
+                                <span className="display ">GitHub</span>
                                 <BsGithub size={20} />
                             </motion.div>
                         </Link>
