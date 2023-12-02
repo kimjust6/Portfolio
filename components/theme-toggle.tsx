@@ -1,6 +1,7 @@
 'use client';
 import { useTheme } from '@/app/context/theme-context';
-import { BsMoon, BsSun } from 'react-icons/bs';
+import { BsSun } from 'react-icons/bs';
+import { LuMoonStar } from 'react-icons/lu';
 
 const ThemeToggle = () => {
     const { theme, toggleTheme } = useTheme();
@@ -12,7 +13,7 @@ const ThemeToggle = () => {
             onClick={toggleTheme}
         >
             {theme === 'light' ? (
-                <BsMoon className="text-xl sm:text-xl" />
+                <LuMoonStar className="text-xl sm:text-xl text-slate-900 stroke-[0.05em]" />
             ) : (
                 <BsSun className="text-xl sm:text-xl" />
             )}
