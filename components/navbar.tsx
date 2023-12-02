@@ -26,7 +26,7 @@ const Navigation = () => {
                 className={`z-100 flex justify-center items-center fixed bg-amber-200 opacity-95 
                 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-gray-300 
                 px-4 py-1 rounded-md border sm:border-amber-300 text-lg z-[999] flex-wrap w-screen 
-                dark:bg-gray-800  dark:border-gray-600 dark:shadow-none  sm:py-2 sm:rounded-full sm:mt-6 sm:w-fit`}
+                dark:bg-gray-800  dark:border-gray-600 dark:shadow-none  sm:py-2 sm:mt-6 sm:w-fit`}
             >
                 <motion.span
                     className="sm:hidden mr-4"
@@ -69,7 +69,7 @@ const Navigation = () => {
                                             duration: 1,
                                             damping: 30,
                                         }}
-                                        className="absolute inset-0 bg-amber-100 rounded-full -z-10 border border-gray-600 dark:bg-gray-900 
+                                        className="absolute inset-0 bg-amber-100 rounded-lg -z-10 border border-gray-600 dark:bg-gray-900 
                                         dark:text-yellow-200 "
                                     ></motion.div>
                                 )}
