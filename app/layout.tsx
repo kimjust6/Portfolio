@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 
-import { MetadataValues } from "@/lib/data";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navbar";
+import { MetadataValues } from "@/lib/data";
 import { Analytics } from "@vercel/analytics/react";
 import ActiveSectionContextProvider from "./context/active-section-context";
 import ThemeContextProvider from "./context/theme-context";
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         determiner: '',
-        title: MetadataValues.Title,
+        title: "Justin Kim",
         description: MetadataValues.Description,
-        siteName: "Justin Kim",
+        siteName: MetadataValues.Title,
         locale: "en_US",
         alternateLocale:"en_GB",
-        images: ["https://www.justink.dev/_next/image?url=https%3A%2F%2Fi.imgur.com%2FR4NkK6G.jpg&w=256&q=75"],
+        images: ["https://i.imgur.com/O3H6i8d.png","https://www.justink.dev/_next/image?url=https%3A%2F%2Fi.imgur.com%2FR4NkK6G.jpg&w=256&q=75"],
         url: "https://www.justink.dev/",
         countryName: "Canada",
     }
