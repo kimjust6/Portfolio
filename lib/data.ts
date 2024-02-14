@@ -446,7 +446,7 @@ export const useInViewSettings = {
 } as const;
 
 
-export const Metadata = {
+export const MetadataValues = {
     Title: "Justin Kim Full Stack Developer Portfolio",
-    Description: "Justin Kim is a full stack developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
+    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
 }
