@@ -447,6 +447,6 @@ export const useInViewSettings = {
 
 
 export const MetadataValues = {
-    Title: "Justin Kim Full Stack Developer Portfolio",
+    Title: "Justin Kim Full Stack Developer",
     Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
 }
