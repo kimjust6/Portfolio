@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         siteName: MetadataValues.Title,
         locale: "en_US",
         alternateLocale:"en_GB",
-        images: ["https://i.imgur.com/O3H6i8d.png","https://www.justink.dev/_next/image?url=https%3A%2F%2Fi.imgur.com%2FR4NkK6G.jpg&w=256&q=75"],
+        images: ["https://i.imgur.com/O3H6i8d.png"],
         url: "https://www.justink.dev/",
         countryName: "Canada",
     }
