@@ -13,7 +13,31 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Justin Kim Full Stack Developer",
     description:
-        "Justin kim is a full stack developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position.",
+        "Justin Kim is a full stack developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position.",
+    applicationName: "Justin Kim's Portfolio",
+    authors: [{ url: "", name: "Justin Kim" }],
+    keywords: [
+        "Justin Kim",
+        "Portfolio",
+        "Web Developer",
+        "Full Stack Developer",
+        "Seneca College",
+        "Yaksa",
+        "Partech",
+        "Par",
+    ],
+    robots: {
+        googleBot: {
+            index: true,
+            follow: true,
+            noarchive: false,
+            nosnippet: false,
+            noimageindex: false,
+            notranslate: false,
+            indexifembedded: true,
+            nositelinkssearchbox: true,
+        }
+    }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
