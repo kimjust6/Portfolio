@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 
+import { MetadataValues } from "@/lib/data";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navbar";
 import { Analytics } from "@vercel/analytics/react";
@@ -11,11 +12,12 @@ import ThemeContextProvider from "./context/theme-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Justin Kim Full Stack Developer",
+    title: MetadataValues.Title,
     description:
-        "Justin Kim is a full stack developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position.",
+        MetadataValues.Description,
     applicationName: "Justin Kim's Portfolio",
     authors: [{ url: "", name: "Justin Kim" }],
+    generator: "Next.js",
     keywords: [
         "Justin Kim",
         "Portfolio",
@@ -37,6 +39,18 @@ export const metadata: Metadata = {
             indexifembedded: true,
             nositelinkssearchbox: true,
         }
+    },
+    openGraph: {
+        type: "website",
+        determiner: '',
+        title: MetadataValues.Title,
+        description: MetadataValues.Description,
+        siteName: "Justin Kim",
+        locale: "en_US",
+        alternateLocale:"en_GB",
+        images: ["https://www.justink.dev/_next/image?url=https%3A%2F%2Fi.imgur.com%2FR4NkK6G.jpg&w=256&q=75"],
+        url: "https://www.justink.dev/",
+        countryName: "Canada",
     }
 };
 
