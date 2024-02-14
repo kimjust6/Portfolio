@@ -444,3 +444,9 @@ export const useInViewSettings = {
     // triggerOnce: true,
     rootMargin: '-40% 0% -40% 0%',
 } as const;
+
+
+export const MetadataValues = {
+    Title: "Justin Kim Full Stack Developer",
+    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
+}
