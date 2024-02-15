@@ -40,26 +40,26 @@ export const skillsData = [
             { name: 'React', svg: react },
             { name: 'Next.js', svg: next },
             { name: 'Angular', svg: angular },
-            { name: 'ASP.NET', svg: dotnet },
-            { name: 'Node.js', svg: node },
-            { name: 'Framer Motion', svg: framerMotion },
             { name: 'Typescript', svg: typescript },
-            { name: 'Javascript', svg: javascript },
-            { name: 'HTML5', svg: html },
-            { name: 'CSS3', svg: css },
-            { name: 'Ionic', svg: ionic },
+            // { name: 'Framer Motion', svg: framerMotion },
+            // { name: 'Javascript', svg: javascript },
+            // { name: 'HTML5', svg: html },
+            // { name: 'CSS3', svg: css },
+            // { name: 'Ionic', svg: ionic },
         ],
     },
     {
         title: 'Programming & Scripting',
         skills: [
-            { name: 'Java', svg: java },
             { name: 'C#', svg: csharp },
-            { name: 'C++', svg: cplusplus },
-            { name: 'Spring', svg: spring },
-            { name: 'Python', svg: python },
+            { name: 'ASP.NET', svg: dotnet },
+            { name: 'Java', svg: java },
+            { name: 'Node.js', svg: node },
+            // { name: 'C++', svg: cplusplus },
+            // { name: 'Spring', svg: spring },
+            // { name: 'Python', svg: python },
             // { name: "C", svg: c },
-            { name: 'Shell Scripting', svg: bash },
+            // { name: 'Shell Scripting', svg: bash },
         ],
     },
     {
@@ -124,6 +124,16 @@ export const links = [
 ] as const;
 
 export const workExperience = [
+    {
+        title: 'Développeur Maintenance et Évolutions',
+        company: 'Yaksa Inc.',
+        location: 'Montreal, QC',
+        description: [
+            
+        ],
+        icon: React.createElement(CgWorkAlt),
+        date: 'Feb 2024 - Present',
+    },
     {
         title: 'Full Stack Developer',
         company: 'ParTech Inc.',
@@ -448,5 +458,5 @@ export const useInViewSettings = {
 
 export const MetadataValues = {
     Title: "Justin Kim Full Stack Developer",
-    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
+    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College in 2023, where he acquired his Bachelor of Technology in Software Development."
 }
