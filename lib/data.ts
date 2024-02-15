@@ -125,7 +125,7 @@ export const links = [
 
 export const workExperience = [
     {
-        title: 'Développeur Maintenance et Evolutions',
+        title: 'Développeur Maintenance et Évolutions',
         company: 'Yaksa Inc.',
         location: 'Montreal, QC',
         description: [
@@ -458,5 +458,5 @@ export const useInViewSettings = {
 
 export const MetadataValues = {
     Title: "Justin Kim Full Stack Developer",
-    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying Software Development."
+    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College in 2023, where he acquired his Bachelor of Technology in Software Development."
 }
