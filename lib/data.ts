@@ -125,6 +125,16 @@ export const links = [
 
 export const workExperience = [
     {
+        title: 'Développeur Maintenance et Evolutions',
+        company: 'Yaksa Inc.',
+        location: 'Montreal, QC',
+        description: [
+            
+        ],
+        icon: React.createElement(CgWorkAlt),
+        date: 'Feb 2024 - Present',
+    },
+    {
         title: 'Full Stack Developer',
         company: 'ParTech Inc.',
         location: 'Markham, ON',
@@ -448,5 +458,5 @@ export const useInViewSettings = {
 
 export const MetadataValues = {
     Title: "Justin Kim Full Stack Developer",
-    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying computer science and is looking for a full time position."
+    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College studying Software Development."
 }
