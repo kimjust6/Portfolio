@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useActiveSection } from "@/app/context/active-section-context";
-import { useTheme } from "@/app/context/theme-context";
-import { useInViewSettings, workExperience } from "@/lib/data";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import Reveal from "./utils/reveal";
-import SectionHeading from "./utils/section-heading";
+import { useActiveSection } from '@/app/context/active-section-context';
+import { useTheme } from '@/app/context/theme-context';
+import { useInViewSettings, workExperience } from '@/lib/data';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import Reveal from './utils/reveal';
+import SectionHeading from './utils/section-heading';
 
 const Experience = () => {
     const { ref, inView } = useInView(useInViewSettings);
@@ -18,7 +18,7 @@ const Experience = () => {
     useEffect(() => {
         return () => {
             if (inView && Date.now() - timeOfLastClick > 1000) {
-                setActiveSection("Experience");
+                setActiveSection('Experience');
             }
         };
     }, [inView, setActiveSection, timeOfLastClick]);
@@ -44,19 +44,20 @@ const Experience = () => {
                             // <React.Fragment key={exp.company + exp.date}>
                             <VerticalTimelineElement
                                 key={exp.company + exp.date}
+                                visible={true}
                                 contentStyle={{
-                                    background: theme == "dark" ? "#111827" : "#fef6c7",
-                                    boxShadow: "none",
-                                    border: "1px solid rgba(0, 0, 0, 0.05)",
-                                    padding: "1rem 1rem 1rem 1.5rem",
+                                    background: theme == 'dark' ? '#111827' : '#fef6c7',
+                                    boxShadow: 'none',
+                                    border: '1px solid rgba(0, 0, 0, 0.05)',
+                                    padding: '1rem 1rem 1rem 1.5rem',
                                 }}
                                 contentArrowStyle={{
-                                    borderRight: "7px solid #d1d5db",
+                                    borderRight: '7px solid #d1d5db',
                                 }}
                                 icon={exp.icon}
                                 iconStyle={{
-                                    background: theme == "dark" ? "#111827" : "#fef6c7",
-                                    fontSize: "1.5rem",
+                                    background: theme == 'dark' ? '#111827' : '#fef6c7',
+                                    fontSize: '1.5rem',
                                 }}
                                 date={exp.date}
                             >
