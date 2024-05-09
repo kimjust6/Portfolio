@@ -128,9 +128,7 @@ export const workExperience = [
         title: 'Développeur Maintenance et Évolutions',
         company: 'Yaksa Inc.',
         location: 'Montreal, QC',
-        description: [
-            
-        ],
+        description: [],
         icon: React.createElement(CgWorkAlt),
         date: 'Feb 2024 - Present',
     },
@@ -455,8 +453,8 @@ export const useInViewSettings = {
     rootMargin: '-40% 0% -40% 0%',
 } as const;
 
-
 export const MetadataValues = {
-    Title: "Justin Kim Full Stack Developer",
-    Description: "Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College in 2023, where he acquired his Bachelor of Technology in Software Development."
-}
+    Title: 'Justin Kim Full Stack Developer',
+    Description:
+        'Justin Kim is a Full Stack Developer who is passionate about web development. He graduated from Seneca College in 2023, where he acquired his Bachelor of Technology in Software Development.',
+};
