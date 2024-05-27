@@ -63,7 +63,7 @@ const Intro = () => {
                         applications.
                     </motion.p>
                     <motion.div
-                        className="flex justify-center sm:gap-4 min-w-96 gap-3 flex-col sm:flex-row items-center"
+                        className="flex justify-center sm:gap-4 sm:min-w-96 gap-3 flex-col sm:flex-row items-center"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ type: 'spring', delay: 0.1, duration: 0.1 }}
