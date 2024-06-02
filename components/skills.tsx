@@ -20,39 +20,34 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="scroll-m-28 w-screen flex justify-center flex-col items-center"
+            className="flex w-screen scroll-m-28 flex-col items-center justify-center"
         >
-            <div
-                ref={ref}
-                className="mb-8"
-            >
+            <div ref={ref} className="mb-8">
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
-            <div className="w-screen flex justify-center max-w-7xl flex-wrap gap-8 ">
+            <div className="flex w-screen max-w-7xl flex-wrap justify-center gap-8">
                 {skillsData.map((skill) => {
                     return (
                         <ul
-                            className="flex flex-col p-4 items-center  "
+                            className="flex flex-col items-center p-4"
                             key={skill.title}
                         >
                             <Reveal>
                                 <h2 className="subheading">{skill.title}</h2>
                             </Reveal>
-                            <div className="flex items-end justify-center flex-wrap my-4">
+                            <div className="my-4 flex flex-wrap items-end justify-center">
                                 {skill.skills.map((s, index) => {
                                     return (
                                         // because s can be undefined sometimes
                                         s && (
-                                            <Reveal
-                                                key={s.name}
-                                                index={index}
-                                            >
-                                                <li className="flex flex-col items-center px-5 py-2 ">
+                                            <Reveal key={s.name} index={index}>
+                                                <li className="flex flex-col items-center px-5 py-2">
                                                     <Image
                                                         className={
-                                                            "hidden sm:block mb-2 " +
-                                                            (s.name === "Next.js"
-                                                                ? " dark:invert"
+                                                            "mb-2 hidden sm:block " +
+                                                            (s.name ===
+                                                            "Next.js"
+                                                                ? "dark:invert"
                                                                 : "")
                                                         }
                                                         src={s.svg}
@@ -63,8 +58,9 @@ const Skills = () => {
                                                     <Image
                                                         className={
                                                             "sm:hidden " +
-                                                            (s.name === "Next.js"
-                                                                ? " dark:invert"
+                                                            (s.name ===
+                                                            "Next.js"
+                                                                ? "dark:invert"
                                                                 : "")
                                                         }
                                                         src={s.svg}

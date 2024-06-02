@@ -23,34 +23,33 @@ const About = () => {
     return (
         <section
             id="about"
-            className="scroll-m-28 flex flex-col items-center justify-center text-md mx-6"
+            className="text-md mx-6 flex scroll-m-28 flex-col items-center justify-center"
         >
-            <div
-                ref={ref}
-                className="mb-4"
-            >
+            <div ref={ref} className="mb-4">
                 <SectionHeading>ABOUT ME</SectionHeading>
             </div>
 
             <motion.p
-                className="text-center max-w-md sm:max-w-3xl text-md mt-2 sm:mt-4"
+                className="text-md mt-2 max-w-md text-center sm:mt-4 sm:max-w-3xl"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
             >
-                My name is Justin and I'm a full stack developer who is passionate about creating
-                responsive user centered web applications. My strong work ethic, willingness to
-                rising up to challenges, and eagerness to learn are some of my greatest assets.
+                My name is Justin and I'm a full stack developer who is
+                passionate about creating responsive user centered web
+                applications. My strong work ethic, willingness to rising up to
+                challenges, and eagerness to learn are some of my greatest
+                assets.
             </motion.p>
             <motion.p
-                className="text-center max-w-md sm:max-w-3xl text-md mt-2 sm:mt-4"
+                className="text-md mt-2 max-w-md text-center sm:mt-4 sm:max-w-3xl"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 0.25, duration: 0.25 }}
             >
-                Aside from programming, I enjoy rock climbing/bouldering and following financial
-                markets. Have a look around to learn about me and see what projects I have been
-                working on!
+                Aside from programming, I enjoy rock climbing/bouldering and
+                following financial markets. Have a look around to learn about
+                me and see what projects I have been working on!
             </motion.p>
         </section>
     );

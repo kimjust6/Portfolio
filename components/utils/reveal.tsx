@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import { motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { cn } from "@/lib/utils";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 interface Props {
     className?: string;
@@ -23,14 +23,17 @@ const Reveal = ({ index, children, className }: Props) => {
 
     useEffect(() => {
         if (isInView) {
-            mainControls.start('visible');
+            mainControls.start("visible");
         }
     }, [isInView, mainControls]);
 
     return (
         <motion.div
             ref={ref}
-            variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
+            variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+            }}
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.25, delay: index ? index * 0.08 : 0.25 }}

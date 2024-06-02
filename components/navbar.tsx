@@ -1,18 +1,19 @@
-'use client';
+"use client";
 
-import { useActiveSection } from '@/app/context/active-section-context';
-import { links } from '@/lib/data';
-import clsx from 'clsx';
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import Link from 'next/link';
-import { useState } from 'react';
-import ThemeToggle from './theme-toggle';
+import { useActiveSection } from "@/app/context/active-section-context";
+import { links } from "@/lib/data";
+import clsx from "clsx";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import ThemeToggle from "./theme-toggle";
 
 const Navigation = () => {
-    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection();
+    const { activeSection, setActiveSection, setTimeOfLastClick } =
+        useActiveSection();
     const [isOnTop, setIsOnTop] = useState(true);
     const { scrollY } = useScroll();
-    useMotionValueEvent(scrollY, 'change', (latest) => {
+    useMotionValueEvent(scrollY, "change", (latest) => {
         if (latest > 150) {
             setIsOnTop(false);
         } else {
@@ -21,15 +22,10 @@ const Navigation = () => {
     });
 
     return (
-        <nav className="flex justify-center flex-row w-screen ">
-            <div
-                className={`z-100 flex justify-center items-center fixed bg-amber-200 opacity-95 
-                bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-95 sm:bg-opacity-80 shadow-md sm:shadow-lg shadow-gray-300 
-                px-4 py-1 rounded-md border sm:border-amber-300 text-lg z-[999] flex-wrap w-screen 
-                dark:bg-gray-800  dark:border-gray-600 dark:shadow-none  sm:py-2 sm:mt-6 sm:w-fit`}
-            >
+        <nav className="flex w-screen flex-row justify-center">
+            <div className="z-100 fixed z-[999] flex w-screen flex-wrap items-center justify-center rounded-md border bg-amber-200 bg-opacity-95 bg-clip-padding px-4 py-1 text-lg opacity-95 shadow-md shadow-gray-300 backdrop-blur-lg backdrop-filter dark:border-gray-600 dark:bg-gray-800 dark:shadow-none sm:mt-6 sm:w-fit sm:border-amber-300 sm:bg-opacity-80 sm:py-2 sm:shadow-lg">
                 <motion.span
-                    className="sm:hidden mr-4"
+                    className="mr-4 sm:hidden"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                 >
@@ -39,7 +35,7 @@ const Navigation = () => {
                     return (
                         <motion.li
                             key={link.name}
-                            className="flex justify-center items-center relative"
+                            className="relative flex items-center justify-center"
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                         >
@@ -47,9 +43,10 @@ const Navigation = () => {
                                 href={link.hash}
                                 data-text={link.name}
                                 className={clsx(
-                                    'my_navbar text-gray-700 mx-2 text-zinc-9500 opacity-100 dark:text-gray-50 hover:text-gray-950 hover:font-semibold transition-all py-1 data-text-title select-none',
+                                    "my_navbar text-zinc-9500 data-text-title mx-2 select-none py-1 text-gray-700 opacity-100 transition-all hover:font-semibold hover:text-gray-950 dark:text-gray-50",
                                     {
-                                        'font-semibold text-gray-950': activeSection === link.name,
+                                        "font-semibold text-gray-950":
+                                            activeSection === link.name,
                                     }
                                 )}
                                 onClick={() => {
@@ -64,13 +61,12 @@ const Navigation = () => {
                                     <motion.div
                                         layoutId="pill"
                                         transition={{
-                                            type: 'spring',
+                                            type: "spring",
                                             stiffness: 380,
                                             duration: 1,
                                             damping: 30,
                                         }}
-                                        className="absolute inset-0 bg-amber-100 rounded-lg -z-10 border border-gray-600 dark:bg-gray-900 
-                                        dark:text-yellow-200 "
+                                        className="absolute inset-0 -z-10 rounded-lg border border-gray-600 bg-amber-100 dark:bg-gray-900 dark:text-yellow-200"
                                     ></motion.div>
                                 )}
                             </Link>
