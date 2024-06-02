@@ -28,14 +28,14 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="scroll-m-28 flex flex-col items-center w-screen min-h-[40em] sm:min-h-[48em] text-center "
+            className="flex min-h-[40em] w-screen scroll-m-28 flex-col items-center text-center sm:min-h-[48em]"
         >
             <div ref={ref}>
                 <SectionHeading>CONTACT ME</SectionHeading>
             </div>
 
             <motion.p
-                className="text-gray-700 text-sm px-4 mt-2 dark:text-gray-400"
+                className="mt-2 px-4 text-sm text-gray-700 dark:text-gray-400"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.25 }}
@@ -43,7 +43,7 @@ const Contact = () => {
             >
                 Contact me directly at{" "}
                 <a
-                    className="text-indigo-600 underline font-semibold"
+                    className="font-semibold text-indigo-600 underline"
                     href="mailto:kimjust6@gmail.com"
                 >
                     kimjust6@gmail.com
@@ -63,18 +63,20 @@ const Contact = () => {
                     }
                     setEmailSent(true);
                 }}
-                className="mt-10 flex flex-col gap-4 sm:gap-4 min-w-[min(100%,38rem)] px-8"
+                className="mt-10 flex min-w-[min(100%,38rem)] flex-col gap-4 px-8 sm:gap-4"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                {errorMessage && <p className="text-red-500">Error: {errorMessage}</p>}
+                {errorMessage && (
+                    <p className="text-red-500">Error: {errorMessage}</p>
+                )}
                 <input
                     disabled={emailSent}
                     type="email"
                     name="senderEmail"
-                    className="rounded-lg border h-10 px-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70 dark:bg-gray-700 dark:shadow-none dark:border-gray-600"
+                    className="h-10 rounded-lg border bg-gray-50 px-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:shadow-none"
                     placeholder="Your Email"
                     required
                     maxLength={100}
@@ -83,7 +85,7 @@ const Contact = () => {
                     disabled={emailSent}
                     required
                     name="senderMessage"
-                    className="rounded-lg h-80 border p-4 shadow-md shadow-gray-300 bg-gray-50 disabled:bg-gray-100 disabled:opacity-70 dark:bg-gray-700 dark:shadow-none dark:border-gray-600"
+                    className="h-80 rounded-lg border bg-gray-50 p-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:shadow-none"
                     placeholder="Your Message"
                     maxLength={1000}
                 ></textarea>

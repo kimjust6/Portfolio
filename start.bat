@@ -1,2 +1,2 @@
 rem npm run build
-npm start
+npm start -- --port 8000
