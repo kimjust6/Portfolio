@@ -19,6 +19,7 @@ import postgres from "@/public/logos/postgres.svg";
 // import framerMotion from "@/public/logos/framer-motion.svg";
 import docker from "@/public/logos/docker.svg";
 import mysql from "@/public/logos/mysql.svg";
+import mssql from "@/public/logos/mssql.svg";
 // import heroku from "@/public/logos/heroku.svg";
 import mongodb from "@/public/logos/mongodb.svg";
 import postman from "@/public/logos/postman.svg";
@@ -66,10 +67,10 @@ export const skillsData = [
     {
         title: "Database Management",
         skills: [
-            { name: "MongoDB", svg: mongodb },
+            { name: "MSSQL", svg: mssql },
             { name: "PostgreSQL", svg: postgres },
+            { name: "MongoDB", svg: mongodb },
             // { name: "MySQL", svg: mysql },
-            { name: "MySQL", svg: mysql },
             { name: "Firebase", svg: firebase },
             // { name: "Amazon S3", svg: s3 },
         ],
