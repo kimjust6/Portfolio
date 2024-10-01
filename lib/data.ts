@@ -3,22 +3,21 @@ import { CgWorkAlt } from "react-icons/cg";
 
 import { LuGraduationCap } from "react-icons/lu";
 // import angular from "@/public/logos/angular.svg";
+import azure from "@/public/logos/azure.svg";
 import react from "@/public/logos/react.svg";
 import typescript from "@/public/logos/typescript.svg";
-import azure from "@/public/logos/azure.svg";
 // import css from "@/public/logos/css.svg";
 // import html from "@/public/logos/html.svg";
 // import javascript from "@/public/logos/javascript.svg";
 import node from "@/public/logos/node.svg";
 // import c from "@/public/logos/c.svg";
-// import java from "@/public/logos/java.svg";
+import java from "@/public/logos/java.svg";
 // import python from "@/public/logos/python.svg";
 // import spring from "@/public/logos/spring.svg";
 import firebase from "@/public/logos/firebase.svg";
 import postgres from "@/public/logos/postgres.svg";
 // import framerMotion from "@/public/logos/framer-motion.svg";
 import docker from "@/public/logos/docker.svg";
-import mysql from "@/public/logos/mysql.svg";
 import mssql from "@/public/logos/mssql.svg";
 // import heroku from "@/public/logos/heroku.svg";
 import mongodb from "@/public/logos/mongodb.svg";
@@ -56,7 +55,7 @@ export const skillsData = [
         skills: [
             { name: "C#", svg: csharp },
             { name: ".NET", svg: dotnet },
-            // { name: "Java", svg: java },
+            { name: "Java", svg: java },
             // { name: 'C++', svg: cplusplus },
             // { name: 'Spring', svg: spring },
             // { name: 'Python', svg: python },
