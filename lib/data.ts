@@ -2,47 +2,49 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 
 import { LuGraduationCap } from "react-icons/lu";
-import angular from "@/public/logos/angular.svg";
+// import angular from "@/public/logos/angular.svg";
 import react from "@/public/logos/react.svg";
 import typescript from "@/public/logos/typescript.svg";
-import css from "@/public/logos/css.svg";
-import html from "@/public/logos/html.svg";
-import javascript from "@/public/logos/javascript.svg";
+import azure from "@/public/logos/azure.svg";
+// import css from "@/public/logos/css.svg";
+// import html from "@/public/logos/html.svg";
+// import javascript from "@/public/logos/javascript.svg";
 import node from "@/public/logos/node.svg";
 // import c from "@/public/logos/c.svg";
-import java from "@/public/logos/java.svg";
-import python from "@/public/logos/python.svg";
-import spring from "@/public/logos/spring.svg";
-import postgres from "@/public/logos/postgres.svg";
+// import java from "@/public/logos/java.svg";
+// import python from "@/public/logos/python.svg";
+// import spring from "@/public/logos/spring.svg";
 import firebase from "@/public/logos/firebase.svg";
-import framerMotion from "@/public/logos/framer-motion.svg";
-import mysql from "@/public/logos/mysql.svg";
+import postgres from "@/public/logos/postgres.svg";
+// import framerMotion from "@/public/logos/framer-motion.svg";
 import docker from "@/public/logos/docker.svg";
-import heroku from "@/public/logos/heroku.svg";
-import postman from "@/public/logos/postman.svg";
+import mysql from "@/public/logos/mysql.svg";
+// import heroku from "@/public/logos/heroku.svg";
 import mongodb from "@/public/logos/mongodb.svg";
-import bash from "@/public/logos/bash.svg";
+import postman from "@/public/logos/postman.svg";
+// import bash from "@/public/logos/bash.svg";
 import next from "@/public/logos/next.svg";
-import aws from "@/public/logos/aws.svg";
-import ionic from "@/public/logos/ionic.svg";
-import cplusplus from "@/public/logos/c++.svg";
+// import aws from "@/public/logos/aws.svg";
+// import ionic from "@/public/logos/ionic.svg";
+// import cplusplus from "@/public/logos/c++.svg";
 import csharp from "@/public/logos/csharp.svg";
 import dotnet from "@/public/logos/dotnet.svg";
-import vercel from "@/public/logos/vercel.svg";
-import netlify from "@/public/logos/netlify.svg";
-import s3 from "@/public/logos/amazon-s3.svg";
+// import vercel from "@/public/logos/vercel.svg";
+// import netlify from "@/public/logos/netlify.svg";
+// import s3 from "@/public/logos/amazon-s3.svg";
 import git from "@/public/logos/git.svg";
 
 export const skillsData = [
     {
         title: "Web Development",
         skills: [
-            { name: "React", svg: react },
             { name: "Next.js", svg: next },
-            { name: "Angular", svg: angular },
+            { name: "React", svg: react },
+            // { name: "Angular", svg: angular },
+            { name: "Node.js", svg: node },
             { name: "Typescript", svg: typescript },
             // { name: 'Framer Motion', svg: framerMotion },
-            // { name: 'Javascript', svg: javascript },
+            // { name: "Javascript", svg: javascript },
             // { name: 'HTML5', svg: html },
             // { name: 'CSS3', svg: css },
             // { name: 'Ionic', svg: ionic },
@@ -52,9 +54,8 @@ export const skillsData = [
         title: "Programming & Scripting",
         skills: [
             { name: "C#", svg: csharp },
-            { name: "ASP.NET", svg: dotnet },
-            { name: "Java", svg: java },
-            { name: "Node.js", svg: node },
+            { name: ".NET", svg: dotnet },
+            // { name: "Java", svg: java },
             // { name: 'C++', svg: cplusplus },
             // { name: 'Spring', svg: spring },
             // { name: 'Python', svg: python },
@@ -76,7 +77,8 @@ export const skillsData = [
     {
         title: "Tools & Misc.",
         skills: [
-            { name: "AWS", svg: aws },
+            // { name: "AWS", svg: aws },
+            { name: "Azure", svg: azure },
             { name: "Docker", svg: docker },
             { name: "Git", svg: git },
             { name: "Postman", svg: postman },
@@ -123,12 +125,27 @@ export const links = [
     // },
 ] as const;
 
+const nice =
+    "jr, cdmv, iata, dollarama, sommets, exfo, infrastructure ontario, hilo, ";
+
 export const workExperience = [
+    // {
+    //     title: "Développeur Maintenance et Évolutions",
+    //     company: "Yaksa Inc.",
+    //     location: "Montreal, QC",
+    //     description: [],
+    //     icon: React.createElement(CgWorkAlt),
+    //     date: "Feb 2024 - Present",
+    // },
     {
-        title: "Développeur Maintenance et Évolutions",
-        company: "Yaksa Inc.",
+        title: "Associate Developer, Optimization",
+        company: "Verndale Canada",
         location: "Montreal, QC",
-        description: [],
+        description: [
+            "Collaborated with clients to define scope, provide detailed estimates, and successfully develop, test, and deploy requested features",
+            "Provided 24/7 support for 8+ client websites by diagnosing and resolving mission critical issues",
+            "Created documentation for newly implemented features to facilitate understanding and support for end users and development teams",
+        ],
         icon: React.createElement(CgWorkAlt),
         date: "Feb 2024 - Present",
     },
@@ -140,7 +157,7 @@ export const workExperience = [
             "Maintained ownership of dashboard that clients utilized to view organization performance metrics",
             "Reduced dashboard API calls up to 30% by serializing API calls with RxJS and custom lazy loading logic",
             "Architected and implemented store portal dashboard to improve scalability by transitioning API calls to client databases",
-            "Repaired production server by diagnosing and fixing an API endpoint that caused database connection leaks ",
+            "Repaired production server by diagnosing and fixing an API endpoint that caused database connection leaks",
         ],
         icon: React.createElement(CgWorkAlt),
         date: "May 2022 - Apr 2023",
