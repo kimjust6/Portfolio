@@ -143,7 +143,8 @@ export const workExperience = [
         location: "Montreal, QC",
         description: [
             "Collaborated with clients to define scope, provide detailed estimates, and successfully develop, test, and deploy requested features",
-            "Provided 24/7 support for 8+ client websites by diagnosing and resolving mission critical issues",
+            "Provided 24/7 support for 8+ client websites by diagnosing and resolving issues ranging from minor cosmetic bugs to mission critical business logic",
+            "Developed intuition in diagnosing and resolving production issues with Application Insights and reading logs",
             "Created documentation for newly implemented features to facilitate understanding and support for end users and development teams",
         ],
         icon: React.createElement(CgWorkAlt),
