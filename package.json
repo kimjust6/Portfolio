@@ -6,7 +6,10 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next dev",
-        "lint": "next lint"
+        "lint": "next lint",
+        "pages:build": "npx @cloudflare/next-on-pages",
+        "prev": "npm run pages:build && wrangler pages dev",
+        "deploy": "npm run pages:build && wrangler pages deploy"
     },
     "dependencies": {
         "@types/node": "20.12.11",
