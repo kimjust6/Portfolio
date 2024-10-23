@@ -354,7 +354,7 @@ export const projectsData = [
         description: `This Next.js full stack application allows users to sign in with their existing google account and create, update, 
         and delete prompts for Stable Diffusion. Posts are saved to MongoDB and can be filtered on the home page.`,
         codeURL: "https://github.com/kimjust6/StablePrompts",
-        liveDemoURL: "https://prompts-mocha-seven.vercel.app",
+        liveDemoURL: "https://prompts.justink.dev",
         carouselImage: projectImages[0],
     },
     {
@@ -413,7 +413,7 @@ export const projectsData = [
             design in mind. My version of Wordle makes use of emitters, localstorage, and variable css. This 
             application has a dark theme as well as a mobile view of the webpage. Checkout the live demo below.`,
         codeURL: "https://github.com/kimjust6/Wordle-Clone",
-        liveDemoURL: "https://wordle-xi.vercel.app/game/1",
+        liveDemoURL: "https://wordle.justink.dev/",
         carouselImage: projectImages[2],
     },
     {
