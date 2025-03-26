@@ -35,6 +35,7 @@
     "devDependencies": {
         "@types/react-vertical-timeline-component": "^3.3.6",
         "@types/uuid": "^9.0.8",
+        "postcss-import": "^16.1.0",
         "prettier": "^3.5.3",
         "prettier-plugin-tailwindcss": "^0.6.11",
         "react-vertical-timeline-component": "^3.6.0",
