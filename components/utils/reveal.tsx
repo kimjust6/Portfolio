@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type JSX } from "react";
 
 interface Props {
     className?: string;

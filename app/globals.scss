@@ -17,7 +17,7 @@ $transparent: rgba(0, 0, 0, 0);
 }
 
 .button_secondary {
-    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-zinc-50 px-4 py-2 shadow-md shadow-gray-300 hover:bg-zinc-100 dark:bg-gray-900 dark:text-gray-100 dark:shadow-none dark:hover:bg-gray-950 sm:w-fit;
+    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-amber-100 bg-opacity-75 px-4 py-2 shadow-md shadow-gray-300 hover:bg-amber-100 dark:bg-gray-900 dark:text-gray-100 dark:shadow-none dark:hover:bg-gray-950 sm:w-fit;
 }
 
 .button_accent {
