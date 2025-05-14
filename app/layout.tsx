@@ -1,9 +1,9 @@
-"use client";
+import "@/app/styles/globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/app/styles/globals.scss";
 
 import Footer from "@/components/footer";
+import GlobalStyles from "@/components/globalStyles";
 import Navigation from "@/components/navbar";
 import { MetadataValues } from "@/lib/data";
 import { Analytics } from "@vercel/analytics/react";
@@ -64,6 +64,7 @@ export default function RootLayout({
             <body
                 className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 dark:text-opacity-95`}
             >
+                <GlobalStyles />
                 <ActiveSectionContextProvider>
                     <ThemeContextProvider>
                         <Navigation />
