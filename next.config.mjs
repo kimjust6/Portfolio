@@ -8,9 +8,6 @@ const nextConfig = {
         remotePatterns: [{ protocol: "https", hostname: "i.imgur.com" }],
     },
     reactStrictMode: false,
-    sassOptions: {
-        implementation: sass,
-    },
 };
 
 export default nextConfig;
