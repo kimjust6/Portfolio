@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FcCheckmark } from "react-icons/fc";
-
 import { useFormStatus } from "react-dom";
 
 function SubmitBtn({ emailSent }: { emailSent: boolean }) {

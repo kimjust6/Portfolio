@@ -1,13 +1,7 @@
 import "@/app/styles/globals.scss";
+import { MetadataValues } from "@/lib/data";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
-import Footer from "@/components/footer";
-import GlobalStyles from "@/components/globalStyles";
-import Navigation from "@/components/navbar";
-import { MetadataValues } from "@/lib/data";
-import { Analytics } from "@vercel/analytics/react";
-import ActiveSectionContextProvider from "./context/active-section-context";
 import ThemeContextProvider from "./context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,6 +19,8 @@ export const metadata: Metadata = {
         "Full Stack Developer",
         "Seneca College",
         "Yaksa",
+        "Verndale",
+        "Verndale Canada",
         "Partech",
         "Par",
     ],
@@ -60,20 +56,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="scroll-smooth">
-            <body
-                className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 dark:text-opacity-95`}
-            >
-                <GlobalStyles />
-                <ActiveSectionContextProvider>
-                    <ThemeContextProvider>
-                        <Navigation />
-                        {children}
-                        <Analytics />
-                        <Footer />
-                    </ThemeContextProvider>
-                </ActiveSectionContextProvider>
-            </body>
-        </html>
+        <ThemeContextProvider>
+            <html lang="en" className="scroll-smooth">
+                <body
+                    className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 dark:text-opacity-95`}
+                >
+                    {children}
+                </body>
+            </html>
+        </ThemeContextProvider>
     );
 }
