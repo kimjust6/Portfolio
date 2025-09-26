@@ -59,7 +59,7 @@ export default function RootLayout({
         <ThemeContextProvider>
             <html lang="en" className="scroll-smooth">
                 <body
-                    className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 dark:text-opacity-95`}
+                    className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50/95`}
                 >
                     {children}
                 </body>
