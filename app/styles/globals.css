@@ -8,10 +8,6 @@ html {
     --line-color: #d1d5db;
 }
 
-$color: rgb(245, 244, 230);
-$color2: rgb(253, 191, 204);
-$transparent: rgba(0, 0, 0, 0);
-
 .button_primary {
     @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-zinc-800 px-4 py-2 text-zinc-50 shadow-md shadow-gray-300 hover:bg-zinc-900 disabled:cursor-default disabled:bg-zinc-800 disabled:opacity-70 dark:border-gray-100 dark:bg-yellow-200 dark:text-gray-950 dark:shadow-none dark:hover:bg-yellow-300 sm:w-fit;
 }
@@ -43,13 +39,13 @@ textarea:valid {
 }
 
 .background {
-    // backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
     background: linear-gradient(
         15deg,
-        $transparent 50%,
-        $color 50%,
-        $color 55%,
-        $transparent 30%
+        rgba(0, 0, 0, 0) 50%,
+        rgb(245, 244, 230) 50%,
+        rgb(245, 244, 230) 55%,
+        rgba(0, 0, 0, 0) 30%
     );
     background-size: 1em 1em;
     background-color: rgb(253, 251, 232);
@@ -64,9 +60,8 @@ textarea:valid {
     @apply text-xl font-bold text-gray-700 dark:text-gray-300;
 }
 
-// so navbar doesn't move on bold
+/* so navbar doesn't move on bold */
 .my_navbar::before {
-    // font-weight: bold;
     font-weight: 600;
     content: attr(data-text);
     height: 0;
