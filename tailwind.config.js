@@ -1,5 +1,6 @@
-/** @type {import('@tailwindcss/cli').Config} */
+/** @type {import('tailwindcss').Config} */
 const config = {
+    darkMode: "class", // or "media"
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,8 +15,9 @@ const config = {
             },
         },
     },
-    plugins: [],
-    darkMode: "class",
+    plugins: [plugin(function ({ addVariant }) {
+        addVariant("dark-custom", "&:where(.dark, .dark *)");
+    }),],
 };
 
 export default config;

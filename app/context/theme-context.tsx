@@ -2,7 +2,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
-type ThemeContextProviderProps = { children: React.ReactNode };
 type ThemeContextType = {
     theme: Theme;
     toggleTheme: () => void;
@@ -10,45 +9,43 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
-const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
+const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
     const [theme, setTheme] = useState<Theme>("light");
-
-    const themeSet = (theme: Theme) => {
-        if (theme === "light") {
-            setTheme("light");
-            window.localStorage.setItem("theme", "light");
-            document.documentElement.classList.remove("dark");
-        } else {
-            setTheme("dark");
-            window.localStorage.setItem("theme", "dark");
-            document.documentElement.classList.add("dark");
-        }
-    };
-
-    const toggleTheme = () => {
-        if (theme === "light") {
-            themeSet("dark");
-        } else {
-            themeSet("light");
-        }
-    };
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        const localTheme = window.localStorage.getItem("theme");
-
-        if (localTheme === "dark") {
-            themeSet("dark");
-        } else if (localTheme === "light") {
-            themeSet("light");
+        const stored = window.localStorage.getItem("theme") as Theme | null;
+        if (stored) {
+            setTheme(stored);
         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            themeSet("dark");
-        } else {
-            themeSet("light");
+            setTheme("dark");
         }
+        setMounted(true);
     }, []);
 
+    useEffect(() => {
+        if (!mounted) {
+            console.log("not mounted yet");
+            return;
+        }
+        console.log("mounted, setting theme:", theme);
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        window.localStorage.setItem("theme", theme);
+    }, [theme, mounted]);
+
+    if (!mounted) {
+        // prevent hydration mismatch: render nothing or a loader until mounted
+        return null;
+    }
+
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeContext.Provider
+            value={{
+                theme,
+                toggleTheme: () =>
+                    setTheme((t) => (t === "light" ? "dark" : "light")),
+            }}
+        >
             {children}
         </ThemeContext.Provider>
     );
@@ -58,10 +55,7 @@ export default ThemeContextProvider;
 
 export const useTheme = () => {
     const context = useContext(ThemeContext);
-
-    if (context === null) {
-        throw new Error("useTheme must be used within a ThemeContextProvider");
-    }
-
+    if (!context)
+        throw new Error("useTheme must be used within ThemeContextProvider");
     return context;
 };

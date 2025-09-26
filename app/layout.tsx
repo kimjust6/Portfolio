@@ -56,14 +56,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <ThemeContextProvider>
-            <html lang="en" className="scroll-smooth">
-                <body
-                    className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50/95`}
-                >
-                    {children}
-                </body>
-            </html>
-        </ThemeContextProvider>
+        <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+            <body
+                className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark dark:text-opacity-95 overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50`}
+            >
+                <ThemeContextProvider>{children}</ThemeContextProvider>
+            </body>
+        </html>
     );
 }
