@@ -1,9 +1,7 @@
 "use client";
-import { color } from "framer-motion";
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
-const themeContext = createContext(null);
 type ThemeContextProviderProps = { children: React.ReactNode };
 type ThemeContextType = {
     theme: Theme;
@@ -49,7 +47,11 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
         }
     }, []);
 
-    return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
 
 export default ThemeContextProvider;
