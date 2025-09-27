@@ -23,7 +23,7 @@ const Navigation = () => {
 
     return (
         <nav className="flex w-screen flex-row justify-center">
-            <div className="fixed z-100 z-[999] flex w-screen flex-wrap items-center justify-center rounded-md border bg-amber-200/95 bg-clip-padding px-4 py-1 text-lg opacity-95 shadow-md shadow-gray-300 backdrop-blur-lg sm:mt-6 sm:w-fit sm:border-amber-300 sm:bg-amber-200/80 sm:py-2 sm:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:shadow-none">
+            <div className="fixed z-100 flex w-screen flex-wrap items-center justify-center rounded-md border border-amber-300 bg-amber-200/95 bg-clip-padding px-4 py-1 text-lg opacity-95 shadow-md shadow-gray-300 backdrop-blur-lg sm:bg-amber-200/80 sm:shadow-lg lg:mt-6 lg:w-fit lg:py-2 dark:border-gray-600 dark:bg-gray-800 dark:shadow-none">
                 <motion.span
                     className="mr-4 sm:hidden"
                     initial={{ y: -100, opacity: 0 }}
@@ -43,7 +43,7 @@ const Navigation = () => {
                                 href={link.hash}
                                 data-text={link.name}
                                 className={clsx(
-                                    "my_navbar text-zinc-9500 data-text-title mx-2 py-1 text-gray-700 opacity-100 transition-all select-none hover:font-semibold hover:text-gray-950 dark:text-gray-50",
+                                    "my_navbar text-zinc-9500 data-text-title mx-2 py-1 text-gray-700 opacity-100 transition-all select-none hover:font-semibold dark:text-gray-50",
                                     {
                                         "font-semibold text-gray-950":
                                             activeSection === link.name,
