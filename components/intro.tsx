@@ -40,7 +40,7 @@ const Intro = () => {
                     width={200}
                     height={300}
                     alt="head shot"
-                ></Image>
+                />
             </motion.div>
             <div className="flex w-full justify-center">
                 <div className="max-w-xs text-center sm:max-w-2xl">
