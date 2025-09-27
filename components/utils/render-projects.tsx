@@ -12,12 +12,10 @@ function RenderProjects(projectsData: any) {
             // card
             <Reveal key={project.name + project.description}>
                 <div
-                    // className=" flex justify-center my-8 sm:px-8"
+                    // className=" flex justify-center my-8 sm:px-8"g
                     className="mb-4 flex-1 break-inside-avoid px-4 sm:mb-8 sm:px-8"
                 >
-                    {/* image */}
-                    {/* <div className="max-w-lg sm:max-w-xl pb-2 bg-gray-100 rounded-xl border shadow-md shadow-gray-300 flex flex-col justify-between"> */}
-                    <div className="flex max-w-lg flex-col rounded-xl border bg-gray-100 pb-2 shadow-md shadow-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:max-w-xl">
+                    <div className="flex max-w-lg flex-col rounded-xl border border-gray-400 bg-gray-100 pb-2 shadow-md shadow-gray-300 sm:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
                         <div className="">
                             {project?.carouselImage[0]?.image && (
                                 <Image
@@ -41,7 +39,7 @@ function RenderProjects(projectsData: any) {
                                     {project.tech.map((technology: any) => {
                                         return (
                                             <div
-                                                className="my-1 flex select-none items-center justify-center rounded-full bg-white p-1 px-1.5 text-sm shadow-sm shadow-gray-300 dark:border dark:border-gray-700 dark:bg-gray-950 dark:shadow-none"
+                                                className="my-1 flex items-center justify-center rounded-full bg-white p-1 px-1.5 text-sm shadow-sm shadow-gray-300 select-none dark:border dark:border-gray-700 dark:bg-gray-950 dark:shadow-none"
                                                 key={project.name + technology}
                                             >
                                                 {technology}{" "}
