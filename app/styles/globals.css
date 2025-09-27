@@ -37,7 +37,7 @@ textarea:valid {
     @apply bg-gray-50;
 }
 
-.background {
+html:not(.dark) .background {
     /* backdrop-filter: blur(6px); */
     background: linear-gradient(
         15deg,

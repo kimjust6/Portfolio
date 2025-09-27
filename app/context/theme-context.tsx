@@ -17,7 +17,9 @@ const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
         const stored = window.localStorage.getItem("theme") as Theme | null;
         if (stored) {
             setTheme(stored);
-        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+            setTheme("light");
+        } else {
             setTheme("dark");
         }
         setMounted(true);
@@ -25,10 +27,8 @@ const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         if (!mounted) {
-            console.log("not mounted yet");
             return;
         }
-        console.log("mounted, setting theme:", theme);
         document.documentElement.classList.toggle("dark", theme === "dark");
         window.localStorage.setItem("theme", theme);
     }, [theme, mounted]);
