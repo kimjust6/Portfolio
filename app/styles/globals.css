@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
     --scroll-behavior: smooth !important;
@@ -9,19 +8,19 @@ html {
 }
 
 .button_primary {
-    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-zinc-800 px-4 py-2 text-zinc-50 shadow-md shadow-gray-300 hover:bg-zinc-900 disabled:cursor-default disabled:bg-zinc-800 disabled:opacity-70 dark:border-gray-100 dark:bg-yellow-200 dark:text-gray-950 dark:shadow-none dark:hover:bg-yellow-300 sm:w-fit;
+    @apply flex w-44 cursor-pointer items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-zinc-800 px-4 py-2 text-zinc-50 shadow-md shadow-gray-300 select-none hover:bg-zinc-900 disabled:cursor-default disabled:bg-zinc-800 disabled:opacity-70 sm:w-fit dark:border-gray-100 dark:bg-yellow-200 dark:text-gray-950 dark:shadow-none dark:hover:bg-yellow-300;
 }
 
 .button_secondary {
-    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-amber-100 bg-opacity-75 px-4 py-2 shadow-md shadow-gray-300 hover:bg-amber-100 dark:bg-gray-900 dark:text-gray-100 dark:shadow-none dark:hover:bg-gray-950 sm:w-fit;
+    @apply flex w-44 cursor-pointer items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-amber-100 px-4 py-2 shadow-md shadow-gray-300 select-none hover:bg-amber-100/75 sm:w-fit dark:bg-gray-900/75 dark:text-gray-100 dark:shadow-none dark:hover:bg-gray-950;
 }
 
 .button_accent {
-    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-amber-300 px-4 py-2 shadow-md shadow-gray-300 hover:bg-amber-400 dark:border-gray-100 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-950 sm:w-fit;
+    @apply flex w-44 cursor-pointer items-center justify-center gap-3 rounded-lg border border-zinc-400 bg-amber-300 px-4 py-2 shadow-md shadow-gray-300 select-none hover:bg-amber-400 sm:w-fit dark:border-gray-100 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-950;
 }
 
 .button_shape {
-    @apply flex w-44 cursor-pointer select-none items-center justify-center gap-3 rounded-lg border border-zinc-400 px-4 py-2 shadow-md shadow-gray-300 dark:border-gray-100 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-950 sm:w-fit;
+    @apply flex w-44 cursor-pointer items-center justify-center gap-3 rounded-lg border border-zinc-400 px-4 py-2 shadow-md shadow-gray-300 select-none sm:w-fit dark:border-gray-100 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-950;
 }
 
 @media only screen and (min-width: 640px) {
@@ -38,7 +37,7 @@ textarea:valid {
     @apply bg-gray-50;
 }
 
-.background {
+html:not(.dark) .background {
     /* backdrop-filter: blur(6px); */
     background: linear-gradient(
         15deg,
@@ -49,11 +48,6 @@ textarea:valid {
     );
     background-size: 1em 1em;
     background-color: rgb(253, 251, 232);
-}
-
-.background-dark {
-    background: none !important;
-    background-color: green !important;
 }
 
 .subheading {

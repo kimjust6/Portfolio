@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    mode: "jit",
+const config = {
+    darkMode: "class", // or "media"
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +8,12 @@ module.exports = {
     ],
     theme: {
         extend: {
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-            },
+
         },
     },
-    plugins: [],
-    darkMode: "class",
+    plugins: [plugin(function ({ addVariant }) {
+        addVariant("dark-custom", "&:where(.dark, .dark *)");
+    }),],
 };
+
+export default config;
