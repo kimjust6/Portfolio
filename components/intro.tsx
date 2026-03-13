@@ -6,24 +6,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
 
 const Intro = () => {
     const router = useRouter();
-    const { ref, inView } = useInView({
-        // threshold: 0.1,
-        initialInView: true,
-        rootMargin: "-30% 0% -70% 0%",
-    });
-    const { setActiveSection, timeOfLastClick } = useActiveSection();
-
-    useEffect(() => {
-        if (inView && Date.now() - timeOfLastClick > 1000) {
-            setActiveSection("Home");
-        }
-    }, [inView, setActiveSection, timeOfLastClick]);
+    const { setActiveSection } = useActiveSection();
 
     return (
         <section id="home" className="scroll-m-28">
@@ -34,7 +21,6 @@ const Intro = () => {
                 transition={{ type: "spring", delay: 0, duration: 0.25 }}
             >
                 <Image
-                    ref={ref}
                     className="mt-24 rounded-xl border-4 border-zinc-100 shadow-sm shadow-zinc-800 sm:mt-36"
                     src="https://i.imgur.com/R4NkK6G.jpg"
                     width={200}

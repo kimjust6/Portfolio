@@ -1,28 +1,16 @@
 "use client";
-import { useActiveSection } from "@/app/context/active-section-context";
-import { skillsData, useInViewSettings } from "@/lib/data";
+import { skillsData } from "@/lib/data";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
 
 const Skills = () => {
-    const { ref, inView } = useInView(useInViewSettings);
-    const { setActiveSection, timeOfLastClick } = useActiveSection();
-    useEffect(() => {
-        return () => {
-            if (inView && Date.now() - timeOfLastClick > 1000) {
-                setActiveSection("Skills");
-            }
-        };
-    }, [inView, setActiveSection, timeOfLastClick]);
     return (
         <section
             id="skills"
             className="flex w-screen scroll-m-28 flex-col items-center justify-center"
         >
-            <div ref={ref} className="mb-8">
+            <div className="mb-8">
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
             <div className="flex w-screen max-w-7xl flex-wrap justify-center gap-8">

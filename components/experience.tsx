@@ -1,10 +1,7 @@
 "use client";
 
-import { useActiveSection } from "@/app/context/active-section-context";
 import { useTheme } from "@/app/context/theme-context";
-import { useInViewSettings, workExperience } from "@/lib/data";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { workExperience } from "@/lib/data";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -14,23 +11,14 @@ import Reveal from "./utils/reveal";
 import SectionHeading from "./utils/section-heading";
 
 const Experience = () => {
-    const { ref, inView } = useInView(useInViewSettings);
-    const { setActiveSection, timeOfLastClick } = useActiveSection();
     const { theme } = useTheme();
-    useEffect(() => {
-        return () => {
-            if (inView && Date.now() - timeOfLastClick > 1000) {
-                setActiveSection("Experience");
-            }
-        };
-    }, [inView, setActiveSection, timeOfLastClick]);
 
     return (
         <section
             id="experience"
             className="m-4 flex scroll-m-28 flex-col items-center sm:mx-8"
         >
-            <div ref={ref} className="mb-4">
+            <div className="mb-4">
                 <SectionHeading>EXPERIENCE</SectionHeading>
             </div>
             <div className="max-w-3xl">
