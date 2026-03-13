@@ -59,7 +59,7 @@ function RenderProjects(projectsData: any) {
                                     className={
                                         "sm:w-44 " +
                                         (theme == "dark"
-                                            ? "button_accent"
+                                            ? "button_secondary "
                                             : "button_primary")
                                     }
                                     target="_blank"
@@ -78,7 +78,7 @@ function RenderProjects(projectsData: any) {
                                         "sm:w-44 " +
                                         (theme == "dark"
                                             ? "button_primary"
-                                            : "button_accent")
+                                            : "button_secondary ")
                                     }
                                     target="_blank"
                                     href={

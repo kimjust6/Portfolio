@@ -1,12 +1,14 @@
 import Link from "next/link";
-import {
-    BsEnvelopeFill,
-    BsGithub,
-    BsInstagram,
-    BsLinkedin,
-} from "react-icons/bs";
-
+import { BsEnvelopeFill, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { IconType } from "react-icons";
 import Reveal from "./utils/reveal";
+
+const socialLinks: { href: string; icon: IconType; label: string; target?: string }[] = [
+    { href: "https://github.com/kimjust6",              icon: BsGithub,      label: "GitHub",    target: "_blank" },
+    { href: "https://www.linkedin.com/in/justin-kim6/", icon: BsLinkedin,    label: "LinkedIn",  target: "_blank" },
+    { href: "mailto:kimjust6@gmail.com",                icon: BsEnvelopeFill,label: "Email" },
+    { href: "https://instagram.com/milklatteteas",      icon: BsInstagram,   label: "Instagram", target: "_blank" },
+];
 
 const Footer = () => {
     return (
@@ -24,33 +26,17 @@ const Footer = () => {
 
                     {/* Social Links */}
                     <div className="flex space-x-6 text-xl">
-                        <Link
-                            href="https://github.com/kimjust6"
-                            target="_blank"
-                            className="transition-colors hover:scale-105"
-                        >
-                            <BsGithub />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/justin-kim6/"
-                            target="_blank"
-                            className="transition-colors hover:scale-105"
-                        >
-                            <BsLinkedin />
-                        </Link>
-                        <Link
-                            href="mailto:kimjust6@gmail.com"
-                            className="transition-colors hover:scale-105"
-                        >
-                            <BsEnvelopeFill />
-                        </Link>
-                        <Link
-                            href="https://instagram.com/milklatteteas"
-                            target="_blank"
-                            className="transition-colors hover:scale-105"
-                        >
-                            <BsInstagram />
-                        </Link>
+                        {socialLinks.map(({ href, icon: Icon, label, target }) => (
+                            <Link
+                                key={label}
+                                href={href}
+                                target={target}
+                                aria-label={label}
+                                className="transition-colors hover:scale-105"
+                            >
+                                <Icon />
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
