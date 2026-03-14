@@ -81,7 +81,7 @@ const Intro = () => {
                             <BsEnvelope className="transition-all group-hover:translate-x-0.5" />
                         </motion.button>
                         <motion.a
-                            href="/Justin Kim Resume 2023.pdf"
+                            href="/Justin Kim Resume 2026.pdf"
                             download
                             className="button_primary group"
                             whileHover={{ scale: 1.04 }}
