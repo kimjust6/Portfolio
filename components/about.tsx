@@ -1,31 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { useActiveSection } from "@/app/context/active-section-context";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import SectionHeading from "./utils/section-heading";
 
 const About = () => {
-    const { ref, inView } = useInView({
-        rootMargin: "-50% 0% -50% 0%",
-    });
-    const { setActiveSection, timeOfLastClick } = useActiveSection();
-
-    useEffect(() => {
-        return () => {
-            if (inView && Date.now() - timeOfLastClick > 1000) {
-                setActiveSection("About");
-            }
-        };
-    }, [inView, setActiveSection, timeOfLastClick]);
-
     return (
         <section
             id="about"
             className="text-md mx-6 flex scroll-m-28 flex-col items-center justify-center"
         >
-            <div ref={ref} className="mb-4">
+            <div className="mb-4">
                 <SectionHeading>ABOUT ME</SectionHeading>
             </div>
 

@@ -1,36 +1,22 @@
 "use client";
 
 import sendEmail from "@/actions/send-email";
-import { useActiveSection } from "@/app/context/active-section-context";
 import getErrorMessage from "@/components/utils/errorHandler";
-import { useInViewSettings } from "@/lib/data";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 import SectionHeading from "./utils/section-heading";
 import SubmitBtn from "./utils/submit-btn";
 
 const Contact = () => {
-    const { ref, inView } = useInView(useInViewSettings);
-    const { setActiveSection, timeOfLastClick } = useActiveSection();
     const [emailSent, setEmailSent] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-
-    useEffect(() => {
-        const time = Date.now();
-        return () => {
-            if (inView && time - timeOfLastClick > 1000) {
-                setActiveSection("Contact");
-            }
-        };
-    }, [inView, setActiveSection, timeOfLastClick]);
 
     return (
         <section
             id="contact"
             className="flex min-h-[40em] w-screen scroll-m-28 flex-col items-center text-center sm:min-h-[48em]"
         >
-            <div ref={ref}>
+            <div>
                 <SectionHeading>CONTACT ME</SectionHeading>
             </div>
 

@@ -23,7 +23,7 @@ const Navigation = () => {
 
     return (
         <nav className="flex w-screen flex-row justify-center">
-            <div className="fixed z-100 flex w-screen flex-wrap items-center justify-center rounded-md border border-amber-300 bg-amber-200/95 bg-clip-padding px-4 py-1 text-lg opacity-95 shadow-md shadow-gray-300 backdrop-blur-lg sm:py-2 lg:mt-6 lg:w-fit lg:bg-amber-200/80 lg:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:shadow-none">
+            <div className="fixed z-100 flex w-screen flex-wrap items-center justify-center rounded-md border border-amber-300 bg-amber-200/95 bg-clip-padding px-4 py-1 text-lg opacity-95 shadow-md shadow-gray-300 backdrop-blur-lg sm:py-2 lg:mt-6 lg:w-fit lg:bg-amber-200/80 lg:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:shadow-none gap-1">
                 <motion.span
                     className="mr-4 lg:hidden"
                     initial={{ y: -100, opacity: 0 }}

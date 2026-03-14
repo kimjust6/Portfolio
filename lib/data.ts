@@ -3,9 +3,11 @@ import { CgWorkAlt } from "react-icons/cg";
 
 import { LuGraduationCap } from "react-icons/lu";
 // import angular from "@/public/logos/angular.svg";
+import angular2 from "@/public/logos/angular2.png";
 import azure from "@/public/logos/azure.svg";
 import react from "@/public/logos/react.svg";
 import typescript from "@/public/logos/typescript.svg";
+import ssms from "@/public/logos/ssms.webp";
 // import css from "@/public/logos/css.svg";
 // import html from "@/public/logos/html.svg";
 // import javascript from "@/public/logos/javascript.svg";
@@ -36,12 +38,12 @@ import git from "@/public/logos/git.svg";
 
 export const skillsData = [
     {
-        title: "Web Development",
+        title: "Frontend Development",
         skills: [
             { name: "Next.js", svg: next },
             { name: "React", svg: react },
-            // { name: "Angular", svg: angular },
-            { name: "Node.js", svg: node },
+            { name: "Angular", svg: angular2 },
+            // { name: "Node.js", svg: node },
             { name: "Typescript", svg: typescript },
             // { name: 'Framer Motion', svg: framerMotion },
             // { name: "Javascript", svg: javascript },
@@ -51,7 +53,7 @@ export const skillsData = [
         ],
     },
     {
-        title: "Programming & Scripting",
+        title: "Backend Development",
         skills: [
             { name: "C#", svg: csharp },
             { name: ".NET", svg: dotnet },
@@ -66,11 +68,12 @@ export const skillsData = [
     {
         title: "Database Management",
         skills: [
-            { name: "MSSQL", svg: mssql },
+            { name: "Microsoft SQL", svg: mssql },
+            { name: "SSMS", svg: ssms },
             { name: "PostgreSQL", svg: postgres },
             { name: "MongoDB", svg: mongodb },
             // { name: "MySQL", svg: mysql },
-            { name: "Firebase", svg: firebase },
+            // { name: "Firebase", svg: firebase },
             // { name: "Amazon S3", svg: s3 },
         ],
     },
@@ -140,12 +143,14 @@ export const workExperience = [
     {
         title: "Associate Developer, Optimization",
         company: "Verndale Canada",
-        location: "Montreal, QC",
+        location: "Toronto, ON",
         description: [
-            "Collaborated with clients to define scope, provide detailed estimates, and successfully develop, test, and deploy requested features",
-            "Provided 24/7 support for 8+ client websites by diagnosing and resolving issues ranging from minor cosmetic bugs to mission critical business logic",
-            "Developed intuition in diagnosing and resolving production issues with Application Insights and reading logs",
-            "Created documentation for newly implemented features to facilitate understanding and support for end users and development teams",
+            "Worked with clients to scope requirements, define acceptance criteria, architect technical solutions, and deliver features throughout the SDLC from development through QA and production deployment using .NET Core and React",
+            "Provided support for 8+ clients, triaging and resolving Zendesk tickets for their .NET Core production applications, including SEO defects, performance degradation, and critical business logic failures",
+            "Utilized Application Insights to monitor application health, trace errors, and conduct root cause analysis on production incidents",
+            "Authored technical documentation and end-user guides for newly shipped features, reducing support overhead for development teams and clients",
+            "Communicated complex technical issues to non-technical stakeholders, customers, and cross-functional teammates to drive timely resolutions",
+            "Leveraged AI developer tools including Claude Sonnet and ChatGPT Codex to accelerate development workflows, improve code quality, and increase productivity across frontend and backend tasks",
         ],
         icon: React.createElement(CgWorkAlt),
         date: "Feb 2024 - Present",
@@ -155,10 +160,12 @@ export const workExperience = [
         company: "ParTech Inc.",
         location: "Markham, ON",
         description: [
-            "Maintained ownership of dashboard that clients utilized to view organization performance metrics",
-            "Reduced dashboard API calls up to 30% by serializing API calls with RxJS and custom lazy loading logic",
-            "Architected and implemented store portal dashboard to improve scalability by transitioning API calls to client databases",
-            "Repaired production server by diagnosing and fixing an API endpoint that caused database connection leaks",
+            "Debugged and enhanced a widget-based dashboard that visualized and monitored restaurant performance metrics in real time",
+            "Reduced dashboard API calls by up to 30% through serialization of API requests using RxJS and implementation of custom lazy loading logic",
+            "Designed, developed, and launched a secondary store dashboard using Angular, Material UI, Chart.js, Java, and MySQL, improving application scalability by offloading resource-intensive API calls to the client's database",
+            "Decreased concurrent database connection count by up to 25% by identifying and closing unused connections throughout the application, improving overall system stability",
+            "Developed, tested, and integrated RESTful APIs in Java leveraging Eclipse Debugger, Postman, and MySQL Workbench to ensure reliable and scalable backend services",
+            "Refactored approximately 30% of application pages to implement responsive design, ensuring full mobile compatibility and an improved user experience across devices",
         ],
         icon: React.createElement(CgWorkAlt),
         date: "May 2022 - Apr 2023",
@@ -335,6 +342,13 @@ export const projectImages = [
             alt: "Next Portfolio 1",
         },
     ],
+    // Dank Movies
+    [
+        {
+            image: "https://i.imgur.com/UBQSwd1.png",
+            alt: "Dank Movies",
+        },
+    ],
 ] as const;
 
 export const videos = [
@@ -385,26 +399,41 @@ export const projectsData = [
         liveDemoURL: "https://www.justink.dev/",
         carouselImage: projectImages[6],
     },
+    // {
+    //     title: "AWS Backend Microservice API",
+    //     tech: [
+    //         "Node.js",
+    //         "AWS",
+    //         "Cognito",
+    //         "S3",
+    //         "DynamoDB",
+    //         "Docker Compose",
+    //         "Github Actions",
+    //         "Jest",
+    //     ],
+    //     description: `This is a backend microservice that includes automated testing with a CI/CD pipeline using Github Actions and 
+    //     automated deployment to the cloud (AWS) using DockerHub.  This application takes advantage of AWS Cognito allowing users to register and 
+    //     login with their emails. Once logged in, users can call the microservice's api endpoint to perform CRUD operations on text or images 
+    //     stored on S3.  In addition to this, metadata is stored on DynamoDB.  `,
+    //     codeURL: "https://github.com/kimjust6/fragments",
+    //     videoDemoURL: "https://www.youtube.com/watch?v=WnsjEKPZEYk",
+    //     // carouselImage: projectImages[3],
+    //     carouselImage: "",
+    // },
     {
-        title: "AWS Backend Microservice API",
+        title: "Pocket Movies",
         tech: [
-            "Node.js",
-            "AWS",
-            "Cognito",
-            "S3",
-            "DynamoDB",
-            "Docker Compose",
-            "Github Actions",
-            "Jest",
+            "Alpine.js",
+            "DaisyUI",
+            "Tailwind",
+            "TMDB API",
+            "Google Oauth2",
+            "Pocketbase (SQLite)",
         ],
-        description: `This is a backend microservice that includes automated testing with a CI/CD pipeline using Github Actions and 
-        automated deployment to the cloud (AWS) using DockerHub.  This application takes advantage of AWS Cognito allowing users to register and 
-        login with their emails. Once logged in, users can call the microservice's api endpoint to perform CRUD operations on text or images 
-        stored on S3.  In addition to this, metadata is stored on DynamoDB.  `,
-        codeURL: "https://github.com/kimjust6/fragments",
-        videoDemoURL: "https://www.youtube.com/watch?v=WnsjEKPZEYk",
-        // carouselImage: projectImages[3],
-        carouselImage: "",
+        description: `Pocket Movies lets users track their watched movies and share them with friends. Users can sign in with their google account and add movies to their watchlist.`,
+        codeURL: "https://github.com/kimjust6/pocket-movies",
+        liveDemoURL: "https://movie.jkim.win/",
+        carouselImage: projectImages[7],
     },
     {
         title: "Wordle Clone Frontend Application",
