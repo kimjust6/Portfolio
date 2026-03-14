@@ -2,10 +2,12 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 
 import { LuGraduationCap } from "react-icons/lu";
-import angular from "@/public/logos/angular.svg";
+// import angular from "@/public/logos/angular.svg";
+import angular2 from "@/public/logos/angular2.png";
 import azure from "@/public/logos/azure.svg";
 import react from "@/public/logos/react.svg";
 import typescript from "@/public/logos/typescript.svg";
+import ssms from "@/public/logos/ssms.webp";
 // import css from "@/public/logos/css.svg";
 // import html from "@/public/logos/html.svg";
 // import javascript from "@/public/logos/javascript.svg";
@@ -40,7 +42,7 @@ export const skillsData = [
         skills: [
             { name: "Next.js", svg: next },
             { name: "React", svg: react },
-            { name: "Angular", svg: angular },
+            { name: "Angular", svg: angular2 },
             // { name: "Node.js", svg: node },
             { name: "Typescript", svg: typescript },
             // { name: 'Framer Motion', svg: framerMotion },
@@ -66,11 +68,12 @@ export const skillsData = [
     {
         title: "Database Management",
         skills: [
-            { name: "MSSQL", svg: mssql },
+            { name: "Microsoft SQL", svg: mssql },
+            { name: "SSMS", svg: ssms },
             { name: "PostgreSQL", svg: postgres },
             { name: "MongoDB", svg: mongodb },
             // { name: "MySQL", svg: mysql },
-            { name: "Firebase", svg: firebase },
+            // { name: "Firebase", svg: firebase },
             // { name: "Amazon S3", svg: s3 },
         ],
     },
