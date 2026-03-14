@@ -21,7 +21,7 @@ const Experience = () => {
             <div className="mb-4">
                 <SectionHeading>EXPERIENCE</SectionHeading>
             </div>
-            <div className="max-w-3xl">
+            <div className="max-w-4xl">
                 <VerticalTimeline lineColor="" layout="1-column-left">
                     {workExperience.map((exp, index2) => {
                         return (
