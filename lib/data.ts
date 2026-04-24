@@ -141,9 +141,9 @@ export const workExperience = [
     //     date: "Feb 2024 - Present",
     // },
     {
-        title: "Associate Developer, Optimization",
+        title: "Développeur Maintenance et Évolutions",
         company: "Verndale Canada",
-        location: "Toronto, ON",
+        location: "Montreal, QC",
         description: [
             "Worked with clients to scope requirements, define acceptance criteria, architect technical solutions, and deliver features throughout the SDLC from development through QA and production deployment using .NET Core and React",
             "Provided support for 8+ clients, triaging and resolving Zendesk tickets for their .NET Core production applications, including SEO defects, performance degradation, and critical business logic failures",
