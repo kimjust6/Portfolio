@@ -140,6 +140,16 @@ export const workExperience = [
     //     icon: React.createElement(CgWorkAlt),
     //     date: "Feb 2024 - Present",
     // },
+    // {
+    //     title: "Software Developer II",
+    //     company: "Dayforce",
+    //     location: "Toronto, ON",
+    //     description: [
+
+    //     ],
+    //     icon: React.createElement(CgWorkAlt),
+    //     date: "Jun 2026 - Present",
+    // },
     {
         title: "Développeur Maintenance et Évolutions",
         company: "Verndale Canada",
@@ -153,7 +163,7 @@ export const workExperience = [
             "Leveraged AI developer tools including Claude Sonnet and ChatGPT Codex to accelerate development workflows, improve code quality, and increase productivity across frontend and backend tasks",
         ],
         icon: React.createElement(CgWorkAlt),
-        date: "Feb 2024 - Present",
+        date: "Feb 2024 - May 2026",
     },
     {
         title: "Full Stack Developer",
@@ -170,18 +180,18 @@ export const workExperience = [
         icon: React.createElement(CgWorkAlt),
         date: "May 2022 - Apr 2023",
     },
-    {
-        title: "Project Coordinator",
-        company: "Quantech Electrical Contractors Ltd.",
-        location: "Thornhill, ON",
-        description: [
-            "Created, updated, and debugged VBA scripts to automate emailing paystubs to employees",
-            "Coordinated between project managers, foreman on job sites, and suppliers for deliveries",
-            "Oversaw the organization of shop drawings for engineering sign offs, employee training records",
-        ],
-        icon: React.createElement(CgWorkAlt),
-        date: "2016-2019",
-    },
+    // {
+    //     title: "Project Coordinator",
+    //     company: "Quantech Electrical Contractors Ltd.",
+    //     location: "Thornhill, ON",
+    //     description: [
+    //         "Created, updated, and debugged VBA scripts to automate emailing paystubs to employees",
+    //         "Coordinated between project managers, foreman on job sites, and suppliers for deliveries",
+    //         "Oversaw the organization of shop drawings for engineering sign offs, employee training records",
+    //     ],
+    //     icon: React.createElement(CgWorkAlt),
+    //     date: "2016-2019",
+    // },
 ] as const;
 
 export const education = [
