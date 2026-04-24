@@ -62,7 +62,7 @@ const Contact = () => {
                     disabled={emailSent}
                     type="email"
                     name="senderEmail"
-                    className="h-10 rounded-lg border border-gray-400 bg-gray-50 px-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:shadow-none"
+                    className="h-10 rounded-lg border border-gray-400 bg-gray-50 px-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:disabled:bg-gray-800 dark:shadow-none"
                     placeholder="Your Email"
                     required
                     maxLength={100}
@@ -71,7 +71,7 @@ const Contact = () => {
                     disabled={emailSent}
                     required
                     name="senderMessage"
-                    className="h-80 rounded-lg border border-gray-400 bg-gray-50 p-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:shadow-none"
+                    className="h-80 rounded-lg border border-gray-400 bg-gray-50 p-4 shadow-md shadow-gray-300 disabled:bg-gray-100 disabled:opacity-70 dark:border-gray-600 dark:bg-gray-700 dark:disabled:bg-gray-800 dark:shadow-none"
                     placeholder="Your Message"
                     maxLength={1000}
                 ></textarea>
