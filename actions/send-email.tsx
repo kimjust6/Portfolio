@@ -11,7 +11,7 @@ const sendEmail = async (email: string, message: string) => {
             from: "Justin Kim's Portfolio <onboarding@resend.dev>",
             to: "mletemps@hotmail.com",
             subject: "Message from Portfolio",
-            reply_to: email,
+            replyTo: email,
             text: message,
         });
     } catch (error: unknown) {
