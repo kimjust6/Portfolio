@@ -19,7 +19,7 @@ const Experience = () => {
             className="m-4 flex scroll-m-28 flex-col items-center sm:mx-8"
         >
             <div className="mb-4">
-                <SectionHeading>EXPERIENCE</SectionHeading>
+                <SectionHeading>WORK EXPERIENCE</SectionHeading>
             </div>
             <div className="max-w-4xl">
                 <VerticalTimeline lineColor="" layout="1-column-left">
