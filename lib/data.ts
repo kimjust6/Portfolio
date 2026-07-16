@@ -391,9 +391,7 @@ export const projectsData = [
             "Tailwind",
             "DaisyUI",
         ],
-        description: `Personal blog built with Petite-vue, PocketPages, and DaisyUI.
-        • Designed and deployed a personal blog platform using Pocketbase, EJS server-side rendering, Petite-vue, and Tailwind CSS and DaisyUI
-        • Implemented fully responsive, modern UI with clean navigation and layout`,
+        description: `A personal blog platform built with Petite-vue, PocketPages, and DaisyUI, leveraging PocketBase for the database and EJS for server-side rendering. It features a fully responsive, modern user interface with clean navigation and layout.`,
         codeURL: "https://github.com/kimjust6/pocket-blog",
         liveDemoURL: "https://www.jkim.win/",
         carouselImage: [
