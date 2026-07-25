@@ -381,6 +381,26 @@ export const projectsData = [
         liveDemoURL: "https://prompts.justink.dev",
         carouselImage: projectImages[0],
     },
+        {
+        title: "Personal Blog",
+        tech: [
+            "Vue.js",
+            "Petite-vue",
+            "PocketPages",
+            "Pocketbase (SQLite)",
+            "Tailwind",
+            "DaisyUI",
+        ],
+        description: `A personal blog platform built with Petite-vue, PocketPages, and DaisyUI, leveraging PocketBase for the database and EJS for server-side rendering. It features a fully responsive, modern user interface with clean navigation and layout.`,
+        codeURL: "https://github.com/kimjust6/pocket-blog",
+        liveDemoURL: "https://www.jkim.win/",
+        carouselImage: [
+            {
+                image: "/personal-blog.webp",
+                alt: "Personal Blog Home Page",
+            },
+        ],
+    },
     {
         title: "Eventure Full Stack Mobile Application (Capstone)",
         tech: [
@@ -400,6 +420,21 @@ export const projectsData = [
         codeURL: "https://github.com/kimjust6/Eventure",
         videoDemoURL: "https://www.youtube.com/watch?v=aNnlid6Ti_4",
         carouselImage: projectImages[1],
+    },
+    {
+        title: "Pocket Movies",
+        tech: [
+            "Alpine.js",
+            "DaisyUI",
+            "Tailwind",
+            "TMDB API",
+            "Google Oauth2",
+            "Pocketbase (SQLite)",
+        ],
+        description: `Pocket Movies lets users track their watched movies and share them with friends. Users can sign in with their google account and add movies to their watchlist.`,
+        codeURL: "https://github.com/kimjust6/pocket-movies",
+        liveDemoURL: "https://movie.jkim.win/",
+        carouselImage: projectImages[7],
     },
     {
         title: "Justin Kim's Portfolio ",
@@ -430,31 +465,17 @@ export const projectsData = [
     //     // carouselImage: projectImages[3],
     //     carouselImage: "",
     // },
-    {
-        title: "Pocket Movies",
-        tech: [
-            "Alpine.js",
-            "DaisyUI",
-            "Tailwind",
-            "TMDB API",
-            "Google Oauth2",
-            "Pocketbase (SQLite)",
-        ],
-        description: `Pocket Movies lets users track their watched movies and share them with friends. Users can sign in with their google account and add movies to their watchlist.`,
-        codeURL: "https://github.com/kimjust6/pocket-movies",
-        liveDemoURL: "https://movie.jkim.win/",
-        carouselImage: projectImages[7],
-    },
-    {
-        title: "Wordle Clone Frontend Application",
-        tech: ["Angular", "Bootstrap", "CSS"],
-        description: `This is my version of the popular game Wordle. I styled the website with responsive 
-            design in mind. My version of Wordle makes use of emitters, localstorage, and variable css. This 
-            application has a dark theme as well as a mobile view of the webpage. Checkout the live demo below.`,
-        codeURL: "https://github.com/kimjust6/Wordle-Clone",
-        liveDemoURL: "https://wordle.justink.dev/",
-        carouselImage: projectImages[2],
-    },
+    
+    // {
+    //     title: "Wordle Clone Frontend Application",
+    //     tech: ["Angular", "Bootstrap", "CSS"],
+    //     description: `This is my version of the popular game Wordle. I styled the website with responsive 
+    //         design in mind. My version of Wordle makes use of emitters, localstorage, and variable css. This 
+    //         application has a dark theme as well as a mobile view of the webpage. Checkout the live demo below.`,
+    //     codeURL: "https://github.com/kimjust6/Wordle-Clone",
+    //     liveDemoURL: "https://wordle.justink.dev/",
+    //     carouselImage: projectImages[2],
+    // },
     {
         title: "Blockchain Banking Full Stack Web Application",
         tech: [
