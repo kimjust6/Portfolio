@@ -5,18 +5,21 @@ import type {
     ZendeskTicketsResponse,
 } from "@/lib/pocketbase-types";
 
+export const dynamic = "force-dynamic";
+
 const pb = new PocketBase(process.env.PB_TYPEGEN_URL) as TypedPocketBase;
 
 type error = { message?: string };
 
-// If you need admin auth (for server-to-server writes)
-await pb.admins.authWithPassword(
-    process.env.PB_TYPEGEN_EMAIL!,
-    process.env.PB_TYPEGEN_PASSWORD!
-);
-
 export async function POST(req: NextRequest) {
     try {
+        if (process.env.PB_TYPEGEN_EMAIL && process.env.PB_TYPEGEN_PASSWORD) {
+            await pb.admins.authWithPassword(
+                process.env.PB_TYPEGEN_EMAIL,
+                process.env.PB_TYPEGEN_PASSWORD
+            );
+        }
+
         const body = await req.json();
 
         // Store entire request body as string
