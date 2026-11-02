@@ -132,24 +132,22 @@ const nice =
     "jr, cdmv, iata, dollarama, sommets, exfo, infrastructure ontario, hilo, ";
 
 export const workExperience = [
-    // {
-    //     title: "Développeur Maintenance et Évolutions",
-    //     company: "Yaksa Inc.",
-    //     location: "Montreal, QC",
-    //     description: [],
-    //     icon: React.createElement(CgWorkAlt),
-    //     date: "Feb 2024 - Present",
-    // },
-    // {
-    //     title: "Software Developer II",
-    //     company: "Dayforce",
-    //     location: "Toronto, ON",
-    //     description: [
 
-    //     ],
-    //     icon: React.createElement(CgWorkAlt),
-    //     date: "Jun 2026 - Present",
-    // },
+    {
+        title: "Software Developer II",
+        company: "Dayforce",
+        location: "Toronto, ON",
+        description: [
+            "Co-own the background job engine, a core platform service, within a collaborative engineering team",
+            "Debug and resolve defects using Application Insights, speeding up root-cause analysis",
+            "Lead end-to-end, regression, and performance testing and sign-offs to ensure production readiness",
+            "Leverage AI tools to accelerate development, debugging, test design, and documentation",
+            "Write user stories for new features and discovered issues, shaping the team backlog",
+            "Create and maintain technical documentation to support team knowledge sharing",
+        ],
+        icon: React.createElement(CgWorkAlt),
+        date: "June 2026 - Present",
+    },
     {
         title: "Développeur Maintenance et Évolutions",
         company: "Verndale Canada",
