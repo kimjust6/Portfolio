@@ -439,7 +439,7 @@ export const projectsData = [
         tech: ["React", "Next.js", "Tailwind", "Framer Motion"],
         description: `I created my portfolio with Next.js to showcase my work experience and knowledge of web frameworks such as React/Next.js.`,
         codeURL: "https://github.com/kimjust6/Portfolio",
-        liveDemoURL: "https://www.justink.dev/",
+        liveDemoURL: "https://www.jkim.win/",
         carouselImage: projectImages[6],
     },
     // {
@@ -521,7 +521,7 @@ export const showMoreProjectsList = [
             knowledge and application. The website was styled with responsive design in
             mind.`,
         codeURL: "https://github.com/kimjust6/portfolio",
-        liveDemoURL: "https://www.justink.dev/",
+        liveDemoURL: "https://www.jkim.win/",
         // image: "https://i.imgur.com/ITIYoji.png",
         image: "https://i.imgur.com/inIWya0.png",
     },

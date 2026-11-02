@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         locale: "en_US",
         alternateLocale: "en_GB",
         images: ["https://i.imgur.com/O3H6i8d.png"],
-        url: "https://www.justink.dev/",
+        url: "https://www.jkim.win/",
         countryName: "Canada",
     },
 };
