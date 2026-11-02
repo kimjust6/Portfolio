@@ -13,7 +13,7 @@ const Skills = () => {
             <div className="mb-8">
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
-            <div className="flex w-screen max-w-7xl flex-wrap justify-center gap-8">
+            <div className="grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2">
                 {skillsData.map((skill) => {
                     return (
                         <ul

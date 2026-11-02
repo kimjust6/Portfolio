@@ -42,7 +42,7 @@ export const skillsData = [
         skills: [
             { name: "Next.js", svg: next },
             { name: "React", svg: react },
-            { name: "Angular", svg: angular2 },
+            // { name: "Angular", svg: angular2 },
             // { name: "Node.js", svg: node },
             { name: "Typescript", svg: typescript },
             // { name: 'Framer Motion', svg: framerMotion },
