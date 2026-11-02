@@ -381,7 +381,7 @@ export const projectsData = [
         liveDemoURL: "https://prompts.justink.dev",
         carouselImage: projectImages[0],
     },
-        {
+    {
         title: "Personal Blog",
         tech: [
             "Vue.js",
@@ -393,7 +393,7 @@ export const projectsData = [
         ],
         description: `A personal blog platform built with Petite-vue, PocketPages, and DaisyUI, leveraging PocketBase for the database and EJS for server-side rendering. It features a fully responsive, modern user interface with clean navigation and layout.`,
         codeURL: "https://github.com/kimjust6/pocket-blog",
-        liveDemoURL: "https://www.jkim.win/",
+        liveDemoURL: "https://myblog.jkim.win/",
         carouselImage: [
             {
                 image: "/personal-blog.webp",
@@ -465,7 +465,7 @@ export const projectsData = [
     //     // carouselImage: projectImages[3],
     //     carouselImage: "",
     // },
-    
+
     // {
     //     title: "Wordle Clone Frontend Application",
     //     tech: ["Angular", "Bootstrap", "CSS"],
