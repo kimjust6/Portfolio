@@ -6,11 +6,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { BsDownload, BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
+import CvModal from "./cv-modal";
 
 const Intro = () => {
     const router = useRouter();
     const { setActiveSection } = useActiveSection();
+    const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
     return (
         <section id="home" className="scroll-m-28">
@@ -80,16 +83,16 @@ const Intro = () => {
                             Contact Me{" "}
                             <BsEnvelope className="transition-all group-hover:translate-x-0.5" />
                         </motion.button>
-                        <motion.a
-                            href="/Justin Kim Resume 2026.pdf"
-                            download
+                        <motion.button
+                            type="button"
                             className="button_primary group"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.97 }}
+                            onClick={() => setIsCvModalOpen(true)}
                         >
                             Download CV{" "}
                             <BsDownload className="transition-all group-hover:translate-y-0.5" />
-                        </motion.a>
+                        </motion.button>
 
                         <Link
                             href="https://www.linkedin.com/in/justin-kim6/"
@@ -123,6 +126,10 @@ const Intro = () => {
                     </motion.div>
                 </div>
             </div>
+            <CvModal
+                isOpen={isCvModalOpen}
+                onClose={() => setIsCvModalOpen(false)}
+            />
         </section>
     );
 };
