@@ -2,6 +2,7 @@
 "use client";
 
 import { useActiveSection } from "@/app/context/active-section-context";
+import { socialLinks } from "@/lib/social-links";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -95,7 +96,7 @@ const Intro = () => {
                         </motion.button>
 
                         <Link
-                            href="https://www.linkedin.com/in/justin-kim6/"
+                            href={socialLinks.linkedin}
                             target="_blank"
                         >
                             <motion.div
@@ -111,7 +112,7 @@ const Intro = () => {
                             </motion.div>
                         </Link>
                         <Link
-                            href="https://github.com/kimjust6"
+                            href={socialLinks.github}
                             target="_blank"
                         >
                             <motion.div

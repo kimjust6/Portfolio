@@ -1,57 +1,14 @@
 import "@/app/styles/globals.css";
-import { MetadataValues } from "@/lib/data";
+import { personJsonLd, siteMetadata } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import ThemeContextProvider from "./context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-    title: MetadataValues.Title,
-    description: MetadataValues.Description,
-    applicationName: "Justin Kim's Portfolio",
-    authors: [{ url: "", name: "Justin Kim" }],
-    generator: "Next.js",
-    keywords: [
-        "Justin Kim",
-        "Portfolio",
-        "Web Developer",
-        "Full Stack Developer",
-        "Dayforce",
-        "Dayforce Canada",
-        "Backend Developer",
-        "Seneca College",
-        "Yaksa",
-        "Verndale",
-        "Verndale Canada",
-        "Partech",
-        "Par",
-    ],
-    robots: {
-        googleBot: {
-            index: true,
-            follow: true,
-            noarchive: false,
-            nosnippet: false,
-            noimageindex: false,
-            notranslate: false,
-            indexifembedded: true,
-            nositelinkssearchbox: true,
-        },
-    },
-    openGraph: {
-        type: "website",
-        determiner: "",
-        title: "Justin Kim",
-        description: MetadataValues.Description,
-        siteName: MetadataValues.Title,
-        locale: "en_US",
-        alternateLocale: "en_GB",
-        images: ["https://i.imgur.com/O3H6i8d.png"],
-        url: "https://www.jkim.win/",
-        countryName: "Canada",
-    },
-};
+export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
     children,
@@ -62,8 +19,17 @@ export default function RootLayout({
         <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
             <head>
                 <script
+                    type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: `
+                        __html: JSON.stringify(personJsonLd),
+                    }}
+                />
+            </head>
+            <body
+                className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark dark:text-opacity-95 overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 relative`}
+            >
+                <Script id="theme-init" strategy="beforeInteractive">
+                    {`
                     try {
                         document.documentElement.classList.toggle(
                         'dark',
@@ -73,13 +39,8 @@ export default function RootLayout({
                     } catch (err) {
                         console.error('Theme initialization failed', err);
                     }
-                    `,
-                    }}
-                />
-            </head>
-            <body
-                className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark dark:text-opacity-95 overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 relative`}
-            >
+                    `}
+                </Script>
                 <div
                     className="absolute inset-0 z-0 pointer-events-none hidden dark:block"
                     style={{
@@ -95,6 +56,7 @@ export default function RootLayout({
                 <div className="relative z-10">
                     <ThemeContextProvider>{children}</ThemeContextProvider>
                 </div>
+                <Analytics />
             </body>
         </html>
     );

@@ -4,13 +4,13 @@ import Link from "next/link";
 import { BsEnvelopeFill, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { IconType } from "react-icons";
 import { useState } from "react";
-import Reveal from "./utils/reveal";
+import { socialLinks as profileLinks } from "@/lib/social-links";
 
 const socialLinks: { href: string; icon: IconType; label: string; target?: string }[] = [
-    { href: "https://github.com/kimjust6",              icon: BsGithub,       label: "GitHub",    target: "_blank" },
-    { href: "https://www.linkedin.com/in/justin-kim6/", icon: BsLinkedin,     label: "LinkedIn",  target: "_blank" },
-    { href: "mailto:kimjust6@gmail.com",                icon: BsEnvelopeFill, label: "Email" },
-    { href: "https://instagram.com/milklatteteas",      icon: BsInstagram,    label: "Instagram", target: "_blank" },
+    { href: profileLinks.github,    icon: BsGithub,       label: "GitHub",    target: "_blank" },
+    { href: profileLinks.linkedin,  icon: BsLinkedin,     label: "LinkedIn",  target: "_blank" },
+    { href: profileLinks.email,     icon: BsEnvelopeFill, label: "Email" },
+    { href: profileLinks.instagram, icon: BsInstagram,    label: "Instagram", target: "_blank" },
 ];
 
 const Footer = () => {

@@ -1,6 +1,4 @@
-"use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { AiFillHome } from "react-icons/ai";
 
 export default function Professional404() {
@@ -27,16 +25,13 @@ export default function Professional404() {
                             The page you requested could not be found.
                         </p>
                         <div className="flex justify-center pb-5 pt-10">
-                            <motion.button
-                                className="button_primary group"
-                                whileHover={{ scale: 1.04 }}
-                                whileTap={{ scale: 0.97 }}
+                            <Link
+                                href="/"
+                                className="button_primary group flex transition-transform hover:scale-[1.04] active:scale-[0.97]"
                             >
-                                <Link href="/" className="flex">
-                                    <AiFillHome className="mr-2 h-5 w-5" />
-                                    Go Home
-                                </Link>
-                            </motion.button>
+                                <AiFillHome className="mr-2 h-5 w-5" />
+                                Go Home
+                            </Link>
                         </div>
                     </div>
                 </div>
