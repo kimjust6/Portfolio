@@ -26,7 +26,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.className} text-gray-00 background no-scrollbar dark:background-dark dark:text-opacity-95 overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 relative`}
+                className={`${inter.className} text-gray-950 background no-scrollbar dark:background-dark dark:text-opacity-95 overflow-y-scroll transition-all dark:bg-gray-950 dark:bg-gradient-to-r dark:bg-auto dark:text-gray-50 relative`}
             >
                 <Script id="theme-init" strategy="beforeInteractive">
                     {`

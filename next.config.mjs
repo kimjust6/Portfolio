@@ -1,9 +1,9 @@
 // import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 
-import sass from "sass-embedded"; // or "sass"
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: "standalone",
+    poweredByHeader: false,
     images: {
         remotePatterns: [{ protocol: "https", hostname: "i.imgur.com" }],
     },
