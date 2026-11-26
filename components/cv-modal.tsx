@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { BsDownload, BsEye, BsEyeSlash, BsLock, BsX } from "react-icons/bs";
 import { AiOutlineLoading } from "react-icons/ai";
+import { downloadCv } from "@/lib/download-cv";
 
 interface CvModalProps {
     isOpen: boolean;
@@ -17,11 +18,15 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
     const [errorMessage, setErrorMessage] = useState("");
     const inputRef = useRef<HTMLInputElement>(null);
 
+    const handleClose = useCallback(() => {
+        setPassword("");
+        setErrorMessage("");
+        setShowPassword(false);
+        onClose();
+    }, [onClose]);
+
     useEffect(() => {
         if (isOpen) {
-            setPassword("");
-            setErrorMessage("");
-            setShowPassword(false);
             const timer = setTimeout(() => {
                 inputRef.current?.focus();
             }, 100);
@@ -32,7 +37,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "Escape" && isOpen && !isLoading) {
-                onClose();
+                handleClose();
             }
         };
 
@@ -45,7 +50,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
             window.removeEventListener("keydown", handleKeyDown);
             document.body.style.overflow = "unset";
         };
-    }, [isOpen, isLoading, onClose]);
+    }, [isOpen, isLoading, handleClose]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -55,35 +60,15 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
         setErrorMessage("");
 
         try {
-            const response = await fetch("/api/cv", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ password }),
-            });
-
-            if (!response.ok) {
-                const data = await response.json().catch(() => ({}));
-                setErrorMessage(data.error || "Incorrect password. Please try again.");
-                setIsLoading(false);
+            const result = await downloadCv(password);
+            if (!result.ok) {
+                setErrorMessage(result.error);
                 return;
             }
-
-            const blob = await response.blob();
-            const downloadUrl = window.URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = downloadUrl;
-            a.download = "Justin Kim Resume 2026.pdf";
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(downloadUrl);
-
-            setIsLoading(false);
-            onClose();
+            handleClose();
         } catch {
             setErrorMessage("Failed to download CV. Please try again later.");
+        } finally {
             setIsLoading(false);
         }
     };
@@ -104,7 +89,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => {
-                            if (!isLoading) onClose();
+                            if (!isLoading) handleClose();
                         }}
                     />
 
@@ -119,7 +104,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
                         {/* Close button */}
                         <button
                             type="button"
-                            onClick={onClose}
+                            onClick={handleClose}
                             disabled={isLoading}
                             aria-label="Close modal"
                             className="absolute right-4 top-4 rounded-full p-1 text-gray-500 hover:bg-gray-100 hover:text-gray-700 disabled:opacity-50 dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-gray-200"
@@ -139,7 +124,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
                                     Download Resume / CV
                                 </h3>
                                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                                    Please enter the password to download Justin's CV.
+                                    Please enter the password to download Justin&apos;s CV.
                                 </p>
                             </div>
                         </div>
@@ -178,7 +163,7 @@ const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
                             <div className="mt-2 flex flex-col-reverse justify-end gap-2 sm:flex-row sm:gap-3">
                                 <button
                                     type="button"
-                                    onClick={onClose}
+                                    onClick={handleClose}
                                     disabled={isLoading}
                                     className="button_secondary !w-full sm:!w-auto justify-center"
                                 >

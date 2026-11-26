@@ -2,6 +2,7 @@
 
 import sendEmail from "@/actions/send-email";
 import getErrorMessage from "@/components/utils/errorHandler";
+import { socialLinks } from "@/lib/social-links";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import SectionHeading from "./utils/section-heading";
@@ -30,24 +31,28 @@ const Contact = () => {
                 Contact me directly at{" "}
                 <a
                     className="font-semibold text-indigo-600 underline"
-                    href="mailto:kimjust6@gmail.com"
+                    href={socialLinks.email}
                 >
-                    kimjust6@gmail.com
+                    {socialLinks.email.replace(/^mailto:/, "")}
                 </a>{" "}
                 or through the form below.
             </motion.p>
             <motion.form
                 action={async (formData) => {
+                    setErrorMessage("");
                     try {
-                        // await sleep(1000);
-                        await sendEmail(
+                        const result = await sendEmail(
                             formData.get("senderEmail")?.toString() ?? "",
                             formData.get("senderMessage")?.toString() ?? ""
                         );
+                        if (result?.error) {
+                            setErrorMessage(result.error);
+                            return;
+                        }
+                        setEmailSent(true);
                     } catch (error) {
                         setErrorMessage(getErrorMessage(error));
                     }
-                    setEmailSent(true);
                 }}
                 className="mt-10 flex min-w-[min(100%,38rem)] flex-col gap-4 px-8 sm:gap-4"
                 initial={{ opacity: 0, y: 50 }}

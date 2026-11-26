@@ -1,37 +1,44 @@
+import crypto from "crypto";
+import { saveZendeskTicket } from "@/lib/zendesk";
 import { NextRequest, NextResponse } from "next/server";
-import PocketBase from "pocketbase";
-import type {
-    TypedPocketBase,
-    ZendeskTicketsResponse,
-} from "@/lib/pocketbase-types";
 
 export const dynamic = "force-dynamic";
 
-const pb = new PocketBase(process.env.PB_TYPEGEN_URL) as TypedPocketBase;
+type ErrorWithMessage = { message?: string };
 
-type error = { message?: string };
+function isAuthorized(req: NextRequest): boolean {
+    const secret = process.env.ZENDESK_WEBHOOK_SECRET;
+    if (!secret) return true;
+
+    const provided = req.headers.get("x-webhook-secret");
+    if (!provided || provided.length !== secret.length) {
+        return false;
+    }
+
+    return crypto.timingSafeEqual(Buffer.from(provided), Buffer.from(secret));
+}
 
 export async function POST(req: NextRequest) {
+    if (!isAuthorized(req)) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    let body: unknown;
     try {
-        if (process.env.PB_TYPEGEN_EMAIL && process.env.PB_TYPEGEN_PASSWORD) {
-            await pb.admins.authWithPassword(
-                process.env.PB_TYPEGEN_EMAIL,
-                process.env.PB_TYPEGEN_PASSWORD
-            );
-        }
+        body = await req.json();
+    } catch {
+        return NextResponse.json(
+            { error: "Invalid JSON payload" },
+            { status: 400 }
+        );
+    }
 
-        const body = await req.json();
-
-        // Store entire request body as string
-        const record = await pb
-            .collection("zendesk_tickets")
-            .create<ZendeskTicketsResponse>({
-                data: JSON.stringify(body),
-            });
-
-        return NextResponse.json(JSON.stringify(record), { status: 201 });
+    try {
+        const record = await saveZendeskTicket(body);
+        return NextResponse.json(record, { status: 201 });
     } catch (err: unknown) {
-        const e = err as error;
+        console.error("Failed to create Zendesk ticket:", err);
+        const e = err as ErrorWithMessage;
         return NextResponse.json(
             { error: e?.message || "Failed to create Zendesk ticket" },
             { status: 500 }

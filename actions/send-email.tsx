@@ -1,18 +1,31 @@
 "use server";
 
 import getErrorHandler from "@/components/utils/errorHandler";
-import { Resend } from "resend";
+import { sendContactEmail, validateContactInput } from "@/lib/mail";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
+import { headers } from "next/headers";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const contactRateLimiter = createRateLimiter({
+    windowMs: 60_000,
+    maxRequests: 5,
+});
 
 const sendEmail = async (email: string, message: string) => {
+    const reqHeaders = await headers();
+    const { allowed } = contactRateLimiter(getClientIp(reqHeaders));
+    if (!allowed) {
+        return { error: "Too many requests. Please try again later." };
+    }
+
+    const validationError = validateContactInput(email, message);
+    if (validationError) {
+        return { error: validationError };
+    }
+
     try {
-        await resend.emails.send({
-            from: "Justin Kim's Portfolio <onboarding@resend.dev>",
-            to: "mletemps@hotmail.com",
-            subject: "Message from Portfolio",
-            replyTo: email,
-            text: message,
+        await sendContactEmail({
+            replyTo: email.trim(),
+            text: message.trim(),
         });
     } catch (error: unknown) {
         return {
@@ -20,4 +33,5 @@ const sendEmail = async (email: string, message: string) => {
         };
     }
 };
+
 export default sendEmail;
