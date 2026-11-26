@@ -7,7 +7,6 @@ export const revalidate = 300;
 const portfolioRootSource = async (): Promise<MetadataRoute.Sitemap> => [
     {
         url: `${siteConfig.url}/`,
-        lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 1,
     },

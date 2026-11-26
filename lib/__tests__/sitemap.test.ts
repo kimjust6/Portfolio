@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { parseSitemapXml } from "../sitemap.ts";
+import { composeSitemaps, parseSitemapXml } from "../sitemap.ts";
 
 describe("parseSitemapXml", () => {
     it("parses valid url entries with all fields", () => {
@@ -33,5 +33,22 @@ describe("parseSitemapXml", () => {
 
         const entries = parseSitemapXml(xml);
         assert.deepEqual(entries, [{ url: "https://example.com/" }]);
+    });
+});
+
+describe("composeSitemaps", () => {
+    it("merges sources and deduplicates by url", async () => {
+        const result = await composeSitemaps([
+            async () => [{ url: "https://www.jkim.win/", priority: 1 }],
+            async () => [
+                { url: "https://www.jkim.win/", priority: 0.5 },
+                { url: "https://myblog.jkim.win/", priority: 0.8 },
+            ],
+        ]);
+
+        assert.deepEqual(result, [
+            { url: "https://www.jkim.win/", priority: 1 },
+            { url: "https://myblog.jkim.win/", priority: 0.8 },
+        ]);
     });
 });

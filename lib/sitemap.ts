@@ -102,5 +102,14 @@ export async function composeSitemaps(
     sources: readonly SitemapSource[]
 ): Promise<MetadataRoute.Sitemap> {
     const results = await Promise.all(sources.map((source) => source()));
-    return results.flat();
+    const seen = new Set<string>();
+    const merged: MetadataRoute.Sitemap = [];
+
+    for (const entry of results.flat()) {
+        if (seen.has(entry.url)) continue;
+        seen.add(entry.url);
+        merged.push(entry);
+    }
+
+    return merged;
 }

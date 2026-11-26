@@ -67,9 +67,9 @@ export function ProjectCard({ project }: { project: Project }) {
                             />
                         )}
                         <div className="mt-6 px-5 sm:max-w-2xl sm:px-7">
-                            <h1 className="pb-2 text-xl font-bold">
+                            <h3 className="pb-2 text-xl font-bold">
                                 {project.title}
-                            </h1>
+                            </h3>
                             <div className="flex flex-row flex-wrap justify-center gap-1.5 sm:justify-start">
                                 {project.tech.map((technology) => (
                                     <div

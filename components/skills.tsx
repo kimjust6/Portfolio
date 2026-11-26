@@ -13,27 +13,31 @@ const Skills = () => {
                 <SectionHeading>MY Skills</SectionHeading>
             </div>
             <div className="grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2">
-                {skillsData.map((skill) => {
-                    return (
-                        <ul
-                            className="flex flex-col items-center p-4"
-                            key={skill.title}
-                        >
-                            <Reveal>
-                                <h2 className="subheading">{skill.title}</h2>
-                            </Reveal>
-                            <div className="my-4 flex flex-wrap items-end justify-center">
-                                {skill.skills.map((s, index) => {
-                                    return (
-                                        // because s can be undefined sometimes
-                                        s && (
-                                            <Reveal key={s.name} index={index}>
-                                                <li className="flex flex-col items-center px-5 py-2">
+                {skillsData.map((skill) => (
+                    <div
+                        className="flex flex-col items-center p-4"
+                        key={skill.title}
+                    >
+                        <Reveal>
+                            <h3 className="subheading">{skill.title}</h3>
+                        </Reveal>
+                        <ul className="my-4 flex flex-wrap items-end justify-center">
+                            {skill.skills.map(
+                                (s, index) =>
+                                    s && (
+                                        <li
+                                            key={s.name}
+                                            className="px-5 py-2"
+                                        >
+                                            <Reveal
+                                                index={index}
+                                                className="flex flex-col items-center"
+                                            >
+                                                <>
                                                     <Image
                                                         className={
-                                                            "mb-2 hidden sm:block " +
-                                                            (s.name ===
-                                                            "Next.js"
+                                                            "h-[45px] w-[45px] sm:mb-2 sm:h-[60px] sm:w-[60px] " +
+                                                            (s.name === "Next.js"
                                                                 ? "dark:invert"
                                                                 : "")
                                                         }
@@ -41,32 +45,18 @@ const Skills = () => {
                                                         alt={s.name}
                                                         width={60}
                                                         height={60}
-                                                    ></Image>
-                                                    <Image
-                                                        className={
-                                                            "sm:hidden " +
-                                                            (s.name ===
-                                                            "Next.js"
-                                                                ? "dark:invert"
-                                                                : "")
-                                                        }
-                                                        src={s.svg}
-                                                        alt={s.name}
-                                                        width={45}
-                                                        height={45}
-                                                    ></Image>
+                                                    />
                                                     <div className="text-sm text-gray-600 dark:text-gray-300">
                                                         {s.name}
                                                     </div>
-                                                </li>
+                                                </>
                                             </Reveal>
-                                        )
-                                    );
-                                })}
-                            </div>
+                                        </li>
+                                    )
+                            )}
                         </ul>
-                    );
-                })}
+                    </div>
+                ))}
             </div>
         </section>
     );
