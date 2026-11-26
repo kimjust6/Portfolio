@@ -1,29 +1,22 @@
 "use server";
 
 import getErrorHandler from "@/components/utils/errorHandler";
-import { sendContactEmail } from "@/lib/mail";
+import { sendContactEmail, validateContactInput } from "@/lib/mail";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
+import { headers } from "next/headers";
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const MAX_EMAIL_LENGTH = 320;
-const MAX_MESSAGE_LENGTH = 5000;
-
-function validateContactInput(email: unknown, message: unknown): string | null {
-    if (typeof email !== "string" || !email.trim()) {
-        return "Please provide an email address.";
-    }
-    if (email.trim().length > MAX_EMAIL_LENGTH || !EMAIL_REGEX.test(email.trim())) {
-        return "Please provide a valid email address.";
-    }
-    if (typeof message !== "string" || !message.trim()) {
-        return "Please provide a message.";
-    }
-    if (message.trim().length > MAX_MESSAGE_LENGTH) {
-        return `Message must be ${MAX_MESSAGE_LENGTH} characters or fewer.`;
-    }
-    return null;
-}
+const contactRateLimiter = createRateLimiter({
+    windowMs: 60_000,
+    maxRequests: 5,
+});
 
 const sendEmail = async (email: string, message: string) => {
+    const reqHeaders = await headers();
+    const { allowed } = contactRateLimiter(getClientIp(reqHeaders));
+    if (!allowed) {
+        return { error: "Too many requests. Please try again later." };
+    }
+
     const validationError = validateContactInput(email, message);
     if (validationError) {
         return { error: validationError };

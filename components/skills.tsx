@@ -1,4 +1,3 @@
-"use client";
 import { skillsData } from "@/lib/data";
 import Image from "next/image";
 import Reveal from "./utils/reveal";

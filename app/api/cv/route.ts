@@ -1,9 +1,27 @@
 import { getCvFile, verifyCvPassword } from "@/lib/cv";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
+const cvRateLimiter = createRateLimiter({
+    windowMs: 60_000,
+    maxRequests: 10,
+});
+
 export async function POST(req: NextRequest) {
+    const ip = getClientIp(req.headers);
+    const { allowed, retryAfterSeconds } = cvRateLimiter(ip);
+    if (!allowed) {
+        return NextResponse.json(
+            { error: "Too many attempts. Please try again later." },
+            {
+                status: 429,
+                headers: { "Retry-After": String(retryAfterSeconds) },
+            }
+        );
+    }
+
     try {
         const body = await req.json().catch(() => ({}));
         const { password } = body;
