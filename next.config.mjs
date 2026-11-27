@@ -1,9 +1,11 @@
-// import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
+const LEGACY_RESUME_PATHS = [
+    "/Justin%20Kim%20Resume%202026.pdf",
+    "/Justin%20Kim%20Resume%202023.pdf",
+    "/Justin%20Kim%20Resume%20OLD.pdf",
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "standalone",
-    poweredByHeader: false,
     images: {
         remotePatterns: [{ protocol: "https", hostname: "i.imgur.com" }],
     },
@@ -11,23 +13,11 @@ const nextConfig = {
         "/api/cv": ["./private/**/*"],
     },
     async redirects() {
-        return [
-            {
-                source: "/Justin%20Kim%20Resume%202026.pdf",
-                destination: "/#home",
-                permanent: false,
-            },
-            {
-                source: "/Justin%20Kim%20Resume%202023.pdf",
-                destination: "/#home",
-                permanent: false,
-            },
-            {
-                source: "/Justin%20Kim%20Resume%20OLD.pdf",
-                destination: "/#home",
-                permanent: false,
-            },
-        ];
+        return LEGACY_RESUME_PATHS.map((source) => ({
+            source,
+            destination: "/#home",
+            permanent: false,
+        }));
     },
     async headers() {
         return [
